@@ -154,25 +154,23 @@ if (copyEmailBtn) {
   });
 }
 
-/* PAGE TRANSITION SYSTEM */
-// Fade out on leave, fade in on arrive
-
+/* ─── PAGE TRANSITION SYSTEM ─── */
 document.documentElement.classList.add('page-ready');
 
-// Intercept all internal link clicks
 document.querySelectorAll('a[href]').forEach(link => {
   const href = link.getAttribute('href');
-
-  // Only internal .html links, not anchors or external
-  if (!href.startsWith('http') && !href.startsWith('#') && href.includes('.html') || href === '/' || href === '') {
+  if (
+    href &&
+    !href.startsWith('http') &&
+    !href.startsWith('#') &&
+    !href.startsWith('mailto') &&
+    (href.endsWith('.html') || href === '/' || href === '')
+  ) {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       document.documentElement.classList.remove('page-ready');
       document.documentElement.classList.add('page-leaving');
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 380);
+      setTimeout(() => { window.location.href = href; }, 300);
     });
   }
 });

@@ -1,3 +1,8 @@
+/* PREVENT WHITE FLASH ON LOAD */
+html {
+  background: #080a0f;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
 
 /* TOKENS */
@@ -456,7 +461,8 @@ footer {
 /* PAGE TRANSITIONS */
 html {
   opacity: 0;
-  transition: opacity 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.3s ease;
+  background: #080a0f;
 }
 
 html.page-ready {
@@ -1360,4 +1366,10 @@ html.page-leaving {
   .phase2-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Last card full width if alone */
+.proj-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 600px;
 }
