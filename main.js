@@ -154,5 +154,76 @@ if (copyEmailBtn) {
   });
 }
 
+/* PAGE TRANSITION SYSTEM */
+// Fade out on leave, fade in on arrive
+
+document.documentElement.classList.add('page-ready');
+
+// Intercept all internal link clicks
+document.querySelectorAll('a[href]').forEach(link => {
+  const href = link.getAttribute('href');
+
+  // Only internal .html links, not anchors or external
+  if (!href.startsWith('http') && !href.startsWith('#') && href.includes('.html') || href === '/' || href === '') {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.documentElement.classList.remove('page-ready');
+      document.documentElement.classList.add('page-leaving');
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 380);
+    });
+  }
+});
+
+/* MAGNETIC BUTTON EFFECT */
+document.querySelectorAll('.btn-magnetic').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+    btn.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+    setTimeout(() => { btn.style.transition = ''; }, 500);
+  });
+});
+
+/* PARALLAX SUBTLE */
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  document.querySelectorAll('[data-parallax]').forEach(el => {
+    const speed = parseFloat(el.dataset.parallax) || 0.3;
+    el.style.transform = `translateY(${scrolled * speed}px)`;
+  });
+});
+
+/* STAGGER CHILDREN ANIMATION */
+function staggerChildren(parentSelector, childSelector, baseDelay = 80) {
+  const parent = document.querySelector(parentSelector);
+  if (!parent) return;
+
+  parent.querySelectorAll(childSelector).forEach((child, i) => {
+    child.style.opacity = '0';
+    child.style.transform = 'translateY(20px)';
+    child.style.transition = `opacity 0.5s ease, transform 0.5s ease`;
+    child.style.transitionDelay = `${i * baseDelay}ms`;
+
+    setTimeout(() => {
+      child.style.opacity = '1';
+      child.style.transform = 'translateY(0)';
+    }, 100);
+  });
+}
+
+window.PortfolioUtils = {
+  ...window.PortfolioUtils,
+  staggerChildren
+};
+
 /* EXPOSE UTILITIES */
 window.PortfolioUtils = { typewriter, initCursorBlink, animateCounter };
