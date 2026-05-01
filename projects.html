@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Tirth Doshi</title>
+  <meta name="description" content="7 production-grade projects across AI, Full Stack, and Data Engineering by Tirth Doshi.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="projects.html">projects</a></li>
+        <li><a href="skills.html">skills</a></li>
+        <li><a href="experience.html">experience</a></li>
+        <li><a href="contact.html" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <div class="page-orb page-orb-1"></div>
+      <div class="page-orb page-orb-2"></div>
+    </div>
+    <div class="container">
+      <div class="section-label reveal">all projects</div>
+      <h1 class="reveal" data-delay="100">
+        7 projects.<br>
+        <span class="text-gradient">All shipped.</span>
+      </h1>
+      <p class="reveal" data-delay="200">
+        Every project has a real architecture, a real data layer, and real AI doing
+        actual work. Click any card to explore an interactive demo — no video, 
+        navigate it yourself.
+      </p>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs reveal" data-delay="300">
+        <button class="filter-tab active" data-filter="all">
+          all <span class="filter-count">7</span>
+        </button>
+        <button class="filter-tab" data-filter="ai">
+          AI <span class="filter-count">5</span>
+        </button>
+        <button class="filter-tab" data-filter="fullstack">
+          full stack <span class="filter-count">6</span>
+        </button>
+        <button class="filter-tab" data-filter="data">
+          data engineering <span class="filter-count">3</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="projects-section section">
+    <div class="container">
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- MediFlow -->
+        <article class="proj-card hover-lift gradient-border" 
+                 data-categories="ai data fullstack">
+          <div class="proj-card-accent" style="background: var(--green);"></div>
+          <div class="proj-card-body">
+            <div class="proj-card-top">
+              <div class="proj-tags-row">
+                <span class="tag tag-green">Data</span>
+                <span class="tag tag-green">AI</span>
+                <span class="tag tag-green">Full Stack</span>
+              </div>
+              <span class="proj-number mono">01</span>
+            </div>
+
+            <h2 class="proj-title">MediFlow</h2>
+            <p class="proj-subtitle">Clinical Data Pipeline & AI Insights</p>
+
+            <p class="proj-desc">
+              Automated ETL ingesting 11,474 patients and 361,510 vital readings 
+              from Synthea into SQL Server. Three-model ensemble ML (Isolation Forest 
+              + LOF + One-Class SVM) with 2/3 majority voting. Claude AI clinical 
+              explanations per anomaly. JWT auth with role-based access. 49 unit tests.
+            </p>
+
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">361,510</span>
+                <span class="proj-stat-label">records</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">49</span>
+                <span class="proj-stat-label">unit tests</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">3</span>
+                <span class="proj-stat-label">ML models</span>
+              </div>
+            </div>
+
+            <div class="proj-tech">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">React</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Claude AI</span>
+            </div>
+
+            <div class="proj-actions">
+              <a href="projects/mediflow.html" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                live demo
+              </a>
+              <a href="https://github.com/DoshiTirth/mediflow" target="_blank" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SmartPOS AI -->
+        <article class="proj-card hover-lift gradient-border"
+                 data-categories="ai fullstack">
+          <div class="proj-card-accent" style="background: var(--blue);"></div>
+          <div class="proj-card-body">
+            <div class="proj-card-top">
+              <div class="proj-tags-row">
+                <span class="tag tag-blue">Full Stack</span>
+                <span class="tag tag-blue">AI</span>
+              </div>
+              <span class="proj-number mono">02</span>
+            </div>
+
+            <h2 class="proj-title">SmartPOS AI</h2>
+            <p class="proj-subtitle">Hybrid POS System with AI Analytics</p>
+
+            <p class="proj-desc">
+              Enterprise POS with a C# WPF .NET 9 cashier terminal and ASP.NET Core 
+              Web API. Python Flask AI microservice handles sales forecasting (Prophet), 
+              customer segmentation (K-Means), and anomaly detection (Isolation Forest). 
+              React 18 manager dashboard. Same architecture as Square and Lightspeed.
+            </p>
+
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">4</span>
+                <span class="proj-stat-label">AI models</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">3</span>
+                <span class="proj-stat-label">user roles</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">100</span>
+                <span class="proj-stat-label">products seeded</span>
+              </div>
+            </div>
+
+            <div class="proj-tech">
+              <span class="tag">C#</span>
+              <span class="tag">WPF</span>
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">React</span>
+              <span class="tag">SQL Server</span>
+            </div>
+
+            <div class="proj-actions">
+              <a href="projects/smartposai.html" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                live demo
+              </a>
+              <a href="https://github.com/DoshiTirth/SmartPOS-AI" target="_blank" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TalentLens -->
+        <article class="proj-card hover-lift gradient-border"
+                 data-categories="ai data fullstack">
+          <div class="proj-card-accent" style="background: var(--purple);"></div>
+          <div class="proj-card-body">
+            <div class="proj-card-top">
+              <div class="proj-tags-row">
+                <span class="tag tag-purple">AI</span>
+                <span class="tag tag-purple">Data</span>
+              </div>
+              <span class="proj-number mono">03</span>
+            </div>
+
+            <h2 class="proj-title">TalentLens</h2>
+            <p class="proj-subtitle">AI Job Market Intelligence Platform</p>
+
+            <p class="proj-desc">
+              Ingests 1,500+ live Canadian job postings via automated ETL into a 
+              SQL Server star schema. Claude AI NLP agent extracts skills from every 
+              job description. C# ASP.NET Core Web API with React 18 frontend. 
+              PDF resume analyzer with market match scoring and skill gap analysis.
+            </p>
+
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">1,500+</span>
+                <span class="proj-stat-label">job postings</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">32+</span>
+                <span class="proj-stat-label">role categories</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">star</span>
+                <span class="proj-stat-label">schema DB</span>
+              </div>
+            </div>
+
+            <div class="proj-tech">
+              <span class="tag">Python</span>
+              <span class="tag">C#</span>
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">React</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">Claude AI</span>
+            </div>
+
+            <div class="proj-actions">
+              <a href="projects/talentlens.html" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                live demo
+              </a>
+              <a href="https://github.com/DoshiTirth/TalentLens" target="_blank" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- RetailPulse -->
+        <article class="proj-card hover-lift gradient-border"
+                 data-categories="fullstack">
+          <div class="proj-card-accent" style="background: var(--amber);"></div>
+          <div class="proj-card-body">
+            <div class="proj-card-top">
+              <div class="proj-tags-row">
+                <span class="tag tag-amber">Full Stack</span>
+              </div>
+              <span class="proj-number mono">04</span>
+            </div>
+
+            <h2 class="proj-title">RetailPulse</h2>
+            <p class="proj-subtitle">Full-Stack ERP-Lite System</p>
+
+            <p class="proj-desc">
+              Enterprise-grade ERP with full product, inventory, supplier, customer, 
+              and order management. JWT auth with 5-role RBAC and dynamic permissions 
+              in SQL Server. PDF and CSV reporting via QuestPDF. Dark and light mode. 
+              Chart.js analytics dashboard — no Power BI, everything inside the app.
+            </p>
+
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">5</span>
+                <span class="proj-stat-label">RBAC roles</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">EF</span>
+                <span class="proj-stat-label">Core ORM</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">JWT</span>
+                <span class="proj-stat-label">auth</span>
+              </div>
+            </div>
+
+            <div class="proj-tech">
+              <span class="tag">C#</span>
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">EF Core</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">QuestPDF</span>
+              <span class="tag">Chart.js</span>
+            </div>
+
+            <div class="proj-actions">
+              <a href="projects/retailpulse.html" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                live demo
+              </a>
+              <a href="https://github.com/DoshiTirth/RetailPulse" target="_blank" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- MarketPulse -->
+        <article class="proj-card hover-lift gradient-border"
+                 data-categories="ai fullstack">
+          <div class="proj-card-accent" style="background: var(--coral);"></div>
+          <div class="proj-card-body">
+            <div class="proj-card-top">
+              <div class="proj-tags-row">
+                <span class="tag tag-coral">AI</span>
+                <span class="tag tag-coral">Full Stack</span>
+              </div>
+              <span class="proj-number mono">05</span>
+            </div>
+
+            <h2 class="proj-title">MarketPulse</h2>
+            <p class="proj-subtitle">AI Stock Intelligence Platform</p>
+
+            <p class="proj-desc">
+              Custom 4-skill AI agent engine generating confidence-scored buy, sell, 
+              and hold signals from live market data. RSI, MACD, and Bollinger Bands 
+              dashboards. Claude AI conversational assistant using real-time market 
+              data. Web app and native desktop via Electron.
+            </p>
+
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">4</span>
+                <span class="proj-stat-label">AI skills</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">live</span>
+                <span class="proj-stat-label">market data</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">2</span>
+                <span class="proj-stat-label">platforms</span>
+              </div>
+            </div>
+
+            <div class="proj-tech">
+              <span class="tag">React</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">Electron</span>
+              <span class="tag">Claude AI</span>
+              <span class="tag">Chart.js</span>
+              <span class="tag">Finnhub</span>
+            </div>
+
+            <div class="proj-actions">
+              <a href="projects/marketpulse.html" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                live demo
+              </a>
+              <a href="https://github.com/DoshiTirth/market-pulse" target="_blank" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- VaultMind -->
+        <article class="proj-card hover-lift gradient-border"
+                 data-categories="ai fullstack">
+          <div class="proj-card-accent" style="background: #14b8a6;"></div>
+          <div class="proj-card-body">
+            <div class="proj-card-top">
+              <div class="proj-tags-row">
+                <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">AI</span>
+                <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">Full Stack</span>
+              </div>
+              <span class="proj-number mono">06</span>
+            </div>
+
+            <h2 class="proj-title">VaultMind</h2>
+            <p class="proj-subtitle">RAG Document Intelligence</p>
+
+            <p class="proj-desc">
+              Upload PDFs, DOCX and TXT — ask questions — get answers with page-level 
+              source citations. Built without LangChain — direct OpenAI API and ChromaDB. 
+              AI document summarization, smart query suggestions, multi-document vault, 
+              conversation history, and chat export to markdown.
+            </p>
+
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">RAG</span>
+                <span class="proj-stat-label">pipeline</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">0</span>
+                <span class="proj-stat-label">LangChain</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">3</span>
+                <span class="proj-stat-label">file types</span>
+              </div>
+            </div>
+
+            <div class="proj-tech">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">OpenAI</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">React</span>
+            </div>
+
+            <div class="proj-actions">
+              <a href="projects/vaultmind.html" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                live demo
+              </a>
+              <a href="https://github.com/DoshiTirth/VaultMind" target="_blank" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- DataAisle -->
+        <article class="proj-card hover-lift gradient-border"
+                 data-categories="data fullstack">
+          <div class="proj-card-accent" style="background: var(--blue);"></div>
+          <div class="proj-card-body">
+            <div class="proj-card-top">
+              <div class="proj-tags-row">
+                <span class="tag tag-blue">Data</span>
+                <span class="tag tag-blue">Full Stack</span>
+              </div>
+              <span class="proj-number mono">07</span>
+            </div>
+
+            <h2 class="proj-title">DataAisle</h2>
+            <p class="proj-subtitle">ETL Pipeline + Data Warehouse Dashboard</p>
+
+            <p class="proj-desc">
+              Python ETL pipeline ingesting CSV and API data into a SQL Server star 
+              schema data warehouse. C# ASP.NET Core web dashboard with Chart.js 
+              visualizations. Full data engineering lifecycle from raw ingestion to 
+              polished dashboard — no Power BI, no Docker.
+            </div>
+
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">star</span>
+                <span class="proj-stat-label">schema DW</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">ETL</span>
+                <span class="proj-stat-label">pipeline</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num mono">0</span>
+                <span class="proj-stat-label">Power BI</span>
+              </div>
+            </div>
+
+            <div class="proj-tech">
+              <span class="tag">Python</span>
+              <span class="tag">C#</span>
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">Chart.js</span>
+              <span class="tag">Dapper</span>
+            </div>
+
+            <div class="proj-actions">
+              <a href="projects/dataaisle.html" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                live demo
+              </a>
+              <a href="https://github.com/DoshiTirth/DataAisle" target="_blank" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASE 2 COMING SOON -->
+  <section class="phase2 section">
+    <div class="container">
+      <div class="section-label reveal">what's next</div>
+      <h2 class="reveal" data-delay="100">
+        Phase 2 —
+        <span class="text-gradient">In progress.</span>
+      </h2>
+      <p class="reveal" data-delay="200">
+        Always building. Always shipping. Here's what's coming next.
+      </p>
+
+      <div class="phase2-grid reveal" data-delay="300">
+        <div class="phase2-card">
+          <div class="phase2-status">
+            <span class="phase2-dot"></span>
+            <span class="mono">planned</span>
+          </div>
+          <h3>RetailPulse v2.0</h3>
+          <p>Full UI redesign, advanced analytics, supplier portal, and mobile-responsive dashboard.</p>
+          <div class="phase2-tags">
+            <span class="tag">C#</span>
+            <span class="tag">ASP.NET Core</span>
+            <span class="tag">SQL Server</span>
+          </div>
+        </div>
+
+        <div class="phase2-card">
+          <div class="phase2-status">
+            <span class="phase2-dot"></span>
+            <span class="mono">planned</span>
+          </div>
+          <h3>SmartPOS AI v1.1</h3>
+          <p>Enhanced AI cashier assistant, real-time sales alerts, and multi-location support.</p>
+          <div class="phase2-tags">
+            <span class="tag">C#</span>
+            <span class="tag">WPF</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+
+        <div class="phase2-card phase2-card-mystery">
+          <div class="phase2-status">
+            <span class="phase2-dot" style="background: var(--text3);"></span>
+            <span class="mono">tbd</span>
+          </div>
+          <h3>Next Project</h3>
+          <p>Something new is being designed. Always building, always shipping.</p>
+          <div class="phase2-tags">
+            <span class="tag">???</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Filter tabs
+    const tabs = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.proj-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+
+        cards.forEach(card => {
+          const categories = card.dataset.categories;
+          if (filter === 'all' || categories.includes(filter)) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(16px)';
+            setTimeout(() => { card.style.display = 'none'; }, 300);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
