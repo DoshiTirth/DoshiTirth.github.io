@@ -760,14 +760,14 @@ html.page-leaving {
   white-space: nowrap;
 }
 
-.float-tag-1 { top: 10%;  left: -60px; }
-.float-tag-2 { top: 35%;  right: -50px; }
-.float-tag-3 { bottom: 25%; left: -70px; }
-.float-tag-4 { bottom: 10%; right: -45px; }
-.float-tag-5 { top: 60%;  left: -75px; }
-.float-tag-6 { top: 20%;  right: -55px; }
-.float-tag-7 { bottom: 40%; right: -55px; }
-.float-tag-8 { bottom: 5%;  left: -55px; }
+.float-tag-1 { top: 20px;   left: -65px; }
+.float-tag-2 { top: 60px;   right: -55px; }
+.float-tag-3 { top: 110px;  left: -70px; }
+.float-tag-4 { top: 150px;  right: -50px; }
+.float-tag-5 { top: 210px;  left: -75px; }
+.float-tag-6 { top: 240px;  right: -60px; }
+.float-tag-7 { top: 310px;  left: -65px; }
+.float-tag-8 { top: 330px;  right: -65px; }
 
 /* Stats row */
 .hero-stats {
