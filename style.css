@@ -724,6 +724,7 @@ html.page-leaving {
   position: relative;
   width: 320px;
   height: 380px;
+  margin: 0 70px;
 }
 
 .hero-photo-inner {
@@ -760,14 +761,14 @@ html.page-leaving {
   white-space: nowrap;
 }
 
-.float-tag-1 { top: 20px;   left: -65px; }
-.float-tag-2 { top: 60px;   right: -55px; }
-.float-tag-3 { top: 110px;  left: -70px; }
-.float-tag-4 { top: 150px;  right: -50px; }
-.float-tag-5 { top: 210px;  left: -75px; }
-.float-tag-6 { top: 240px;  right: -60px; }
-.float-tag-7 { top: 310px;  left: -65px; }
-.float-tag-8 { top: 330px;  right: -65px; }
+.float-tag-1 { top: 30px;   left: -68px; }
+.float-tag-2 { top: 30px;   right: -58px; }
+.float-tag-3 { top: 120px;  left: -78px; }
+.float-tag-4 { top: 120px;  right: -58px; }
+.float-tag-5 { top: 210px;  left: -83px; }
+.float-tag-6 { top: 210px;  right: -63px; }
+.float-tag-7 { top: 300px;  left: -68px; }
+.float-tag-8 { top: 300px;  right: -73px; }
 
 /* Stats row */
 .hero-stats {
