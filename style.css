@@ -2464,7 +2464,22 @@ html.page-leaving {
   border-radius: 50%;
   margin-top: 4px;
   flex-shrink: 0;
-  animation: pulse-dot 2s infinite;
+  position: relative;
+}
+
+.ai-anomaly-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  animation: ripple 2s ease-out infinite;
+  opacity: 0;
+}
+
+@keyframes ripple {
+  0%   { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2);   opacity: 0; }
 }
 
 .ai-anomaly-title {
