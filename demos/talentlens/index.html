@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body { background: #080a0f; }
+    html { opacity: 0; transition: none; }
+    html.ready { opacity: 1; transition: opacity 0.4s ease 0.05s; }
+  </style>
+  <title>TalentLens — Tirth Doshi</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>document.documentElement.classList.add('ready');</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/skills/">skills</a></li>
+        <li><a href="/experience/">experience</a></li>
+        <li><a href="/contact/" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="demo-hero" style="--accent: #8b5cf6;">
+    <div class="demo-hero-bg">
+      <div class="demo-orb" style="background: #8b5cf6;"></div>
+    </div>
+    <div class="container">
+      <div class="demo-back reveal">
+        <a href="/projects/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          back to projects
+        </a>
+      </div>
+      <div class="demo-hero-inner">
+        <div class="demo-hero-left">
+          <div class="demo-number mono reveal">03 / 07</div>
+          <h1 class="reveal" data-delay="100">TalentLens</h1>
+          <p class="demo-subtitle reveal" data-delay="150">AI Job Market Intelligence Platform</p>
+          <p class="reveal" data-delay="200">
+            Ingests 1,500+ live Canadian job postings via automated ETL into a SQL Server 
+            star schema. Claude AI NLP agent extracts skills from every job description. 
+            C# ASP.NET Core Web API with React 18 frontend. PDF resume analyzer with 
+            market match scoring and skill gap analysis.
+          </p>
+          <div class="demo-hero-tags reveal" data-delay="250">
+            <span class="tag tag-purple">AI</span>
+            <span class="tag tag-purple">Data Engineering</span>
+            <span class="tag tag-purple">NLP</span>
+            <span class="tag tag-purple">Full Stack</span>
+          </div>
+          <div class="demo-hero-actions reveal" data-delay="300">
+            <a href="https://github.com/DoshiTirth/TalentLens" target="_blank" class="btn btn-primary" style="background:#8b5cf6;color:#fff;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              view on GitHub
+            </a>
+            <a href="/projects/" class="btn btn-outline">all projects</a>
+          </div>
+        </div>
+        <div class="demo-hero-stats reveal" data-delay="200">
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="1500">0</span>
+            <span class="demo-stat-label">job postings ingested</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="32">0</span>
+            <span class="demo-stat-label">role categories</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="8">0</span>
+            <span class="demo-stat-label">Canadian cities tracked</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="100">0</span>
+            <span class="demo-stat-label">% skill extraction by AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="demo-arch section">
+    <div class="container">
+      <div class="section-label reveal">architecture</div>
+      <h2 class="reveal" data-delay="100">How it <span class="text-gradient">works</span></h2>
+      <div class="arch-flow reveal" data-delay="200">
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(139,92,246,0.12);border-color:rgba(139,92,246,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <span class="arch-label">Adzuna API</span>
+          <span class="arch-sub">live job feeds</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(139,92,246,0.12);border-color:rgba(139,92,246,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="arch-label">Python ETL</span>
+          <span class="arch-sub">clean + load</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(139,92,246,0.12);border-color:rgba(139,92,246,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="arch-label">SQL Server</span>
+          <span class="arch-sub">star schema DW</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(139,92,246,0.12);border-color:rgba(139,92,246,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <span class="arch-label">Claude AI</span>
+          <span class="arch-sub">NLP skill extract</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(139,92,246,0.12);border-color:rgba(139,92,246,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="arch-label">ASP.NET Core</span>
+          <span class="arch-sub">Web API</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(139,92,246,0.12);border-color:rgba(139,92,246,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <span class="arch-label">React 18</span>
+          <span class="arch-sub">dashboard + PDF</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── INTERACTIVE DEMO ─── -->
+  <section class="demo-interactive section">
+    <div class="container">
+      <div class="section-label reveal">interactive demo</div>
+      <h2 class="reveal" data-delay="100">
+        Job market
+        <span class="text-gradient">intelligence</span>
+      </h2>
+      <p class="reveal" data-delay="150">
+        Search any role to see skill demand data. Then simulate a resume scan
+        to get a market match score and skill gap analysis.
+      </p>
+
+      <!-- Demo tabs -->
+      <div class="pos-tabs reveal" data-delay="200">
+        <button class="pos-tab active" data-view="skills">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          skill demand
+        </button>
+        <button class="pos-tab" data-view="jobs">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          job listings
+        </button>
+        <button class="pos-tab" data-view="resume">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          resume analyzer
+        </button>
+      </div>
+
+      <!-- SKILL DEMAND VIEW -->
+      <div class="pos-view active" id="view-skills">
+        <div class="tl-skill-panel">
+          <div class="tl-search-row">
+            <div class="tl-search-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="roleSearch" class="tl-search" placeholder="search a role... e.g. Data Engineer" />
+            </div>
+            <div class="tl-role-pills" id="rolePills"></div>
+          </div>
+
+          <div class="tl-results" id="skillResults">
+            <div class="tl-results-left">
+              <div class="tl-results-header">
+                <span class="mono" id="resultsTitle">top skills — Data Engineer</span>
+                <span class="tl-job-count mono" id="jobCount">247 jobs</span>
+              </div>
+              <div class="tl-skill-bars" id="skillBars"></div>
+            </div>
+            <div class="tl-results-right">
+              <div class="tl-salary-card">
+                <div class="tl-salary-label mono">avg salary range</div>
+                <div class="tl-salary-value" id="salaryValue">$85k — $125k</div>
+                <div class="tl-salary-sub mono" id="salaryLocation">Ontario, Canada</div>
+              </div>
+              <div class="tl-trend-card">
+                <div class="tl-salary-label mono">market trend</div>
+                <div class="tl-trend-value" id="trendValue">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  <span style="color:#10b981;">Growing</span>
+                </div>
+                <div class="tl-salary-sub mono" id="trendSub">+18% YoY demand</div>
+              </div>
+              <div class="tl-city-card">
+                <div class="tl-salary-label mono">top cities</div>
+                <div class="tl-cities" id="topCities"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOB LISTINGS VIEW -->
+      <div class="pos-view" id="view-jobs">
+        <div class="tl-jobs-panel">
+          <div class="tl-jobs-filters">
+            <select class="tl-select" id="cityFilter" onchange="filterJobs()">
+              <option value="all">all cities</option>
+              <option value="Toronto">Toronto</option>
+              <option value="Vancouver">Vancouver</option>
+              <option value="Calgary">Calgary</option>
+              <option value="Ottawa">Ottawa</option>
+            </select>
+            <select class="tl-select" id="typeFilter" onchange="filterJobs()">
+              <option value="all">all types</option>
+              <option value="Full-time">full-time</option>
+              <option value="Contract">contract</option>
+              <option value="Remote">remote</option>
+            </select>
+            <select class="tl-select" id="roleFilter" onchange="filterJobs()">
+              <option value="all">all roles</option>
+              <option value="Data Engineer">data engineer</option>
+              <option value="AI Engineer">AI engineer</option>
+              <option value="Software Developer">software developer</option>
+              <option value=".NET Developer">.NET developer</option>
+            </select>
+          </div>
+          <div class="tl-jobs-list" id="jobsList"></div>
+        </div>
+      </div>
+
+      <!-- RESUME ANALYZER VIEW -->
+      <div class="pos-view" id="view-resume">
+        <div class="tl-resume-panel">
+          <div class="tl-resume-left">
+            <div class="tl-resume-header mono">paste your skills</div>
+            <div class="tl-resume-pills" id="resumePills">
+              <div class="tl-resume-pills-inner" id="resumePillsInner"></div>
+              <input type="text" class="tl-pill-input" id="skillInput"
+                placeholder="type a skill and press Enter..."/>
+            </div>
+            <div class="tl-resume-role-select">
+              <div class="mono" style="font-size:0.75rem;color:var(--text3);margin-bottom:0.5rem;">target role</div>
+              <select class="tl-select" id="targetRole" style="width:100%;">
+                <option value="data">Data Engineer</option>
+                <option value="ai">AI Engineer</option>
+                <option value="software">Software Developer</option>
+                <option value="dotnet">.NET Developer</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" style="width:100%;justify-content:center;background:#8b5cf6;"
+                    onclick="analyzeResume()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              analyze against market
+            </button>
+          </div>
+          <div class="tl-resume-right" id="resumeResults">
+            <div class="tl-resume-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text3)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <p>Add your skills and click analyze to see your market match score and skill gaps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="demo-tech section">
+    <div class="container">
+      <div class="section-label reveal">tech stack</div>
+      <div class="tech-grid reveal" data-delay="100">
+        <div class="tech-group">
+          <div class="tech-group-label mono">data pipeline</div>
+          <div class="tech-tags">
+            <span class="tag tag-purple">Python</span>
+            <span class="tag tag-purple">Adzuna API</span>
+            <span class="tag tag-purple">pandas</span>
+            <span class="tag tag-purple">pyodbc</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">AI & NLP</div>
+          <div class="tech-tags">
+            <span class="tag tag-purple">Claude AI</span>
+            <span class="tag tag-purple">NLP</span>
+            <span class="tag tag-purple">ReportLab</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">backend</div>
+          <div class="tech-tags">
+            <span class="tag tag-purple">C#</span>
+            <span class="tag tag-purple">ASP.NET Core</span>
+            <span class="tag tag-purple">SQL Server</span>
+            <span class="tag tag-purple">JWT</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">frontend</div>
+          <div class="tech-tags">
+            <span class="tag tag-purple">React 18</span>
+            <span class="tag tag-purple">Vite</span>
+            <span class="tag tag-purple">Recharts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── NEXT PROJECT ─── -->
+  <section class="demo-nav-projects section">
+    <div class="container">
+      <div class="proj-nav-inner">
+        <span class="text-muted mono" style="font-size:0.8rem;">next project</span>
+        <a href="/demos/retailpulse/" class="proj-nav-next hover-lift">
+          <div>
+            <span class="mono" style="color:var(--text3);font-size:0.75rem;">04 / 07</span>
+            <h3>RetailPulse</h3>
+            <p>Full-Stack ERP-Lite System</p>
+          </div>
+          <span class="proj-nav-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../../main.js"></script>
+  <script>
+  // DATA
+  const roleData = {
+    'Data Engineer': {
+      jobs: 247, salary: '$85k — $125k', trend: 'Growing', trendPct: '+18%',
+      cities: ['Toronto','Vancouver','Calgary'],
+      skills: [
+        { name:'SQL / SQL Server', pct:92 },
+        { name:'Python',           pct:88 },
+        { name:'ETL Pipelines',    pct:84 },
+        { name:'Azure / AWS',      pct:76 },
+        { name:'Spark / Databricks',pct:68 },
+        { name:'dbt',              pct:62 },
+        { name:'Airflow',          pct:58 },
+        { name:'Kafka',            pct:45 },
+      ]
+    },
+    'AI Engineer': {
+      jobs: 183, salary: '$95k — $145k', trend: 'Surging', trendPct: '+34%',
+      cities: ['Toronto','Montreal','Vancouver'],
+      skills: [
+        { name:'Python',           pct:96 },
+        { name:'LLMs / Prompt Eng',pct:88 },
+        { name:'RAG Pipelines',    pct:82 },
+        { name:'PyTorch / TF',     pct:78 },
+        { name:'Vector DBs',       pct:72 },
+        { name:'MLOps',            pct:65 },
+        { name:'FastAPI / Flask',  pct:60 },
+        { name:'Azure OpenAI',     pct:55 },
+      ]
+    },
+    'Software Developer': {
+      jobs: 412, salary: '$75k — $115k', trend: 'Stable', trendPct: '+6%',
+      cities: ['Toronto','Ottawa','Calgary'],
+      skills: [
+        { name:'C# / .NET',        pct:78 },
+        { name:'JavaScript',       pct:85 },
+        { name:'React',            pct:76 },
+        { name:'SQL',              pct:72 },
+        { name:'REST APIs',        pct:88 },
+        { name:'Git / CI-CD',      pct:82 },
+        { name:'Azure / AWS',      pct:65 },
+        { name:'Docker',           pct:58 },
+      ]
+    },
+    '.NET Developer': {
+      jobs: 156, salary: '$80k — $120k', trend: 'Growing', trendPct: '+12%',
+      cities: ['Toronto','Ottawa','Vancouver'],
+      skills: [
+        { name:'C#',               pct:98 },
+        { name:'ASP.NET Core',     pct:94 },
+        { name:'Entity Framework', pct:86 },
+        { name:'SQL Server',       pct:82 },
+        { name:'Azure',            pct:74 },
+        { name:'REST APIs',        pct:88 },
+        { name:'WPF / MAUI',       pct:55 },
+        { name:'Microservices',    pct:62 },
+      ]
+    },
+  };
+
+  const jobListings = [
+    { title:'Senior Data Engineer',    company:'RBC',         city:'Toronto',   type:'Full-time', salary:'$110k',  role:'Data Engineer'      },
+    { title:'AI/ML Engineer',          company:'Shopify',     city:'Ottawa',    type:'Remote',    salary:'$130k',  role:'AI Engineer'        },
+    { title:'.NET Developer',          company:'CGI',         city:'Toronto',   type:'Full-time', salary:'$95k',   role:'.NET Developer'     },
+    { title:'Data Engineer',           company:'TD Bank',     city:'Toronto',   type:'Full-time', salary:'$105k',  role:'Data Engineer'      },
+    { title:'Software Developer',      company:'Scotiabank',  city:'Toronto',   type:'Full-time', salary:'$90k',   role:'Software Developer' },
+    { title:'AI Engineer',             company:'Cohere',      city:'Toronto',   type:'Full-time', salary:'$140k',  role:'AI Engineer'        },
+    { title:'Full Stack Developer',    company:'Hootsuite',   city:'Vancouver', type:'Remote',    salary:'$100k',  role:'Software Developer' },
+    { title:'Data Pipeline Engineer',  company:'Telus',       city:'Calgary',   type:'Full-time', salary:'$98k',   role:'Data Engineer'      },
+    { title:'Backend .NET Developer',  company:'Manulife',    city:'Toronto',   type:'Contract',  salary:'$85/hr', role:'.NET Developer'     },
+    { title:'ML Platform Engineer',    company:'Vector Inst', city:'Toronto',   type:'Full-time', salary:'$125k',  role:'AI Engineer'        },
+  ];
+
+  const roleRequirements = {
+    data:     ['Python','SQL / SQL Server','ETL Pipelines','Azure / AWS','Spark / Databricks','dbt','Airflow','Kafka'],
+    ai:       ['Python','LLMs / Prompt Eng','RAG Pipelines','PyTorch / TF','Vector DBs','MLOps','FastAPI / Flask','Azure OpenAI'],
+    software: ['C# / .NET','JavaScript','React','SQL','REST APIs','Git / CI-CD','Azure / AWS','Docker'],
+    dotnet:   ['C#','ASP.NET Core','Entity Framework','SQL Server','Azure','REST APIs','WPF / MAUI','Microservices'],
+  };
+
+  // SKILL DEMAND
+  let currentRole = 'Data Engineer';
+
+  const rolePillsData = Object.keys(roleData);
+
+  function renderRolePills() {
+    document.getElementById('rolePills').innerHTML = rolePillsData.map(r => `
+      <button class="tl-role-pill ${r === currentRole ? 'active' : ''}"
+              onclick="selectRole('${r}')">${r}</button>
+    `).join('');
+  }
+
+  function selectRole(role) {
+    currentRole = role;
+    renderRolePills();
+    renderSkillBars();
+    document.getElementById('roleSearch').value = role;
+  }
+
+  function renderSkillBars() {
+    const data = roleData[currentRole];
+    document.getElementById('resultsTitle').textContent = `top skills — ${currentRole}`;
+    document.getElementById('jobCount').textContent = `${data.jobs} jobs`;
+    document.getElementById('salaryValue').textContent = data.salary;
+    document.getElementById('trendSub').textContent = `${data.trendPct} YoY demand`;
+
+    const trendEl = document.getElementById('trendValue');
+    const isUp = data.trend !== 'Declining';
+    trendEl.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="${isUp?'#10b981':'#ef4444'}" stroke-width="2">
+        ${isUp
+          ? '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>'
+          : '<polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/>'}
+      </svg>
+      <span style="color:${isUp?'#10b981':'#ef4444'}">${data.trend}</span>
+    `;
+
+    document.getElementById('topCities').innerHTML = data.cities.map(c => `
+      <span class="tl-city-pill">${c}</span>
+    `).join('');
+
+    const bars = document.getElementById('skillBars');
+    bars.innerHTML = data.skills.map((s, i) => `
+      <div class="tl-skill-row" style="animation-delay:${i*60}ms">
+        <span class="tl-skill-name">${s.name}</span>
+        <div class="tl-bar-wrap">
+          <div class="tl-bar" data-pct="${s.pct}" style="width:0%;background:#8b5cf6;"></div>
+        </div>
+        <span class="tl-skill-pct mono">${s.pct}%</span>
+      </div>
+    `).join('');
+
+    setTimeout(() => {
+      bars.querySelectorAll('.tl-bar').forEach(bar => {
+        bar.style.width = bar.dataset.pct + '%';
+      });
+    }, 100);
+  }
+
+  // Search input
+  document.getElementById('roleSearch').addEventListener('input', (e) => {
+    const val = e.target.value.trim();
+    const match = Object.keys(roleData).find(r =>
+      r.toLowerCase().includes(val.toLowerCase())
+    );
+    if (match) selectRole(match);
+  });
+
+  // JOB LISTINGS
+  function filterJobs() {
+    const city = document.getElementById('cityFilter').value;
+    const type = document.getElementById('typeFilter').value;
+    const role = document.getElementById('roleFilter').value;
+
+    const filtered = jobListings.filter(j =>
+      (city === 'all' || j.city === city) &&
+      (type === 'all' || j.type === type) &&
+      (role === 'all' || j.role === role)
+    );
+
+    document.getElementById('jobsList').innerHTML = filtered.length
+      ? filtered.map(j => `
+        <div class="tl-job-card">
+          <div class="tl-job-left">
+            <div class="tl-job-title">${j.title}</div>
+            <div class="tl-job-company mono">${j.company}</div>
+          </div>
+          <div class="tl-job-right">
+            <span class="tag">${j.city}</span>
+            <span class="tag">${j.type}</span>
+            <span class="tl-job-salary mono">${j.salary}</span>
+          </div>
+        </div>
+      `).join('')
+      : '<p class="pos-empty mono">no jobs match the selected filters</p>';
+  }
+
+  // RESUME ANALYZER
+  let resumeSkills = ['Python','SQL / SQL Server','C#','ASP.NET Core','React'];
+
+  function renderResumePills() {
+    document.getElementById('resumePillsInner').innerHTML =
+      resumeSkills.map(s => `
+        <span class="tl-resume-pill">
+          ${s}
+          <button onclick="removeSkill('${s}')">×</button>
+        </span>
+      `).join('');
+  }
+
+  function removeSkill(skill) {
+    resumeSkills = resumeSkills.filter(s => s !== skill);
+    renderResumePills();
+  }
+
+  document.getElementById('skillInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const val = e.target.value.trim();
+      if (val && !resumeSkills.includes(val)) {
+        resumeSkills.push(val);
+        renderResumePills();
+      }
+      e.target.value = '';
+    }
+  });
+
+  function analyzeResume() {
+    const role = document.getElementById('targetRole').value;
+    const required = roleRequirements[role];
+    const normalizedResume = resumeSkills.map(s => s.toLowerCase());
+
+    const matched = required.filter(r =>
+      normalizedResume.some(s => s.includes(r.toLowerCase().split('/')[0].trim()))
+    );
+    const missing = required.filter(r => !matched.includes(r));
+    const score = Math.round((matched.length / required.length) * 100);
+
+    const scoreColor = score >= 70 ? '#10b981' : score >= 40 ? '#f59e0b' : '#ef4444';
+    const roleNames = { data:'Data Engineer', ai:'AI Engineer', software:'Software Developer', dotnet:'.NET Developer' };
+
+    document.getElementById('resumeResults').innerHTML = `
+      <div class="tl-analysis">
+        <div class="tl-score-ring">
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="42" fill="none" stroke="var(--surface2)" stroke-width="8"/>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="${scoreColor}" stroke-width="8"
+              stroke-dasharray="${2 * Math.PI * 42}"
+              stroke-dashoffset="${2 * Math.PI * 42 * (1 - score/100)}"
+              stroke-linecap="round"
+              transform="rotate(-90 50 50)"
+              style="transition: stroke-dashoffset 1s ease;"/>
+            <text x="50" y="50" text-anchor="middle" dy="0.35em"
+              fill="${scoreColor}" font-size="20" font-family="JetBrains Mono" font-weight="500">
+              ${score}%
+            </text>
+          </svg>
+          <div class="tl-score-label">market match</div>
+          <div class="tl-score-role mono">${roleNames[role]}</div>
+        </div>
+
+        <div class="tl-analysis-detail">
+          <div class="tl-match-section">
+            <div class="mono" style="font-size:0.7rem;color:#10b981;margin-bottom:0.5rem;">
+              matched skills (${matched.length})
+            </div>
+            <div class="tl-match-tags">
+              ${matched.map(s => `<span class="tag tag-green">${s}</span>`).join('')}
+              ${matched.length === 0 ? '<span style="color:var(--text3);font-size:0.8rem;">none matched</span>' : ''}
+            </div>
+          </div>
+          <div class="tl-match-section">
+            <div class="mono" style="font-size:0.7rem;color:#ef4444;margin-bottom:0.5rem;">
+              skill gaps (${missing.length})
+            </div>
+            <div class="tl-match-tags">
+              ${missing.map(s => `<span class="tag" style="background:rgba(239,68,68,0.1);color:#ef4444;border-color:rgba(239,68,68,0.2);">${s}</span>`).join('')}
+              ${missing.length === 0 ? '<span style="color:#10b981;font-size:0.8rem;">no gaps — perfect match!</span>' : ''}
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // TAB SWITCHING
+  document.querySelectorAll('.pos-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.pos-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.pos-view').forEach(v => v.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(`view-${tab.dataset.view}`).classList.add('active');
+      if (tab.dataset.view === 'jobs') filterJobs();
+    });
+  });
+
+  // INIT
+  renderRolePills();
+  renderSkillBars();
+  renderResumePills();
+  </script>
+
+</body>
+</html>
