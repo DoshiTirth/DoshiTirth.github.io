@@ -1542,6 +1542,12 @@ html.page-leaving {
   padding-bottom: 1.5rem;
 }
 
+/* reduce gap on demo pages */
+.demo-arch { padding-bottom: 2rem; }
+.demo-interactive { padding-top: 2rem; }
+.demo-tech { padding-top: 2rem; }
+.demo-nav-projects { padding-top: 2rem; }
+
 /* MEDIFLOW DEMO */
 .mediflow-demo {
   display: grid;
@@ -1786,7 +1792,7 @@ html.page-leaving {
   color: var(--text);
 }
 
-/* ─── TECH GRID ─── */
+/* TECH GRID */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
