@@ -1817,9 +1817,9 @@ html.page-leaving {
 /* PROJECT NAV */
 .proj-nav-inner {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .proj-nav-next {
@@ -1848,6 +1848,28 @@ html.page-leaving {
 
 .proj-nav-next:hover .proj-nav-arrow {
   transform: translateX(4px);
+  color: var(--text);
+}
+
+.proj-nav-prev {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+
+.proj-nav-prev h3 { margin: 0.25rem 0; font-size: 1.2rem; }
+.proj-nav-prev p  { color: var(--text3); font-size: 0.8rem; margin: 0; max-width: none; }
+
+.proj-nav-prev:hover .proj-nav-arrow {
+  transform: translateX(-4px);
   color: var(--text);
 }
 

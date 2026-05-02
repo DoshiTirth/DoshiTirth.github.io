@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <!-- ─── NAV ─── -->
+  <!--  NAV  -->
   <nav>
     <div class="nav-inner">
       <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
@@ -31,7 +31,7 @@
     </div>
   </nav>
 
-  <!-- ─── PROJECT HERO ─── -->
+  <!--  PROJECT HERO  -->
   <section class="demo-hero" style="--accent: #10b981; --accent-dim: rgba(16,185,129,0.12);">
     <div class="demo-hero-bg">
       <div class="demo-orb" style="background: #10b981;"></div>
@@ -96,7 +96,7 @@
     </div>
   </section>
 
-  <!-- ─── ARCHITECTURE ─── -->
+  <!--  ARCHITECTURE  -->
   <section class="demo-arch section">
     <div class="container">
       <div class="section-label reveal">architecture</div>
@@ -154,7 +154,7 @@
     </div>
   </section>
 
-  <!-- ─── INTERACTIVE DEMO ─── -->
+  <!--  INTERACTIVE DEMO  -->
   <section class="demo-interactive section">
     <div class="container">
       <div class="section-label reveal">interactive demo</div>
@@ -232,7 +232,7 @@
     </div>
   </section>
 
-  <!-- ─── TECH STACK ─── -->
+  <!--  TECH STACK  -->
   <section class="demo-tech section">
     <div class="container">
       <div class="section-label reveal">tech stack</div>
@@ -277,24 +277,27 @@
     </div>
   </section>
 
-  <!-- ─── NAV BETWEEN PROJECTS ─── -->
+  <!--  NAV BETWEEN PROJECTS  -->
   <section class="demo-nav-projects section">
     <div class="container">
       <div class="proj-nav-inner">
-        <span class="text-muted mono" style="font-size:0.8rem;">next project</span>
-        <a href="/demos/smartposai/" class="proj-nav-next hover-lift">
-          <div>
-            <span class="mono" style="color:var(--text3); font-size:0.75rem;">02 / 07</span>
-            <h3>SmartPOS AI</h3>
-            <p>Hybrid POS System with AI Analytics</p>
-          </div>
-          <span class="proj-nav-arrow">→</span>
-        </a>
+        <div></div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">next project</span>
+          <a href="/demos/smartposai/" class="proj-nav-next hover-lift">
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">02 / 07</span>
+              <h3>SmartPOS AI</h3>
+              <p>Hybrid POS System with AI Analytics</p>
+            </div>
+            <span class="proj-nav-arrow">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── FOOTER ─── -->
+  <!--  FOOTER  -->
   <footer>
     <div class="footer-inner">
       <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
@@ -309,7 +312,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
   <script src="../../main.js"></script>
   <script>
-  // ─── PATIENT DATA ───
+  //  PATIENT DATA  //
   const patients = [
     {
       id: 'P-00142', name: 'James Harmon', age: 67, gender: 'Male',
@@ -401,7 +404,7 @@
   let chart = null;
   let clickedAnomalyIndex = -1;
 
-  // ─── RENDER PATIENTS ───
+  //  RENDER PATIENTS 
   function renderPatients() {
     const list = document.getElementById('patientList');
     list.innerHTML = patients.map((p, i) => `
@@ -427,7 +430,7 @@
     });
   }
 
-  // ─── RENDER CHART ───
+  //  RENDER CHART 
   function renderChart() {
     const vitalData = currentPatient.vitals[currentVital];
     const anomalies = currentPatient.anomalies[currentVital];
@@ -510,7 +513,7 @@
     });
   }
 
-  // ─── SHOW EXPLANATION ───
+  //  SHOW EXPLANATION 
   function showExplanation(idx) {
     const pool = aiExplanations[currentVital];
     const text = pool[idx % pool.length];
@@ -557,7 +560,7 @@
       </p>`;
   }
 
-  // ─── RENDER SUMMARY ───
+  //  RENDER SUMMARY
   function renderSummary() {
     const p = currentPatient;
     const totalAnomalies = Object.values(p.anomalies).flat().length;
@@ -578,7 +581,7 @@
     `;
   }
 
-  // ─── VITAL TABS ───
+  //  VITAL TABS 
   document.querySelectorAll('.mf-tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.mf-tab').forEach(t => t.classList.remove('active'));
