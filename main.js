@@ -154,25 +154,26 @@ if (copyEmailBtn) {
   });
 }
 
-/* ─── PAGE TRANSITION SYSTEM ─── */
-document.documentElement.classList.add('page-ready');
+/* ─── PAGE READY + TRANSITION ─── */
+document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('ready');
+});
 
-document.querySelectorAll('a[href]').forEach(link => {
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href]');
+  if (!link) return;
   const href = link.getAttribute('href');
   if (
-    href &&
-    !href.startsWith('http') &&
-    !href.startsWith('#') &&
-    !href.startsWith('mailto') &&
-    (href.endsWith('.html') || href === '/' || href === '')
-  ) {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.documentElement.classList.remove('page-ready');
-      document.documentElement.classList.add('page-leaving');
-      setTimeout(() => { window.location.href = href; }, 300);
-    });
-  }
+    !href ||
+    href.startsWith('http') ||
+    href.startsWith('#') ||
+    href.startsWith('mailto') ||
+    link.getAttribute('target') === '_blank'
+  ) return;
+
+  e.preventDefault();
+  document.documentElement.classList.remove('ready');
+  setTimeout(() => { window.location.href = href; }, 300);
 });
 
 /* MAGNETIC BUTTON EFFECT */
