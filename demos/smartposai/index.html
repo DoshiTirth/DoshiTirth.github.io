@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body { background: #080a0f; }
+    html { opacity: 0; transition: none; }
+    html.ready { opacity: 1; transition: opacity 0.4s ease 0.05s; }
+  </style>
+  <title>SmartPOS AI — Tirth Doshi</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>document.documentElement.classList.add('ready');</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/skills/">skills</a></li>
+        <li><a href="/experience/">experience</a></li>
+        <li><a href="/contact/" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="demo-hero" style="--accent: #4f9cf9;">
+    <div class="demo-hero-bg">
+      <div class="demo-orb" style="background: #4f9cf9;"></div>
+    </div>
+    <div class="container">
+      <div class="demo-back reveal">
+        <a href="/projects/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          back to projects
+        </a>
+      </div>
+      <div class="demo-hero-inner">
+        <div class="demo-hero-left">
+          <div class="demo-number mono reveal">02 / 07</div>
+          <h1 class="reveal" data-delay="100">SmartPOS AI</h1>
+          <p class="demo-subtitle reveal" data-delay="150">Hybrid POS System with AI Analytics</p>
+          <p class="reveal" data-delay="200">
+            Enterprise POS with a C# WPF .NET 9 cashier terminal and ASP.NET Core 
+            Web API. Python Flask AI microservice handles sales forecasting (Prophet), 
+            customer segmentation (K-Means), and anomaly detection (Isolation Forest). 
+            React 18 manager dashboard. Same architecture as Square and Lightspeed.
+          </p>
+          <div class="demo-hero-tags reveal" data-delay="250">
+            <span class="tag tag-blue">Full Stack</span>
+            <span class="tag tag-blue">AI</span>
+            <span class="tag tag-blue">C# .NET</span>
+            <span class="tag tag-blue">Enterprise</span>
+          </div>
+          <div class="demo-hero-actions reveal" data-delay="300">
+            <a href="https://github.com/DoshiTirth/SmartPOS-AI" target="_blank" class="btn btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              view on GitHub
+            </a>
+            <a href="/projects/" class="btn btn-outline">all projects</a>
+          </div>
+        </div>
+        <div class="demo-hero-stats reveal" data-delay="200">
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="4">0</span>
+            <span class="demo-stat-label">AI models integrated</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="100">0</span>
+            <span class="demo-stat-label">products seeded</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="3">0</span>
+            <span class="demo-stat-label">user roles (RBAC)</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="12">0</span>
+            <span class="demo-stat-label">product categories</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="demo-arch section">
+    <div class="container">
+      <div class="section-label reveal">architecture</div>
+      <h2 class="reveal" data-delay="100">How it <span class="text-gradient">works</span></h2>
+      <div class="arch-flow reveal" data-delay="200">
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="arch-label">C# WPF</span>
+          <span class="arch-sub">cashier terminal</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <span class="arch-label">ASP.NET Core</span>
+          <span class="arch-sub">Web API + JWT</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="arch-label">SQL Server</span>
+          <span class="arch-sub">EF Core + procs</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <span class="arch-label">Python Flask</span>
+          <span class="arch-sub">AI microservice</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="arch-label">React 18</span>
+          <span class="arch-sub">manager dashboard</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO -->
+  <section class="demo-interactive section">
+    <div class="container">
+      <div class="section-label reveal">interactive demo</div>
+      <h2 class="reveal" data-delay="100">
+        POS Terminal
+        <span class="text-gradient">simulation</span>
+      </h2>
+      <p class="reveal" data-delay="150">
+        This simulates the C# WPF cashier terminal. Add products to cart,
+        apply discounts, process payment, and see the AI sales forecast update.
+      </p>
+
+      <!-- Demo tabs -->
+      <div class="pos-tabs reveal" data-delay="200">
+        <button class="pos-tab active" data-view="terminal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          cashier terminal
+        </button>
+        <button class="pos-tab" data-view="dashboard">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          manager dashboard
+        </button>
+        <button class="pos-tab" data-view="ai">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
+          AI insights
+        </button>
+      </div>
+
+      <!-- TERMINAL VIEW -->
+      <div class="pos-view active" id="view-terminal">
+        <div class="pos-terminal">
+
+          <!-- Product grid -->
+          <div class="pos-products">
+            <div class="pos-products-header">
+              <span class="mono">product catalog</span>
+              <div class="pos-category-tabs" id="categoryTabs"></div>
+            </div>
+            <div class="pos-product-grid" id="productGrid"></div>
+          </div>
+
+          <!-- Cart -->
+          <div class="pos-cart">
+            <div class="pos-cart-header mono">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              current order
+            </div>
+            <div class="pos-cart-items" id="cartItems">
+              <p class="pos-empty mono">no items added</p>
+            </div>
+            <div class="pos-cart-footer">
+              <div class="pos-totals">
+                <div class="pos-total-row">
+                  <span>subtotal</span>
+                  <span id="subtotal">$0.00</span>
+                </div>
+                <div class="pos-total-row">
+                  <span>tax (13%)</span>
+                  <span id="tax">$0.00</span>
+                </div>
+                <div class="pos-total-row pos-total-final">
+                  <span class="mono">total</span>
+                  <span class="mono" id="total">$0.00</span>
+                </div>
+              </div>
+              <div class="pos-payment-btns">
+                <button class="pos-pay-btn pos-pay-cash" id="payCash" onclick="processPayment('cash')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                  cash
+                </button>
+                <button class="pos-pay-btn pos-pay-card" id="payCard" onclick="processPayment('card')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                  card
+                </button>
+              </div>
+              <button class="pos-clear-btn" onclick="clearCart()">clear order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Receipt -->
+        <div class="pos-receipt" id="receipt" style="display:none;">
+          <div class="receipt-inner">
+            <div class="receipt-header">
+              <div class="receipt-check">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3>Payment Successful</h3>
+              <p class="mono" id="receiptMethod"></p>
+            </div>
+            <div class="receipt-body" id="receiptBody"></div>
+            <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1rem;" onclick="newOrder()">
+              new order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DASHBOARD VIEW -->
+      <div class="pos-view" id="view-dashboard">
+        <div class="pos-dashboard">
+          <div class="dash-kpis">
+            <div class="dash-kpi">
+              <span class="dash-kpi-label mono">today's revenue</span>
+              <span class="dash-kpi-value">$4,892.50</span>
+              <span class="dash-kpi-change positive">+12.4% vs yesterday</span>
+            </div>
+            <div class="dash-kpi">
+              <span class="dash-kpi-label mono">transactions</span>
+              <span class="dash-kpi-value">47</span>
+              <span class="dash-kpi-change positive">+8 vs yesterday</span>
+            </div>
+            <div class="dash-kpi">
+              <span class="dash-kpi-label mono">avg order value</span>
+              <span class="dash-kpi-value">$104.10</span>
+              <span class="dash-kpi-change negative">-2.1% vs yesterday</span>
+            </div>
+            <div class="dash-kpi">
+              <span class="dash-kpi-label mono">low stock alerts</span>
+              <span class="dash-kpi-value" style="color: var(--amber);">6</span>
+              <span class="dash-kpi-change" style="color:var(--amber);">items need restock</span>
+            </div>
+          </div>
+
+          <div class="dash-charts">
+            <div class="dash-chart-card">
+              <div class="dash-chart-title mono">hourly sales — today</div>
+              <canvas id="salesChart" height="160"></canvas>
+            </div>
+            <div class="dash-chart-card">
+              <div class="dash-chart-title mono">top categories</div>
+              <div class="dash-categories" id="dashCategories"></div>
+            </div>
+          </div>
+
+          <div class="dash-transactions">
+            <div class="dash-chart-title mono">recent transactions</div>
+            <div class="dash-tx-list" id="dashTxList"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI VIEW -->
+      <div class="pos-view" id="view-ai">
+        <div class="pos-ai-panel">
+          <div class="ai-card">
+            <div class="ai-card-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span class="mono">sales forecast — next 7 days (Prophet)</span>
+            </div>
+            <canvas id="forecastChart" height="180"></canvas>
+          </div>
+
+          <div class="ai-bottom">
+            <div class="ai-card">
+              <div class="ai-card-header">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
+                <span class="mono">customer segments (K-Means)</span>
+              </div>
+              <div class="ai-segments">
+                <div class="ai-segment">
+                  <div class="ai-segment-bar" style="width:45%;background:#4f9cf9;"></div>
+                  <span class="mono">regular</span>
+                  <span class="mono" style="color:var(--text3);">45%</span>
+                </div>
+                <div class="ai-segment">
+                  <div class="ai-segment-bar" style="width:30%;background:#8b5cf6;"></div>
+                  <span class="mono">high value</span>
+                  <span class="mono" style="color:var(--text3);">30%</span>
+                </div>
+                <div class="ai-segment">
+                  <div class="ai-segment-bar" style="width:15%;background:#10b981;"></div>
+                  <span class="mono">occasional</span>
+                  <span class="mono" style="color:var(--text3);">15%</span>
+                </div>
+                <div class="ai-segment">
+                  <div class="ai-segment-bar" style="width:10%;background:#f59e0b;"></div>
+                  <span class="mono">at-risk</span>
+                  <span class="mono" style="color:var(--text3);">10%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ai-card">
+              <div class="ai-card-header">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span class="mono">anomaly detection (Isolation Forest)</span>
+              </div>
+              <div class="ai-anomalies">
+                <div class="ai-anomaly-item ai-anomaly-high">
+                  <div class="ai-anomaly-dot" style="background:#ef4444;"></div>
+                  <div>
+                    <span class="ai-anomaly-title">Unusual transaction spike — 14:32</span>
+                    <span class="ai-anomaly-sub mono">$847 single transaction — 3.2σ above mean</span>
+                  </div>
+                  <span class="tag" style="background:rgba(239,68,68,0.15);color:#ef4444;border-color:rgba(239,68,68,0.2);white-space:nowrap;">high</span>
+                </div>
+                <div class="ai-anomaly-item">
+                  <div class="ai-anomaly-dot" style="background:#f59e0b;"></div>
+                  <div>
+                    <span class="ai-anomaly-title">Low sales period — 11:00–12:00</span>
+                    <span class="ai-anomaly-sub mono">Revenue 67% below hourly average</span>
+                  </div>
+                  <span class="tag" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.2);white-space:nowrap;">medium</span>
+                </div>
+                <div class="ai-anomaly-item">
+                  <div class="ai-anomaly-dot" style="background:#f59e0b;"></div>
+                  <div>
+                    <span class="ai-anomaly-title">Category shift detected</span>
+                    <span class="ai-anomaly-sub mono">Electronics 2.1x above weekly baseline</span>
+                  </div>
+                  <span class="tag" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.2);white-space:nowrap;">medium</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="demo-tech section">
+    <div class="container">
+      <div class="section-label reveal">tech stack</div>
+      <div class="tech-grid reveal" data-delay="100">
+        <div class="tech-group">
+          <div class="tech-group-label mono">desktop app</div>
+          <div class="tech-tags">
+            <span class="tag tag-blue">C#</span>
+            <span class="tag tag-blue">WPF</span>
+            <span class="tag tag-blue">.NET 9</span>
+            <span class="tag tag-blue">XAML</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">backend API</div>
+          <div class="tech-tags">
+            <span class="tag tag-blue">ASP.NET Core</span>
+            <span class="tag tag-blue">EF Core</span>
+            <span class="tag tag-blue">SQL Server</span>
+            <span class="tag tag-blue">JWT</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">AI microservice</div>
+          <div class="tech-tags">
+            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-blue">Flask</span>
+            <span class="tag tag-blue">Prophet</span>
+            <span class="tag tag-blue">K-Means</span>
+            <span class="tag tag-blue">Isolation Forest</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">dashboard</div>
+          <div class="tech-tags">
+            <span class="tag tag-blue">React 18</span>
+            <span class="tag tag-blue">Recharts</span>
+            <span class="tag tag-blue">Vite</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="demo-nav-projects section">
+    <div class="container">
+      <div class="proj-nav-inner">
+        <span class="text-muted mono" style="font-size:0.8rem;">next project</span>
+        <a href="/demos/talentlens/" class="proj-nav-next hover-lift">
+          <div>
+            <span class="mono" style="color:var(--text3);font-size:0.75rem;">03 / 07</span>
+            <h3>TalentLens</h3>
+            <p>AI Job Market Intelligence Platform</p>
+          </div>
+          <span class="proj-nav-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script src="../../main.js"></script>
+  <script>
+  // PRODUCT DATA
+  const categories = ['All','Electronics','Beverages','Snacks','Dairy','Bakery','Produce'];
+  const products = [
+    { id:1, name:'Wireless Earbuds',  price:49.99, category:'Electronics', stock:23 },
+    { id:2, name:'Phone Charger',     price:19.99, category:'Electronics', stock:45 },
+    { id:3, name:'USB-C Hub',         price:34.99, category:'Electronics', stock:12 },
+    { id:4, name:'Bluetooth Speaker', price:59.99, category:'Electronics', stock:8  },
+    { id:5, name:'Coffee — Large',    price:4.99,  category:'Beverages',   stock:99 },
+    { id:6, name:'Green Tea',         price:3.49,  category:'Beverages',   stock:99 },
+    { id:7, name:'Orange Juice',      price:5.99,  category:'Beverages',   stock:30 },
+    { id:8, name:'Sparkling Water',   price:2.49,  category:'Beverages',   stock:60 },
+    { id:9, name:'Chips — Sea Salt',  price:3.99,  category:'Snacks',      stock:40 },
+    { id:10,name:'Granola Bar',       price:2.99,  category:'Snacks',      stock:55 },
+    { id:11,name:'Mixed Nuts',        price:6.99,  category:'Snacks',      stock:25 },
+    { id:12,name:'Whole Milk 1L',     price:3.49,  category:'Dairy',       stock:20 },
+    { id:13,name:'Greek Yogurt',      price:4.49,  category:'Dairy',       stock:18 },
+    { id:14,name:'Cheddar Cheese',    price:5.99,  category:'Dairy',       stock:14 },
+    { id:15,name:'Sourdough Loaf',    price:6.49,  category:'Bakery',      stock:10 },
+    { id:16,name:'Croissant',         price:2.99,  category:'Bakery',      stock:15 },
+    { id:17,name:'Banana Bunch',      price:1.99,  category:'Produce',     stock:50 },
+    { id:18,name:'Avocado',           price:2.49,  category:'Produce',     stock:30 },
+  ];
+
+  let cart = [];
+  let currentCategory = 'All';
+  let salesChartInst = null;
+  let forecastChartInst = null;
+
+  // RENDER CATEGORY TABS
+  function renderCategoryTabs() {
+    const el = document.getElementById('categoryTabs');
+    el.innerHTML = categories.map(c => `
+      <button class="pos-cat-tab ${c === currentCategory ? 'active' : ''}"
+              onclick="setCategory('${c}')">${c}</button>
+    `).join('');
+  }
+
+  function setCategory(cat) {
+    currentCategory = cat;
+    renderCategoryTabs();
+    renderProducts();
+  }
+
+  // RENDER PRODUCTS
+  function renderProducts() {
+    const filtered = currentCategory === 'All'
+      ? products
+      : products.filter(p => p.category === currentCategory);
+
+    document.getElementById('productGrid').innerHTML = filtered.map(p => `
+      <div class="pos-product" onclick="addToCart(${p.id})">
+        <span class="pos-product-name">${p.name}</span>
+        <span class="pos-product-price mono">$${p.price.toFixed(2)}</span>
+        <span class="pos-product-stock mono" style="color:${p.stock < 15 ? '#f59e0b' : 'var(--text3)'}">
+          ${p.stock} left
+        </span>
+      </div>
+    `).join('');
+  }
+
+  // CART FUNCTIONS
+  function addToCart(id) {
+    const product = products.find(p => p.id === id);
+    const existing = cart.find(i => i.id === id);
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ ...product, qty: 1 });
+    }
+    renderCart();
+  }
+
+  function removeFromCart(id) {
+    cart = cart.filter(i => i.id !== id);
+    renderCart();
+  }
+
+  function changeQty(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) removeFromCart(id);
+    else renderCart();
+  }
+
+  function renderCart() {
+    const el = document.getElementById('cartItems');
+    if (!cart.length) {
+      el.innerHTML = '<p class="pos-empty mono">no items added</p>';
+    } else {
+      el.innerHTML = cart.map(item => `
+        <div class="pos-cart-item">
+          <div class="pos-cart-item-info">
+            <span class="pos-cart-item-name">${item.name}</span>
+            <span class="pos-cart-item-price mono">$${(item.price * item.qty).toFixed(2)}</span>
+          </div>
+          <div class="pos-cart-item-controls">
+            <button class="pos-qty-btn" onclick="changeQty(${item.id}, -1)">−</button>
+            <span class="mono">${item.qty}</span>
+            <button class="pos-qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+            <button class="pos-remove-btn" onclick="removeFromCart(${item.id})">×</button>
+          </div>
+        </div>
+      `).join('');
+    }
+    updateTotals();
+  }
+
+  function updateTotals() {
+    const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    const tax = subtotal * 0.13;
+    const total = subtotal + tax;
+    document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+    document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+  }
+
+  function clearCart() {
+    cart = [];
+    renderCart();
+  }
+
+  function processPayment(method) {
+    if (!cart.length) return;
+    const subtotal = cart.reduce((s,i) => s + i.price * i.qty, 0);
+    const tax = subtotal * 0.13;
+    const total = subtotal + tax;
+
+    document.getElementById('receiptMethod').textContent =
+      `paid by ${method.toUpperCase()} · ${new Date().toLocaleTimeString()}`;
+
+    document.getElementById('receiptBody').innerHTML = `
+      <div class="receipt-items">
+        ${cart.map(i => `
+          <div class="receipt-item">
+            <span>${i.name} × ${i.qty}</span>
+            <span class="mono">$${(i.price * i.qty).toFixed(2)}</span>
+          </div>
+        `).join('')}
+      </div>
+      <div class="receipt-totals">
+        <div class="receipt-row"><span>subtotal</span><span>$${subtotal.toFixed(2)}</span></div>
+        <div class="receipt-row"><span>tax (13%)</span><span>$${tax.toFixed(2)}</span></div>
+        <div class="receipt-row receipt-final"><span>total</span><span>$${total.toFixed(2)}</span></div>
+      </div>
+    `;
+
+    document.getElementById('view-terminal').querySelector('.pos-terminal').style.display = 'none';
+    document.getElementById('receipt').style.display = 'flex';
+  }
+
+  function newOrder() {
+    clearCart();
+    document.getElementById('view-terminal').querySelector('.pos-terminal').style.display = 'grid';
+    document.getElementById('receipt').style.display = 'none';
+  }
+
+  // DASHBOARD
+  function renderDashboard() {
+    const hours = ['8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm'];
+    const sales = [320,480,390,210,580,720,890,654,430,280];
+
+    if (salesChartInst) salesChartInst.destroy();
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    salesChartInst = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: hours,
+        datasets: [{
+          data: sales,
+          backgroundColor: sales.map(v =>
+            v === Math.max(...sales) ? '#4f9cf9' : 'rgba(79,156,249,0.25)'
+          ),
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false }, ticks: { color:'#6b7280', font:{ family:'JetBrains Mono', size:10 } } },
+          y: { grid: { color:'rgba(255,255,255,0.04)' }, ticks: { color:'#6b7280', font:{ family:'JetBrains Mono', size:10 }, callback: v => `$${v}` } }
+        }
+      }
+    });
+
+    const cats = [
+      { name:'Electronics', pct: 38, color:'#4f9cf9' },
+      { name:'Beverages',   pct: 24, color:'#10b981' },
+      { name:'Snacks',      pct: 18, color:'#8b5cf6' },
+      { name:'Dairy',       pct: 12, color:'#f59e0b' },
+      { name:'Other',       pct:  8, color:'#6b7280' },
+    ];
+    document.getElementById('dashCategories').innerHTML = cats.map(c => `
+      <div class="dash-cat-row">
+        <span class="mono" style="width:90px;color:var(--text2);font-size:0.75rem;">${c.name}</span>
+        <div class="dash-cat-bar-wrap">
+          <div class="dash-cat-bar" style="width:${c.pct}%;background:${c.color};"></div>
+        </div>
+        <span class="mono" style="color:var(--text3);font-size:0.75rem;">${c.pct}%</span>
+      </div>
+    `).join('');
+
+    const txs = [
+      { id:'TXN-1847', time:'16:42', amount:'$124.50', method:'card',  items:3 },
+      { id:'TXN-1846', time:'16:38', amount:'$47.99',  method:'cash',  items:1 },
+      { id:'TXN-1845', time:'16:31', amount:'$847.00', method:'card',  items:8, flag:true },
+      { id:'TXN-1844', time:'16:24', amount:'$23.47',  method:'cash',  items:2 },
+      { id:'TXN-1843', time:'16:18', amount:'$199.95', method:'card',  items:4 },
+    ];
+    document.getElementById('dashTxList').innerHTML = txs.map(t => `
+      <div class="dash-tx-row ${t.flag ? 'dash-tx-flagged' : ''}">
+        <span class="mono" style="color:var(--text3);font-size:0.75rem;">${t.time}</span>
+        <span class="mono" style="font-size:0.8rem;">${t.id}</span>
+        <span style="font-size:0.8rem;color:var(--text3);">${t.items} item${t.items>1?'s':''}</span>
+        <span class="tag" style="font-size:0.65rem;">${t.method}</span>
+        <span class="mono" style="font-weight:500;">${t.amount}</span>
+        ${t.flag ? '<span class="tag" style="background:rgba(239,68,68,0.15);color:#ef4444;border-color:rgba(239,68,68,0.2);font-size:0.65rem;">anomaly</span>' : ''}
+      </div>
+    `).join('');
+  }
+
+  // FORECAST CHART
+  function renderForecast() {
+    const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    const actual = [4200,4892,null,null,null,null,null];
+    const forecast = [null,4892,5100,4800,5400,6200,5800];
+
+    if (forecastChartInst) forecastChartInst.destroy();
+    const ctx = document.getElementById('forecastChart').getContext('2d');
+    forecastChartInst = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: days,
+        datasets: [
+          {
+            label: 'actual',
+            data: actual,
+            borderColor: '#4f9cf9',
+            backgroundColor: 'rgba(79,156,249,0.1)',
+            borderWidth: 2,
+            pointRadius: 5,
+            pointBackgroundColor: '#4f9cf9',
+            tension: 0.4,
+            fill: true
+          },
+          {
+            label: 'forecast',
+            data: forecast,
+            borderColor: '#8b5cf6',
+            borderDash: [5,5],
+            borderWidth: 2,
+            pointRadius: 5,
+            pointBackgroundColor: '#8b5cf6',
+            backgroundColor: 'rgba(139,92,246,0.05)',
+            tension: 0.4,
+            fill: true
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            labels: { color:'#9ca3af', font:{ family:'JetBrains Mono', size:11 } }
+          }
+        },
+        scales: {
+          x: { grid:{ display:false }, ticks:{ color:'#6b7280', font:{ family:'JetBrains Mono', size:11 } } },
+          y: { grid:{ color:'rgba(255,255,255,0.04)' }, ticks:{ color:'#6b7280', font:{ family:'JetBrains Mono', size:11 }, callback: v=>`$${v.toLocaleString()}` } }
+        }
+      }
+    });
+  }
+
+  // TAB SWITCHING
+  document.querySelectorAll('.pos-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.pos-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.pos-view').forEach(v => v.classList.remove('active'));
+      tab.classList.add('active');
+      const view = document.getElementById(`view-${tab.dataset.view}`);
+      view.classList.add('active');
+
+      if (tab.dataset.view === 'dashboard') renderDashboard();
+      if (tab.dataset.view === 'ai') renderForecast();
+    });
+  });
+
+  // INIT
+  renderCategoryTabs();
+  renderProducts();
+  </script>
+
+</body>
+</html>
