@@ -330,7 +330,13 @@
               </div>
               <div class="ai-anomalies">
                 <div class="ai-anomaly-item ai-anomaly-high">
-                  <div class="ai-anomaly-dot" style="background:#ef4444;"></div>
+                  <svg width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;margin-top:2px;">
+                    <circle cx="8" cy="8" r="4" fill="#ef4444"/>
+                    <circle cx="8" cy="8" r="4" fill="#ef4444" opacity="0.4">
+                      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+                      <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                  </svg>
                   <div>
                     <span class="ai-anomaly-title">Unusual transaction spike — 14:32</span>
                     <span class="ai-anomaly-sub mono">$847 single transaction — 3.2σ above mean</span>
@@ -338,7 +344,13 @@
                   <span class="tag" style="background:rgba(239,68,68,0.15);color:#ef4444;border-color:rgba(239,68,68,0.2);white-space:nowrap;">high</span>
                 </div>
                 <div class="ai-anomaly-item">
-                  <div class="ai-anomaly-dot" style="background:#f59e0b;"></div>
+                  <svg width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;margin-top:2px;">
+                    <circle cx="8" cy="8" r="4" fill="#f59e0b"/>
+                    <circle cx="8" cy="8" r="4" fill="#f59e0b" opacity="0.4">
+                      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+                      <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                  </svg>
                   <div>
                     <span class="ai-anomaly-title">Low sales period — 11:00–12:00</span>
                     <span class="ai-anomaly-sub mono">Revenue 67% below hourly average</span>
@@ -346,7 +358,13 @@
                   <span class="tag" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.2);white-space:nowrap;">medium</span>
                 </div>
                 <div class="ai-anomaly-item">
-                  <div class="ai-anomaly-dot" style="background:#f59e0b;"></div>
+                  <svg width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;margin-top:2px;">
+                    <circle cx="8" cy="8" r="4" fill="#f59e0b"/>
+                    <circle cx="8" cy="8" r="4" fill="#f59e0b" opacity="0.4">
+                      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+                      <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                  </svg>
                   <div>
                     <span class="ai-anomaly-title">Category shift detected</span>
                     <span class="ai-anomaly-sub mono">Electronics 2.1x above weekly baseline</span>
