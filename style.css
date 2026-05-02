@@ -1373,3 +1373,523 @@ html.page-leaving {
   grid-column: 1 / -1;
   max-width: 600px;
 }
+
+
+/* DEMO PAGES — SHARED STYLES */
+
+/* DEMO HERO */
+.demo-hero {
+  padding: calc(var(--nav-h) + 3rem) 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.demo-orb {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.07;
+  top: -200px; right: -100px;
+}
+
+.demo-back { margin-bottom: 2rem; }
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text3);
+  transition: color 0.2s ease;
+}
+
+.back-link:hover { color: var(--text); }
+
+.demo-number {
+  font-size: 0.75rem;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.demo-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.demo-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text3);
+  margin-bottom: 1.25rem !important;
+}
+
+.demo-hero-left p {
+  max-width: 52ch;
+  margin-bottom: 1.5rem;
+}
+
+.demo-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.demo-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.demo-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* DEMO STATS */
+.demo-hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  min-width: 280px;
+}
+
+.demo-stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.demo-stat-card:hover { border-color: var(--border2); }
+
+.demo-stat-num {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.demo-stat-label {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text3);
+  margin-top: 0.25rem;
+  line-height: 1.3;
+}
+
+/* ARCHITECTURE */
+.arch-flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.arch-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  min-width: 100px;
+}
+
+.arch-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arch-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.arch-sub {
+  font-size: 0.65rem;
+  color: var(--text3);
+}
+
+.arch-arrow {
+  color: var(--text3);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin: 0 0.25rem;
+  padding-bottom: 1.5rem;
+}
+
+/* MEDIFLOW DEMO */
+.mediflow-demo {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+  height: 600px;
+}
+
+.mf-patients {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mf-patients-label {
+  padding: 0.875rem 1rem;
+  font-size: 0.7rem;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+}
+
+.mf-patient-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.mf-patient {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: background 0.15s ease;
+}
+
+.mf-patient:hover { background: var(--surface2); }
+.mf-patient.active { background: var(--surface2); border-left: 2px solid #10b981; }
+
+.mf-patient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.mf-patient-name {
+  font-size: 0.8rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.mf-patient-id {
+  font-size: 0.65rem;
+  color: var(--text3);
+}
+
+.mf-risk-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.mf-risk-high     { background: rgba(239,68,68,0.15);   color: #ef4444; }
+.mf-risk-medium   { background: rgba(245,158,11,0.15);  color: #f59e0b; }
+.mf-risk-low      { background: rgba(16,185,129,0.15);  color: #10b981; }
+.mf-risk-critical { background: rgba(239,68,68,0.25);   color: #ff6b6b; }
+
+.mf-main {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  gap: 0.75rem;
+  min-height: 0;
+}
+
+.mf-chart-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 0;
+}
+
+.mf-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mf-chart-title {
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+
+.mf-chart-tabs {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.mf-tab {
+  padding: 0.25rem 0.625rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mf-tab:hover { border-color: var(--border2); color: var(--text2); }
+.mf-tab.active {
+  background: rgba(16,185,129,0.12);
+  border-color: rgba(16,185,129,0.3);
+  color: #10b981;
+}
+
+.mf-chart-legend {
+  display: flex;
+  gap: 1rem;
+}
+
+.mf-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.7rem;
+  color: var(--text3);
+  font-family: var(--font-mono);
+}
+
+.mf-legend-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+}
+
+#vitalsChart {
+  flex: 1;
+  min-height: 0;
+  cursor: pointer;
+}
+
+.mf-explain-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mf-explain-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface2);
+}
+
+.mf-explain-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+
+.mf-explain-badge {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  color: var(--text3);
+  transition: all 0.3s ease;
+}
+
+.mf-explain-body {
+  padding: 1rem;
+  min-height: 80px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.mf-explain-placeholder {
+  color: var(--text3);
+  font-size: 0.8rem;
+  font-style: italic;
+  max-width: none;
+}
+
+.mf-summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mf-summary-header {
+  padding: 0.75rem 1rem;
+  font-size: 0.7rem;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+}
+
+.mf-summary-body {
+  padding: 0.75rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.mf-summary-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+}
+
+.mf-summary-row span:first-child {
+  color: var(--text3);
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+}
+
+.mf-summary-row span:last-child {
+  color: var(--text);
+}
+
+/* ─── TECH GRID ─── */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tech-group-label {
+  font-size: 0.7rem;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+/* PROJECT NAV */
+.proj-nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.proj-nav-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  min-width: 380px;
+  transition: all 0.3s ease;
+}
+
+.proj-nav-next h3 { margin: 0.25rem 0; font-size: 1.2rem; }
+.proj-nav-next p  { color: var(--text3); font-size: 0.8rem; margin: 0; max-width: none; }
+
+.proj-nav-arrow {
+  font-size: 1.5rem;
+  color: var(--text3);
+  transition: transform 0.2s ease;
+}
+
+.proj-nav-next:hover .proj-nav-arrow {
+  transform: translateX(4px);
+  color: var(--text);
+}
+
+/* RESPONSIVE DEMO */
+@media (max-width: 1024px) {
+  .demo-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+    min-width: unset;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mediflow-demo {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .mf-patient-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .arch-flow {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .demo-hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-nav-next {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .mf-summary-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
