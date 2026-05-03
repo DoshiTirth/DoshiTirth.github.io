@@ -154,50 +154,52 @@
 
       <!-- ERP Shell -->
       <div class="erp-shell reveal" data-delay="200">
-
-        <!-- Sidebar -->
-        <div class="erp-sidebar">
-          <div class="erp-sidebar-logo mono">RetailPulse</div>
-          <div class="erp-sidebar-role mono">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            Admin
+      
+        <!-- Top bar with custom module switcher -->
+        <div class="erp-topbar">
+          <div class="erp-topbar-left">
+            <span class="erp-sidebar-logo mono">RetailPulse</span>
+            <span class="erp-topbar-role mono">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Admin
+            </span>
           </div>
-          <nav class="erp-nav">
-            <button class="erp-nav-item active" data-module="dashboard">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      
+          <!-- Custom module switcher -->
+          <div class="erp-module-switcher">
+            <button class="erp-switch-btn active" data-module="dashboard">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
               Dashboard
             </button>
-            <button class="erp-nav-item" data-module="inventory">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <button class="erp-switch-btn" data-module="inventory">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
               Inventory
             </button>
-            <button class="erp-nav-item" data-module="orders">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <button class="erp-switch-btn" data-module="orders">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
               Orders
             </button>
-            <button class="erp-nav-item" data-module="customers">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <button class="erp-switch-btn" data-module="customers">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               Customers
             </button>
-            <button class="erp-nav-item" data-module="suppliers">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <button class="erp-switch-btn" data-module="suppliers">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
               Suppliers
             </button>
-          </nav>
-          <div class="erp-sidebar-footer mono">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            v1.0.0 — production
           </div>
+      
+          <span class="erp-topbar-date mono">Sunday, May 3 2026</span>
         </div>
-
-        <!-- Main content -->
+      
+        <!-- Main content — no sidebar -->
         <div class="erp-main">
 
           <!-- DASHBOARD MODULE -->
           <div class="erp-module active" id="module-dashboard">
             <div class="erp-module-header">
               <h3>Dashboard</h3>
-              <span class="mono" style="font-size:0.7rem;color:var(--text3);">Sunday, May 3 2026</span>
+              <!-- <span class="mono" style="font-size:0.7rem;color:var(--text3);">Sunday, May 3 2026</span> -->
             </div>
             <div class="erp-kpis">
               <div class="erp-kpi">
@@ -349,7 +351,7 @@
     </div>
   </section>
 
-  <!-- ─── TECH STACK ─── -->
+  <!-- TECH STACK -->
   <section class="demo-tech section">
     <div class="container">
       <div class="section-label reveal">tech stack</div>
@@ -603,9 +605,9 @@
   }
 
   // MODULE SWITCHING
-  document.querySelectorAll('.erp-nav-item').forEach(item => {
+  document.querySelectorAll('.erp-switch-btn').forEach(item => {
     item.addEventListener('click', () => {
-      document.querySelectorAll('.erp-nav-item').forEach(i => i.classList.remove('active'));
+      document.querySelectorAll('.erp-switch-btn').forEach(i => i.classList.remove('active'));
       document.querySelectorAll('.erp-module').forEach(m => m.classList.remove('active'));
       item.classList.add('active');
       document.getElementById(`module-${item.dataset.module}`).classList.add('active');
