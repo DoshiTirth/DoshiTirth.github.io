@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body { background: #080a0f; }
+    html { opacity: 0; transition: none; }
+    html.ready { opacity: 1; transition: opacity 0.4s ease 0.05s; }
+  </style>
+  <title>RetailPulse — Tirth Doshi</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>document.documentElement.classList.add('ready');</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/skills/">skills</a></li>
+        <li><a href="/experience/">experience</a></li>
+        <li><a href="/contact/" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="demo-hero" style="--accent: #f59e0b;">
+    <div class="demo-hero-bg">
+      <div class="demo-orb" style="background: #f59e0b;"></div>
+    </div>
+    <div class="container">
+      <div class="demo-back reveal">
+        <a href="/projects/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          back to projects
+        </a>
+      </div>
+      <div class="demo-hero-inner">
+        <div class="demo-hero-left">
+          <div class="demo-number mono reveal">04 / 07</div>
+          <h1 class="reveal" data-delay="100">RetailPulse</h1>
+          <p class="demo-subtitle reveal" data-delay="150">Full-Stack ERP-Lite System</p>
+          <p class="reveal" data-delay="200">
+            Enterprise-grade ERP with full product, inventory, supplier, customer,
+            and order management. JWT auth with 5-role RBAC and dynamic permissions
+            in SQL Server. PDF and CSV reporting via QuestPDF. Dark and light mode.
+            Chart.js analytics dashboard — no Power BI, everything inside the app.
+          </p>
+          <div class="demo-hero-tags reveal" data-delay="250">
+            <span class="tag tag-amber">Full Stack</span>
+            <span class="tag tag-amber">ERP</span>
+            <span class="tag tag-amber">C# .NET</span>
+            <span class="tag tag-amber">Enterprise</span>
+          </div>
+          <div class="demo-hero-actions reveal" data-delay="300">
+            <a href="https://github.com/DoshiTirth/RetailPulse" target="_blank" class="btn btn-primary" style="background:#f59e0b;color:#080a0f;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              view on GitHub
+            </a>
+            <a href="/projects/" class="btn btn-outline">all projects</a>
+          </div>
+        </div>
+        <div class="demo-hero-stats reveal" data-delay="200">
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="5">0</span>
+            <span class="demo-stat-label">RBAC roles</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="120">0</span>
+            <span class="demo-stat-label">products seeded</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="8">0</span>
+            <span class="demo-stat-label">modules built</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="100">0</span>
+            <span class="demo-stat-label">% in-app reporting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="demo-arch section">
+    <div class="container">
+      <div class="section-label reveal">architecture</div>
+      <h2 class="reveal" data-delay="100">How it <span class="text-gradient">works</span></h2>
+      <div class="arch-flow reveal" data-delay="200">
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="arch-label">React 18</span>
+          <span class="arch-sub">frontend SPA</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <span class="arch-label">ASP.NET Core</span>
+          <span class="arch-sub">REST API + JWT</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <span class="arch-label">EF Core</span>
+          <span class="arch-sub">ORM + migrations</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="arch-label">SQL Server</span>
+          <span class="arch-sub">RBAC + dynamic perms</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <span class="arch-label">QuestPDF</span>
+          <span class="arch-sub">PDF + CSV reports</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO -->
+  <section class="demo-interactive section">
+    <div class="container">
+      <div class="section-label reveal">interactive demo</div>
+      <h2 class="reveal" data-delay="100">
+        ERP Dashboard
+        <span class="text-gradient">simulation</span>
+      </h2>
+      <p class="reveal" data-delay="150">
+        Navigate the ERP system. Manage inventory, view orders, and explore
+        the analytics dashboard — all running in the browser.
+      </p>
+
+      <!-- ERP Shell -->
+      <div class="erp-shell reveal" data-delay="200">
+
+        <!-- Sidebar -->
+        <div class="erp-sidebar">
+          <div class="erp-sidebar-logo mono">RetailPulse</div>
+          <div class="erp-sidebar-role mono">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Admin
+          </div>
+          <nav class="erp-nav">
+            <button class="erp-nav-item active" data-module="dashboard">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              Dashboard
+            </button>
+            <button class="erp-nav-item" data-module="inventory">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              Inventory
+            </button>
+            <button class="erp-nav-item" data-module="orders">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Orders
+            </button>
+            <button class="erp-nav-item" data-module="customers">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Customers
+            </button>
+            <button class="erp-nav-item" data-module="suppliers">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              Suppliers
+            </button>
+          </nav>
+          <div class="erp-sidebar-footer mono">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            v1.0.0 — production
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="erp-main">
+
+          <!-- DASHBOARD MODULE -->
+          <div class="erp-module active" id="module-dashboard">
+            <div class="erp-module-header">
+              <h3>Dashboard</h3>
+              <span class="mono" style="font-size:0.7rem;color:var(--text3);">Sunday, May 3 2026</span>
+            </div>
+            <div class="erp-kpis">
+              <div class="erp-kpi">
+                <span class="erp-kpi-label mono">total revenue</span>
+                <span class="erp-kpi-value">$284,920</span>
+                <span class="erp-kpi-change positive">+14.2% this month</span>
+              </div>
+              <div class="erp-kpi">
+                <span class="erp-kpi-label mono">total orders</span>
+                <span class="erp-kpi-value">1,847</span>
+                <span class="erp-kpi-change positive">+8.4% this month</span>
+              </div>
+              <div class="erp-kpi">
+                <span class="erp-kpi-label mono">low stock items</span>
+                <span class="erp-kpi-value" style="color:#f59e0b;">12</span>
+                <span class="erp-kpi-change" style="color:#f59e0b;">needs attention</span>
+              </div>
+              <div class="erp-kpi">
+                <span class="erp-kpi-label mono">active customers</span>
+                <span class="erp-kpi-value">342</span>
+                <span class="erp-kpi-change positive">+22 this week</span>
+              </div>
+            </div>
+            <div class="erp-charts">
+              <div class="erp-chart-card" style="flex:2;">
+                <div class="erp-chart-title mono">monthly revenue — 2026</div>
+                <canvas id="revenueChart" height="160"></canvas>
+              </div>
+              <div class="erp-chart-card" style="flex:1;">
+                <div class="erp-chart-title mono">order status</div>
+                <canvas id="statusChart" height="160"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- INVENTORY MODULE -->
+          <div class="erp-module" id="module-inventory">
+            <div class="erp-module-header">
+              <h3>Inventory</h3>
+              <div style="display:flex;gap:0.5rem;">
+                <select class="tl-select" id="invCategory" onchange="filterInventory()">
+                  <option value="all">all categories</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Clothing">Clothing</option>
+                  <option value="Food">Food</option>
+                  <option value="Office">Office</option>
+                </select>
+                <select class="tl-select" id="invStock" onchange="filterInventory()">
+                  <option value="all">all stock</option>
+                  <option value="low">low stock</option>
+                  <option value="ok">in stock</option>
+                </select>
+              </div>
+            </div>
+            <div class="erp-table-wrap">
+              <table class="erp-table">
+                <thead>
+                  <tr>
+                    <th>SKU</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="inventoryBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- ORDERS MODULE -->
+          <div class="erp-module" id="module-orders">
+            <div class="erp-module-header">
+              <h3>Orders</h3>
+              <select class="tl-select" id="orderStatus" onchange="filterOrders()">
+                <option value="all">all statuses</option>
+                <option value="Pending">pending</option>
+                <option value="Processing">processing</option>
+                <option value="Shipped">shipped</option>
+                <option value="Delivered">delivered</option>
+              </select>
+            </div>
+            <div class="erp-table-wrap">
+              <table class="erp-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="ordersBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- CUSTOMERS MODULE -->
+          <div class="erp-module" id="module-customers">
+            <div class="erp-module-header">
+              <h3>Customers</h3>
+              <span class="mono" style="font-size:0.75rem;color:var(--text3);">342 active</span>
+            </div>
+            <div class="erp-table-wrap">
+              <table class="erp-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Orders</th>
+                    <th>Total Spent</th>
+                  </tr>
+                </thead>
+                <tbody id="customersBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SUPPLIERS MODULE -->
+          <div class="erp-module" id="module-suppliers">
+            <div class="erp-module-header">
+              <h3>Suppliers</h3>
+              <span class="mono" style="font-size:0.75rem;color:var(--text3);">18 active suppliers</span>
+            </div>
+            <div class="erp-table-wrap">
+              <table class="erp-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Supplier</th>
+                    <th>Category</th>
+                    <th>Contact</th>
+                    <th>Products</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="suppliersBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TECH STACK ─── -->
+  <section class="demo-tech section">
+    <div class="container">
+      <div class="section-label reveal">tech stack</div>
+      <div class="tech-grid reveal" data-delay="100">
+        <div class="tech-group">
+          <div class="tech-group-label mono">backend</div>
+          <div class="tech-tags">
+            <span class="tag tag-amber">C#</span>
+            <span class="tag tag-amber">ASP.NET Core</span>
+            <span class="tag tag-amber">EF Core</span>
+            <span class="tag tag-amber">JWT</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">database</div>
+          <div class="tech-tags">
+            <span class="tag tag-amber">SQL Server</span>
+            <span class="tag tag-amber">RBAC</span>
+            <span class="tag tag-amber">Stored Procs</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">frontend</div>
+          <div class="tech-tags">
+            <span class="tag tag-amber">React 18</span>
+            <span class="tag tag-amber">Chart.js</span>
+            <span class="tag tag-amber">Vite</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">reporting</div>
+          <div class="tech-tags">
+            <span class="tag tag-amber">QuestPDF</span>
+            <span class="tag tag-amber">CSV Export</span>
+            <span class="tag tag-amber">CsvHelper</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT NAV -->
+  <section class="demo-nav-projects section">
+    <div class="container">
+      <div class="proj-nav-inner">
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">previous project</span>
+          <a href="/demos/talentlens/" class="proj-nav-prev hover-lift">
+            <span class="proj-nav-arrow">←</span>
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">03 / 07</span>
+              <h3>TalentLens</h3>
+              <p>AI Job Market Intelligence Platform</p>
+            </div>
+          </a>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">next project</span>
+          <a href="/demos/marketpulse/" class="proj-nav-next hover-lift">
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">05 / 07</span>
+              <h3>MarketPulse</h3>
+              <p>AI Stock Intelligence Platform</p>
+            </div>
+            <span class="proj-nav-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script src="../../main.js"></script>
+  <script>
+  // DATA
+  const inventory = [
+    { sku:'EL-001', name:'Wireless Earbuds',    category:'Electronics', price:49.99,  stock:23, min:10 },
+    { sku:'EL-002', name:'USB-C Hub',           category:'Electronics', price:34.99,  stock:8,  min:10 },
+    { sku:'EL-003', name:'Bluetooth Speaker',   category:'Electronics', price:79.99,  stock:15, min:10 },
+    { sku:'EL-004', name:'Phone Stand',         category:'Electronics', price:19.99,  stock:4,  min:10 },
+    { sku:'CL-001', name:'Cotton T-Shirt',      category:'Clothing',    price:24.99,  stock:85, min:20 },
+    { sku:'CL-002', name:'Denim Jacket',        category:'Clothing',    price:89.99,  stock:12, min:15 },
+    { sku:'CL-003', name:'Running Shoes',       category:'Clothing',    price:119.99, stock:6,  min:10 },
+    { sku:'FD-001', name:'Organic Coffee 500g', category:'Food',        price:14.99,  stock:42, min:20 },
+    { sku:'FD-002', name:'Protein Bars x12',   category:'Food',        price:22.99,  stock:7,  min:15 },
+    { sku:'OF-001', name:'Mechanical Keyboard', category:'Office',      price:129.99, stock:18, min:10 },
+    { sku:'OF-002', name:'Ergonomic Mouse',     category:'Office',      price:59.99,  stock:3,  min:10 },
+    { sku:'OF-003', name:'Monitor Stand',       category:'Office',      price:44.99,  stock:25, min:10 },
+  ];
+
+  const orders = [
+    { id:'ORD-2847', customer:'Alice Johnson',  date:'May 3',  items:3, total:'$184.97', status:'Pending'    },
+    { id:'ORD-2846', customer:'Bob Chen',       date:'May 3',  items:1, total:'$79.99',  status:'Processing' },
+    { id:'ORD-2845', customer:'Carol Smith',    date:'May 2',  items:5, total:'$342.95', status:'Shipped'    },
+    { id:'ORD-2844', customer:'David Park',     date:'May 2',  items:2, total:'$154.98', status:'Delivered'  },
+    { id:'ORD-2843', customer:'Emma Wilson',    date:'May 1',  items:4, total:'$229.96', status:'Delivered'  },
+    { id:'ORD-2842', customer:'Frank Miller',   date:'May 1',  items:1, total:'$119.99', status:'Shipped'    },
+    { id:'ORD-2841', customer:'Grace Lee',      date:'Apr 30', items:6, total:'$489.94', status:'Delivered'  },
+    { id:'ORD-2840', customer:'Henry Brown',    date:'Apr 30', items:2, total:'$109.98', status:'Processing' },
+  ];
+
+  const customers = [
+    { id:'C-001', name:'Alice Johnson',  email:'alice@email.com',  city:'Toronto',   orders:12, spent:'$1,847' },
+    { id:'C-002', name:'Bob Chen',       email:'bob@email.com',    city:'Vancouver', orders:8,  spent:'$924'   },
+    { id:'C-003', name:'Carol Smith',    email:'carol@email.com',  city:'Calgary',   orders:24, spent:'$3,210' },
+    { id:'C-004', name:'David Park',     email:'david@email.com',  city:'Ottawa',    orders:5,  spent:'$680'   },
+    { id:'C-005', name:'Emma Wilson',    email:'emma@email.com',   city:'Toronto',   orders:18, spent:'$2,340' },
+    { id:'C-006', name:'Frank Miller',   email:'frank@email.com',  city:'Montreal',  orders:3,  spent:'$420'   },
+    { id:'C-007', name:'Grace Lee',      email:'grace@email.com',  city:'Toronto',   orders:31, spent:'$4,892' },
+  ];
+
+  const suppliers = [
+    { id:'S-001', name:'TechDistro Inc',    category:'Electronics', contact:'john@techdistro.com',  products:24, status:'Active'   },
+    { id:'S-002', name:'FashionWholesale',  category:'Clothing',    contact:'sara@fashionw.com',    products:18, status:'Active'   },
+    { id:'S-003', name:'FreshFoods Co',     category:'Food',        contact:'mike@freshfoods.com',  products:12, status:'Active'   },
+    { id:'S-004', name:'OfficeSupply Plus', category:'Office',      contact:'jen@officesupply.com', products:9,  status:'Active'   },
+    { id:'S-005', name:'GlobalTech Ltd',    category:'Electronics', contact:'tom@globaltech.com',   products:15, status:'Inactive' },
+  ];
+
+  // RENDER FUNCTIONS
+  function filterInventory() {
+    const cat = document.getElementById('invCategory').value;
+    const stock = document.getElementById('invStock').value;
+
+    const filtered = inventory.filter(i =>
+      (cat === 'all' || i.category === cat) &&
+      (stock === 'all' || (stock === 'low' ? i.stock < i.min : i.stock >= i.min))
+    );
+
+    document.getElementById('inventoryBody').innerHTML = filtered.map(i => {
+      const isLow = i.stock < i.min;
+      return `
+        <tr>
+          <td class="mono">${i.sku}</td>
+          <td>${i.name}</td>
+          <td><span class="tag">${i.category}</span></td>
+          <td class="mono">$${i.price.toFixed(2)}</td>
+          <td class="mono" style="color:${isLow?'#f59e0b':'var(--text)'};">${i.stock}</td>
+          <td><span class="erp-status erp-status-${isLow?'warn':'ok'}">${isLow?'Low Stock':'In Stock'}</span></td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  function filterOrders() {
+    const status = document.getElementById('orderStatus').value;
+    const filtered = orders.filter(o => status === 'all' || o.status === status);
+
+    document.getElementById('ordersBody').innerHTML = filtered.map(o => `
+      <tr>
+        <td class="mono">${o.id}</td>
+        <td>${o.customer}</td>
+        <td class="mono" style="color:var(--text3);">${o.date}</td>
+        <td class="mono">${o.items}</td>
+        <td class="mono">${o.total}</td>
+        <td><span class="erp-status erp-status-${
+          o.status === 'Delivered' ? 'ok' :
+          o.status === 'Shipped' ? 'info' :
+          o.status === 'Processing' ? 'warn' : 'neutral'
+        }">${o.status}</span></td>
+      </tr>
+    `).join('');
+  }
+
+  function renderCustomers() {
+    document.getElementById('customersBody').innerHTML = customers.map(c => `
+      <tr>
+        <td class="mono">${c.id}</td>
+        <td>${c.name}</td>
+        <td class="mono" style="color:var(--text3);font-size:0.75rem;">${c.email}</td>
+        <td>${c.city}</td>
+        <td class="mono">${c.orders}</td>
+        <td class="mono" style="color:#f59e0b;">${c.spent}</td>
+      </tr>
+    `).join('');
+  }
+
+  function renderSuppliers() {
+    document.getElementById('suppliersBody').innerHTML = suppliers.map(s => `
+      <tr>
+        <td class="mono">${s.id}</td>
+        <td>${s.name}</td>
+        <td><span class="tag">${s.category}</span></td>
+        <td class="mono" style="color:var(--text3);font-size:0.72rem;">${s.contact}</td>
+        <td class="mono">${s.products}</td>
+        <td><span class="erp-status erp-status-${s.status === 'Active' ? 'ok' : 'neutral'}">${s.status}</span></td>
+      </tr>
+    `).join('');
+  }
+
+  // CHARTS 
+  function renderDashboardCharts() {
+    const months = ['Jan','Feb','Mar','Apr','May'];
+    const revenue = [42000, 58000, 51000, 67000, 84920];
+
+    new Chart(document.getElementById('revenueChart').getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [{
+          data: revenue,
+          backgroundColor: revenue.map((v,i) =>
+            i === revenue.length-1 ? '#f59e0b' : 'rgba(245,158,11,0.25)'
+          ),
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid:{ display:false }, ticks:{ color:'#6b7280', font:{ family:'JetBrains Mono', size:10 } } },
+          y: { grid:{ color:'rgba(255,255,255,0.04)' }, ticks:{ color:'#6b7280', font:{ family:'JetBrains Mono', size:10 }, callback: v=>`$${(v/1000).toFixed(0)}k` } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('statusChart').getContext('2d'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Delivered','Shipped','Processing','Pending'],
+        datasets: [{
+          data: [892, 384, 271, 300],
+          backgroundColor: ['#10b981','#4f9cf9','#f59e0b','#6b7280'],
+          borderWidth: 0,
+          hoverOffset: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color:'#9ca3af', font:{ family:'JetBrains Mono', size:10 }, padding:12 }
+          }
+        }
+      }
+    });
+  }
+
+  // MODULE SWITCHING
+  document.querySelectorAll('.erp-nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.erp-nav-item').forEach(i => i.classList.remove('active'));
+      document.querySelectorAll('.erp-module').forEach(m => m.classList.remove('active'));
+      item.classList.add('active');
+      document.getElementById(`module-${item.dataset.module}`).classList.add('active');
+    });
+  });
+
+  // INIT
+  renderDashboardCharts();
+  filterInventory();
+  filterOrders();
+  renderCustomers();
+  renderSuppliers();
+  </script>
+
+</body>
+</html>
