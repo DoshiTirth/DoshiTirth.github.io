@@ -3129,6 +3129,36 @@ html.page-leaving {
   font-family: var(--font-mono);
 }
 
+/* SLIDING PILL */
+.erp-module-switcher {
+  position: relative;
+}
+
+.erp-switch-pill {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: calc(100% - 6px);
+  background: rgba(245,158,11,0.15);
+  border: 1px solid rgba(245,158,11,0.25);
+  border-radius: 6px;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.erp-switch-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.erp-switch-btn.active {
+  background: transparent;
+  color: #f59e0b;
+  border: none;
+}
+
 /* TABLE */
 .erp-table-wrap {
   flex: 1;

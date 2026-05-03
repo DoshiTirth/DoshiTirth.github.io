@@ -604,15 +604,32 @@
     });
   }
 
-  // MODULE SWITCHING
-  document.querySelectorAll('.erp-switch-btn').forEach(item => {
-    item.addEventListener('click', () => {
-      document.querySelectorAll('.erp-switch-btn').forEach(i => i.classList.remove('active'));
-      document.querySelectorAll('.erp-module').forEach(m => m.classList.remove('active'));
-      item.classList.add('active');
-      document.getElementById(`module-${item.dataset.module}`).classList.add('active');
-    });
+// SLIDING PILL
+const switcher = document.querySelector('.erp-module-switcher');
+const pill = document.createElement('div');
+pill.className = 'erp-switch-pill';
+switcher.prepend(pill);
+
+function movePill(activeBtn) {
+  pill.style.left = activeBtn.offsetLeft + 'px';
+  pill.style.width = activeBtn.offsetWidth + 'px';
+}
+
+document.querySelectorAll('.erp-switch-btn').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.erp-switch-btn').forEach(i => i.classList.remove('active'));
+    document.querySelectorAll('.erp-module').forEach(m => m.classList.remove('active'));
+    item.classList.add('active');
+    document.getElementById(`module-${item.dataset.module}`).classList.add('active');
+    movePill(item);
   });
+});
+
+// Init pill position on load
+setTimeout(() => {
+  const activeBtn = document.querySelector('.erp-switch-btn.active');
+  if (activeBtn) movePill(activeBtn);
+}, 50);
 
   // INIT
   renderDashboardCharts();
