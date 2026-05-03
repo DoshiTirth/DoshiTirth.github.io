@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body { background: #080a0f; }
+    html { opacity: 0; transition: none; }
+    html.ready { opacity: 1; transition: opacity 0.4s ease 0.05s; }
+  </style>
+  <title>DataAisle — Tirth Doshi</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>document.documentElement.classList.add('ready');</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/skills/">skills</a></li>
+        <li><a href="/experience/">experience</a></li>
+        <li><a href="/contact/" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="demo-hero" style="--accent: #4f9cf9;">
+    <div class="demo-hero-bg">
+      <div class="demo-orb" style="background: #4f9cf9;"></div>
+    </div>
+    <div class="container">
+      <div class="demo-back reveal">
+        <a href="/projects/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          back to projects
+        </a>
+      </div>
+      <div class="demo-hero-inner">
+        <div class="demo-hero-left">
+          <div class="demo-number mono reveal">07 / 07</div>
+          <h1 class="reveal" data-delay="100">DataAisle</h1>
+          <p class="demo-subtitle reveal" data-delay="150">ETL Pipeline + Data Warehouse Dashboard</p>
+          <p class="reveal" data-delay="200">
+            Python ETL pipeline ingesting CSV and API data into a SQL Server star
+            schema data warehouse. C# ASP.NET Core web dashboard with Chart.js
+            visualizations. Full data engineering lifecycle from raw ingestion to
+            polished dashboard — no Power BI, no Docker.
+          </p>
+          <div class="demo-hero-tags reveal" data-delay="250">
+            <span class="tag tag-blue">Data Engineering</span>
+            <span class="tag tag-blue">ETL Pipeline</span>
+            <span class="tag tag-blue">Data Warehouse</span>
+            <span class="tag tag-blue">C# .NET</span>
+          </div>
+          <div class="demo-hero-actions reveal" data-delay="300">
+            <a href="https://github.com/DoshiTirth/DataAisle" target="_blank" class="btn btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              view on GitHub
+            </a>
+            <a href="/projects/" class="btn btn-outline">all projects</a>
+          </div>
+        </div>
+        <div class="demo-hero-stats reveal" data-delay="200">
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="5">0</span>
+            <span class="demo-stat-label">ETL pipeline stages</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="4">0</span>
+            <span class="demo-stat-label">star schema tables</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="0">0</span>
+            <span class="demo-stat-label">Power BI dependencies</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="100">0</span>
+            <span class="demo-stat-label">% in-app visualization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="demo-arch section">
+    <div class="container">
+      <div class="section-label reveal">architecture</div>
+      <h2 class="reveal" data-delay="100">How it <span class="text-gradient">works</span></h2>
+      <div class="arch-flow reveal" data-delay="200">
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <span class="arch-label">CSV / API</span>
+          <span class="arch-sub">raw data sources</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="arch-label">Python ETL</span>
+          <span class="arch-sub">extract + transform</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="arch-label">SQL Server</span>
+          <span class="arch-sub">star schema DW</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <span class="arch-label">ASP.NET Core</span>
+          <span class="arch-sub">REST API + Dapper</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="arch-label">Chart.js Dashboard</span>
+          <span class="arch-sub">no Power BI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO -->
+  <section class="demo-interactive section">
+    <div class="container">
+      <div class="section-label reveal">interactive demo</div>
+      <h2 class="reveal" data-delay="100">
+        ETL Pipeline
+        <span class="text-gradient">simulator</span>
+      </h2>
+      <p class="reveal" data-delay="150">
+        Trigger a pipeline run to watch data flow through each stage.
+        Then explore the data warehouse schema and dashboard.
+      </p>
+
+      <div class="da-tabs reveal" data-delay="200">
+        <button class="pos-tab active" data-view="pipeline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          ETL pipeline
+        </button>
+        <button class="pos-tab" data-view="schema">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          star schema
+        </button>
+        <button class="pos-tab" data-view="dashboard">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          dashboard
+        </button>
+      </div>
+
+      <!-- PIPELINE VIEW -->
+      <div class="pos-view active" id="view-pipeline">
+        <div class="da-pipeline-shell">
+
+          <!-- Pipeline stages -->
+          <div class="da-stages" id="pipelineStages">
+            <div class="da-stage" id="stage-extract">
+              <div class="da-stage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div class="da-stage-info">
+                <span class="da-stage-name">Extract</span>
+                <span class="da-stage-detail mono" id="detail-extract">reading CSV + API sources</span>
+              </div>
+              <div class="da-stage-status" id="status-extract">
+                <span class="da-status-dot"></span>
+                <span class="da-status-text mono">idle</span>
+              </div>
+            </div>
+
+            <div class="da-connector" id="conn-1"></div>
+
+            <div class="da-stage" id="stage-validate">
+              <div class="da-stage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="da-stage-info">
+                <span class="da-stage-name">Validate</span>
+                <span class="da-stage-detail mono" id="detail-validate">schema + type checking</span>
+              </div>
+              <div class="da-stage-status" id="status-validate">
+                <span class="da-status-dot"></span>
+                <span class="da-status-text mono">idle</span>
+              </div>
+            </div>
+
+            <div class="da-connector" id="conn-2"></div>
+
+            <div class="da-stage" id="stage-transform">
+              <div class="da-stage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="da-stage-info">
+                <span class="da-stage-name">Transform</span>
+                <span class="da-stage-detail mono" id="detail-transform">normalize + enrich data</span>
+              </div>
+              <div class="da-stage-status" id="status-transform">
+                <span class="da-status-dot"></span>
+                <span class="da-status-text mono">idle</span>
+              </div>
+            </div>
+
+            <div class="da-connector" id="conn-3"></div>
+
+            <div class="da-stage" id="stage-load">
+              <div class="da-stage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <div class="da-stage-info">
+                <span class="da-stage-name">Load</span>
+                <span class="da-stage-detail mono" id="detail-load">insert into star schema</span>
+              </div>
+              <div class="da-stage-status" id="status-load">
+                <span class="da-status-dot"></span>
+                <span class="da-status-text mono">idle</span>
+              </div>
+            </div>
+
+            <div class="da-connector" id="conn-4"></div>
+
+            <div class="da-stage" id="stage-index">
+              <div class="da-stage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              </div>
+              <div class="da-stage-info">
+                <span class="da-stage-name">Index</span>
+                <span class="da-stage-detail mono" id="detail-index">rebuild indexes + stats</span>
+              </div>
+              <div class="da-stage-status" id="status-index">
+                <span class="da-status-dot"></span>
+                <span class="da-status-text mono">idle</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Run controls -->
+          <div class="da-controls">
+            <button class="btn btn-primary" id="runBtn" onclick="runPipeline()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              run pipeline
+            </button>
+            <button class="btn btn-outline" onclick="resetPipeline()">reset</button>
+          </div>
+
+          <!-- Log output -->
+          <div class="da-log" id="pipelineLog">
+            <div class="da-log-header mono">pipeline log</div>
+            <div class="da-log-body" id="logBody">
+              <span class="da-log-line mono da-log-muted">$ awaiting pipeline run...</span>
+            </div>
+          </div>
+
+          <!-- Stats row -->
+          <div class="da-run-stats" id="runStats" style="display:none;">
+            <div class="da-run-stat">
+              <span class="mono" id="statRecords">0</span>
+              <span>records processed</span>
+            </div>
+            <div class="da-run-stat">
+              <span class="mono" id="statDuration">0s</span>
+              <span>duration</span>
+            </div>
+            <div class="da-run-stat">
+              <span class="mono" id="statErrors">0</span>
+              <span>errors</span>
+            </div>
+            <div class="da-run-stat">
+              <span class="mono" style="color:#10b981;">SUCCESS</span>
+              <span>status</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SCHEMA VIEW -->
+      <div class="pos-view" id="view-schema">
+        <div class="da-schema">
+          <div class="da-schema-label mono">star schema — SQL Server data warehouse</div>
+
+          <!-- Fact table center -->
+          <div class="da-schema-layout">
+            <div class="da-schema-dims">
+              <div class="da-table da-dim" onclick="showTable('date')">
+                <div class="da-table-header" style="background:rgba(79,156,249,0.15);border-color:rgba(79,156,249,0.3);">
+                  <span class="mono">dim_date</span>
+                  <span class="da-table-type">dimension</span>
+                </div>
+                <div class="da-table-cols" id="cols-date" style="display:none;">
+                  <div class="da-col"><span class="da-col-pk">PK</span> date_key</div>
+                  <div class="da-col">full_date</div>
+                  <div class="da-col">year</div>
+                  <div class="da-col">quarter</div>
+                  <div class="da-col">month</div>
+                  <div class="da-col">week</div>
+                  <div class="da-col">day_of_week</div>
+                  <div class="da-col">is_weekend</div>
+                </div>
+              </div>
+
+              <div class="da-table da-dim" onclick="showTable('product')">
+                <div class="da-table-header" style="background:rgba(79,156,249,0.15);border-color:rgba(79,156,249,0.3);">
+                  <span class="mono">dim_product</span>
+                  <span class="da-table-type">dimension</span>
+                </div>
+                <div class="da-table-cols" id="cols-product" style="display:none;">
+                  <div class="da-col"><span class="da-col-pk">PK</span> product_key</div>
+                  <div class="da-col">product_id</div>
+                  <div class="da-col">product_name</div>
+                  <div class="da-col">category</div>
+                  <div class="da-col">subcategory</div>
+                  <div class="da-col">unit_price</div>
+                  <div class="da-col">supplier_id</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fact table -->
+            <div class="da-fact-wrap">
+              <div class="da-table da-fact" onclick="showTable('sales')">
+                <div class="da-table-header" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.3);">
+                  <span class="mono">fact_sales</span>
+                  <span class="da-table-type" style="color:#10b981;">fact</span>
+                </div>
+                <div class="da-table-cols" id="cols-sales" style="display:none;">
+                  <div class="da-col"><span class="da-col-pk">PK</span> sale_key</div>
+                  <div class="da-col"><span class="da-col-fk">FK</span> date_key</div>
+                  <div class="da-col"><span class="da-col-fk">FK</span> product_key</div>
+                  <div class="da-col"><span class="da-col-fk">FK</span> customer_key</div>
+                  <div class="da-col"><span class="da-col-fk">FK</span> store_key</div>
+                  <div class="da-col">quantity_sold</div>
+                  <div class="da-col">unit_price</div>
+                  <div class="da-col">discount_amount</div>
+                  <div class="da-col">total_revenue</div>
+                  <div class="da-col">cost_of_goods</div>
+                  <div class="da-col">gross_profit</div>
+                </div>
+              </div>
+              <div class="da-schema-note mono">click any table to expand columns</div>
+            </div>
+
+            <div class="da-schema-dims">
+              <div class="da-table da-dim" onclick="showTable('customer')">
+                <div class="da-table-header" style="background:rgba(79,156,249,0.15);border-color:rgba(79,156,249,0.3);">
+                  <span class="mono">dim_customer</span>
+                  <span class="da-table-type">dimension</span>
+                </div>
+                <div class="da-table-cols" id="cols-customer" style="display:none;">
+                  <div class="da-col"><span class="da-col-pk">PK</span> customer_key</div>
+                  <div class="da-col">customer_id</div>
+                  <div class="da-col">first_name</div>
+                  <div class="da-col">last_name</div>
+                  <div class="da-col">email</div>
+                  <div class="da-col">city</div>
+                  <div class="da-col">province</div>
+                  <div class="da-col">segment</div>
+                </div>
+              </div>
+
+              <div class="da-table da-dim" onclick="showTable('store')">
+                <div class="da-table-header" style="background:rgba(79,156,249,0.15);border-color:rgba(79,156,249,0.3);">
+                  <span class="mono">dim_store</span>
+                  <span class="da-table-type">dimension</span>
+                </div>
+                <div class="da-table-cols" id="cols-store" style="display:none;">
+                  <div class="da-col"><span class="da-col-pk">PK</span> store_key</div>
+                  <div class="da-col">store_id</div>
+                  <div class="da-col">store_name</div>
+                  <div class="da-col">city</div>
+                  <div class="da-col">province</div>
+                  <div class="da-col">region</div>
+                  <div class="da-col">open_date</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DASHBOARD VIEW -->
+      <div class="pos-view" id="view-dashboard">
+        <div class="da-dashboard">
+          <div class="da-dash-kpis">
+            <div class="da-dash-kpi">
+              <span class="da-dash-kpi-label mono">total revenue</span>
+              <span class="da-dash-kpi-value">$2.84M</span>
+              <span class="da-dash-kpi-change positive">+18.4% YoY</span>
+            </div>
+            <div class="da-dash-kpi">
+              <span class="da-dash-kpi-label mono">total orders</span>
+              <span class="da-dash-kpi-value">24,812</span>
+              <span class="da-dash-kpi-change positive">+12.1% YoY</span>
+            </div>
+            <div class="da-dash-kpi">
+              <span class="da-dash-kpi-label mono">avg order value</span>
+              <span class="da-dash-kpi-value">$114.40</span>
+              <span class="da-dash-kpi-change positive">+5.7% YoY</span>
+            </div>
+            <div class="da-dash-kpi">
+              <span class="da-dash-kpi-label mono">gross margin</span>
+              <span class="da-dash-kpi-value">42.8%</span>
+              <span class="da-dash-kpi-change positive">+2.1pp YoY</span>
+            </div>
+          </div>
+          <div class="da-dash-charts">
+            <div class="da-dash-chart-card" style="flex:2;">
+              <div class="da-dash-chart-title mono">monthly revenue — 2025</div>
+              <canvas id="daRevenueChart" height="180"></canvas>
+            </div>
+            <div class="da-dash-chart-card" style="flex:1;">
+              <div class="da-dash-chart-title mono">revenue by category</div>
+              <canvas id="daCategoryChart" height="180"></canvas>
+            </div>
+          </div>
+          <div class="da-dash-charts">
+            <div class="da-dash-chart-card" style="flex:1;">
+              <div class="da-dash-chart-title mono">top provinces by revenue</div>
+              <div class="da-province-bars" id="provinceBars"></div>
+            </div>
+            <div class="da-dash-chart-card" style="flex:1;">
+              <div class="da-dash-chart-title mono">weekly orders — last 8 weeks</div>
+              <canvas id="daOrdersChart" height="150"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="demo-tech section">
+    <div class="container">
+      <div class="section-label reveal">tech stack</div>
+      <div class="tech-grid reveal" data-delay="100">
+        <div class="tech-group">
+          <div class="tech-group-label mono">ETL pipeline</div>
+          <div class="tech-tags">
+            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-blue">pandas</span>
+            <span class="tag tag-blue">pyodbc</span>
+            <span class="tag tag-blue">requests</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">data warehouse</div>
+          <div class="tech-tags">
+            <span class="tag tag-blue">SQL Server</span>
+            <span class="tag tag-blue">Star Schema</span>
+            <span class="tag tag-blue">T-SQL</span>
+            <span class="tag tag-blue">Stored Procs</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">backend API</div>
+          <div class="tech-tags">
+            <span class="tag tag-blue">C#</span>
+            <span class="tag tag-blue">ASP.NET Core</span>
+            <span class="tag tag-blue">Dapper</span>
+            <span class="tag tag-blue">REST API</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">dashboard</div>
+          <div class="tech-tags">
+            <span class="tag tag-blue">Chart.js</span>
+            <span class="tag tag-blue">Razor Pages</span>
+            <span class="tag tag-blue">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT NAV -->
+  <section class="demo-nav-projects section">
+    <div class="container">
+      <div class="proj-nav-inner">
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">previous project</span>
+          <a href="/demos/vaultmind/" class="proj-nav-prev hover-lift">
+            <span class="proj-nav-arrow">←</span>
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">06 / 07</span>
+              <h3>VaultMind</h3>
+              <p>RAG Document Intelligence</p>
+            </div>
+          </a>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">all projects</span>
+          <a href="/projects/" class="proj-nav-next hover-lift">
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">view all</span>
+              <h3>All Projects</h3>
+              <p>Back to the full portfolio</p>
+            </div>
+            <span class="proj-nav-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script src="../../main.js"></script>
+  <script>
+  // PIPELINE SIMULATION
+  const stages = ['extract','validate','transform','load','index'];
+  let running = false;
+
+  const stageDetails = {
+    extract:   ['reading sales_2025.csv — 18,420 rows','reading inventory_api — 847 records','reading store_locations.csv — 12 stores','extracted 19,279 total records'],
+    validate:  ['validating date formats...','checking FK constraints...','detecting null values — 23 found','type coercion: 4 numeric columns','validation passed — 19,256 valid records'],
+    transform: ['normalizing product categories...','creating date dimension keys...','calculating gross_profit column...','deduplicating customer records...','enriching postal codes → provinces...','transform complete — 19,256 records ready'],
+    load:      ['truncating staging tables...','bulk insert → fact_sales...','inserting dim_date records...','inserting dim_product records...','inserting dim_customer records...','inserting dim_store records...','19,256 records loaded successfully'],
+    index:     ['rebuilding clustered indexes...','updating column statistics...','verifying foreign key integrity...','pipeline complete ✓'],
+  };
+
+  function setStageStatus(stage, status) {
+    const el = document.getElementById(`status-${stage}`);
+    const dot = el.querySelector('.da-status-dot');
+    const text = el.querySelector('.da-status-text');
+    const stageEl = document.getElementById(`stage-${stage}`);
+
+    text.textContent = status;
+    dot.className = 'da-status-dot';
+
+    if (status === 'running') {
+      dot.classList.add('da-dot-running');
+      stageEl.classList.add('da-stage-active');
+      stageEl.classList.remove('da-stage-done');
+    } else if (status === 'done') {
+      dot.classList.add('da-dot-done');
+      stageEl.classList.remove('da-stage-active');
+      stageEl.classList.add('da-stage-done');
+    } else {
+      stageEl.classList.remove('da-stage-active','da-stage-done');
+    }
+  }
+
+  function setConnector(index, active) {
+    const conn = document.getElementById(`conn-${index}`);
+    if (conn) {
+      conn.classList.toggle('da-connector-active', active);
+    }
+  }
+
+  function addLog(text, type = '') {
+    const body = document.getElementById('logBody');
+    const line = document.createElement('div');
+    line.className = `da-log-line mono ${type}`;
+    line.textContent = text;
+    body.appendChild(line);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  async function sleep(ms) {
+    return new Promise(r => setTimeout(r, ms));
+  }
+
+  async function runPipeline() {
+    if (running) return;
+    running = true;
+    document.getElementById('runBtn').disabled = true;
+    document.getElementById('runStats').style.display = 'none';
+
+    const logBody = document.getElementById('logBody');
+    logBody.innerHTML = '';
+
+    const startTime = Date.now();
+    addLog(`[${new Date().toLocaleTimeString()}] pipeline started`, 'da-log-info');
+    await sleep(300);
+
+    for (let i = 0; i < stages.length; i++) {
+      const stage = stages[i];
+      setStageStatus(stage, 'running');
+      if (i > 0) setConnector(i, true);
+
+      addLog(`[${new Date().toLocaleTimeString()}] → ${stage.toUpperCase()} stage`, 'da-log-stage');
+
+      const details = stageDetails[stage];
+      for (const detail of details) {
+        await sleep(400);
+        addLog(`  ${detail}`);
+      }
+
+      await sleep(300);
+      setStageStatus(stage, 'done');
+    }
+
+    const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+    addLog(`[${new Date().toLocaleTimeString()}] pipeline completed in ${duration}s`, 'da-log-success');
+
+    document.getElementById('statRecords').textContent = '19,256';
+    document.getElementById('statDuration').textContent = `${duration}s`;
+    document.getElementById('statErrors').textContent = '0';
+    document.getElementById('runStats').style.display = 'grid';
+
+    document.getElementById('runBtn').disabled = false;
+    running = false;
+  }
+
+  function resetPipeline() {
+    if (running) return;
+    stages.forEach(s => setStageStatus(s, 'idle'));
+    for (let i = 1; i <= 4; i++) setConnector(i, false);
+    document.getElementById('logBody').innerHTML =
+      '<span class="da-log-line mono da-log-muted">$ awaiting pipeline run...</span>';
+    document.getElementById('runStats').style.display = 'none';
+  }
+
+  // SCHEMA
+  function showTable(name) {
+    const cols = document.getElementById(`cols-${name}`);
+    const isVisible = cols.style.display !== 'none';
+    document.querySelectorAll('.da-table-cols').forEach(c => c.style.display = 'none');
+    if (!isVisible) cols.style.display = 'block';
+  }
+
+  // DASHBOARD CHARTS
+  let dashRendered = false;
+
+  function renderDashboard() {
+    if (dashRendered) return;
+    dashRendered = true;
+
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const revenue = [182000,194000,178000,221000,248000,267000,243000,289000,312000,298000,334000,274000];
+
+    new Chart(document.getElementById('daRevenueChart').getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: months,
+        datasets: [{
+          data: revenue,
+          borderColor: '#4f9cf9',
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: '#4f9cf9',
+          tension: 0.4,
+          fill: true,
+          backgroundColor: (ctx) => {
+            const g = ctx.chart.ctx.createLinearGradient(0,0,0,180);
+            g.addColorStop(0,'rgba(79,156,249,0.2)');
+            g.addColorStop(1,'rgba(79,156,249,0)');
+            return g;
+          }
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid:{ display:false }, ticks:{ color:'#6b7280', font:{ family:'JetBrains Mono', size:10 } } },
+          y: { grid:{ color:'rgba(255,255,255,0.04)' }, ticks:{ color:'#6b7280', font:{ family:'JetBrains Mono', size:10 }, callback: v=>`$${(v/1000).toFixed(0)}k` } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('daCategoryChart').getContext('2d'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Electronics','Clothing','Food','Office','Other'],
+        datasets: [{
+          data: [38,24,18,12,8],
+          backgroundColor: ['#4f9cf9','#8b5cf6','#10b981','#f59e0b','#6b7280'],
+          borderWidth: 0,
+          hoverOffset: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color:'#9ca3af', font:{ family:'JetBrains Mono', size:10 }, padding: 10 }
+          }
+        }
+      }
+    });
+
+    const provinces = [
+      { name:'Ontario',          pct:42, rev:'$1.19M' },
+      { name:'British Columbia', pct:24, rev:'$681k'  },
+      { name:'Alberta',          pct:18, rev:'$511k'  },
+      { name:'Quebec',           pct:11, rev:'$312k'  },
+      { name:'Other',            pct:5,  rev:'$142k'  },
+    ];
+
+    document.getElementById('provinceBars').innerHTML = provinces.map(p => `
+      <div class="da-prov-row">
+        <span class="mono" style="font-size:0.75rem;color:var(--text2);min-width:140px;">${p.name}</span>
+        <div class="da-prov-bar-wrap">
+          <div class="da-prov-bar" style="width:${p.pct}%;"></div>
+        </div>
+        <span class="mono" style="font-size:0.72rem;color:var(--text3);min-width:50px;text-align:right;">${p.rev}</span>
+      </div>
+    `).join('');
+
+    const weeks = ['W1','W2','W3','W4','W5','W6','W7','W8'];
+    const orders = [412,487,398,521,543,489,612,578];
+
+    new Chart(document.getElementById('daOrdersChart').getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: weeks,
+        datasets: [{
+          data: orders,
+          backgroundColor: orders.map((v,i) =>
+            i === orders.length-1 ? '#4f9cf9' : 'rgba(79,156,249,0.3)'
+          ),
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid:{ display:false }, ticks:{ color:'#6b7280', font:{ family:'JetBrains Mono', size:10 } } },
+          y: { grid:{ color:'rgba(255,255,255,0.04)' }, ticks:{ color:'#6b7280', font:{ family:'JetBrains Mono', size:10 } } }
+        }
+      }
+    });
+  }
+
+  // TAB SWITCHING
+  document.querySelectorAll('.da-tabs .pos-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.da-tabs .pos-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.pos-view').forEach(v => v.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(`view-${tab.dataset.view}`).classList.add('active');
+      if (tab.dataset.view === 'dashboard') renderDashboard();
+    });
+  });
+  </script>
+
+</body>
+</html>
