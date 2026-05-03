@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body { background: #080a0f; }
+    html { opacity: 0; transition: none; }
+    html.ready { opacity: 1; transition: opacity 0.4s ease 0.05s; }
+  </style>
+  <title>VaultMind — Tirth Doshi</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>document.documentElement.classList.add('ready');</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/skills/">skills</a></li>
+        <li><a href="/experience/">experience</a></li>
+        <li><a href="/contact/" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="demo-hero" style="--accent: #14b8a6;">
+    <div class="demo-hero-bg">
+      <div class="demo-orb" style="background: #14b8a6;"></div>
+    </div>
+    <div class="container">
+      <div class="demo-back reveal">
+        <a href="/projects/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          back to projects
+        </a>
+      </div>
+      <div class="demo-hero-inner">
+        <div class="demo-hero-left">
+          <div class="demo-number mono reveal">06 / 07</div>
+          <h1 class="reveal" data-delay="100">VaultMind</h1>
+          <p class="demo-subtitle reveal" data-delay="150">RAG Document Intelligence</p>
+          <p class="reveal" data-delay="200">
+            Upload PDFs, DOCX and TXT — ask questions — get answers with page-level
+            source citations. Built without LangChain — direct OpenAI API and ChromaDB.
+            AI document summarization, smart query suggestions, multi-document vault,
+            conversation history, and chat export to markdown.
+          </p>
+          <div class="demo-hero-tags reveal" data-delay="250">
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">RAG Pipeline</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">AI</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">Full Stack</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">No LangChain</span>
+          </div>
+          <div class="demo-hero-actions reveal" data-delay="300">
+            <a href="https://github.com/DoshiTirth/VaultMind" target="_blank" class="btn btn-primary" style="background:#14b8a6;color:#fff;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              view on GitHub
+            </a>
+            <a href="/projects/" class="btn btn-outline">all projects</a>
+          </div>
+        </div>
+        <div class="demo-hero-stats reveal" data-delay="200">
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="3">0</span>
+            <span class="demo-stat-label">file types supported</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="0">0</span>
+            <span class="demo-stat-label">LangChain dependencies</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="100">0</span>
+            <span class="demo-stat-label">% page-level citations</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="5">0</span>
+            <span class="demo-stat-label">pre-loaded demo docs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="demo-arch section">
+    <div class="container">
+      <div class="section-label reveal">architecture</div>
+      <h2 class="reveal" data-delay="100">How it <span class="text-gradient">works</span></h2>
+      <div class="arch-flow reveal" data-delay="200">
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(20,184,166,0.12);border-color:rgba(20,184,166,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <span class="arch-label">Document Upload</span>
+          <span class="arch-sub">PDF / DOCX / TXT</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(20,184,166,0.12);border-color:rgba(20,184,166,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <span class="arch-label">Chunking</span>
+          <span class="arch-sub">page-level splits</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(20,184,166,0.12);border-color:rgba(20,184,166,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <span class="arch-label">OpenAI Embeddings</span>
+          <span class="arch-sub">text-embedding-3</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(20,184,166,0.12);border-color:rgba(20,184,166,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="arch-label">ChromaDB</span>
+          <span class="arch-sub">vector store</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(20,184,166,0.12);border-color:rgba(20,184,166,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <span class="arch-label">GPT-4o</span>
+          <span class="arch-sub">answer + citations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO -->
+  <section class="demo-interactive section">
+    <div class="container">
+      <div class="section-label reveal">interactive demo</div>
+      <h2 class="reveal" data-delay="100">
+        Document Q&A
+        <span class="text-gradient">with citations</span>
+      </h2>
+      <p class="reveal" data-delay="150">
+        Select a pre-loaded document from the vault, pick a question, and watch
+        the AI answer stream in with page-level source citations.
+      </p>
+
+      <div class="vm-shell reveal" data-delay="200">
+
+        <!-- Vault sidebar -->
+        <div class="vm-vault">
+          <div class="vm-vault-header mono">document vault</div>
+          <div class="vm-doc-list" id="docList"></div>
+          <div class="vm-vault-stats mono" id="vaultStats"></div>
+        </div>
+
+        <!-- Chat area -->
+        <div class="vm-chat">
+          <div class="vm-chat-header">
+            <div class="vm-doc-active">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span class="mono" id="activeDocName">Select a document</span>
+            </div>
+            <div class="vm-suggestions" id="suggestions"></div>
+          </div>
+
+          <div class="vm-messages" id="messages">
+            <div class="vm-welcome">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(20,184,166,0.4)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <p>Select a document from the vault and click a suggested question to begin.</p>
+            </div>
+          </div>
+
+          <div class="vm-input-area">
+            <div class="vm-suggested-qs" id="suggestedQs"></div>
+            <div class="vm-input-row">
+              <input type="text" class="vm-input" id="chatInput"
+                placeholder="ask anything about the document..." />
+              <button class="vm-send-btn" id="sendBtn" onclick="sendMessage()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="demo-tech section">
+    <div class="container">
+      <div class="section-label reveal">tech stack</div>
+      <div class="tech-grid reveal" data-delay="100">
+        <div class="tech-group">
+          <div class="tech-group-label mono">backend</div>
+          <div class="tech-tags">
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">Python</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">FastAPI</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">PyMuPDF</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">AI & vectors</div>
+          <div class="tech-tags">
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">OpenAI API</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">ChromaDB</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">text-embedding-3</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">frontend</div>
+          <div class="tech-tags">
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">React 18</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">Vite</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">pipeline</div>
+          <div class="tech-tags">
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">No LangChain</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">Direct API</span>
+            <span class="tag" style="background:rgba(20,184,166,0.12);color:#14b8a6;border-color:rgba(20,184,166,0.2);">Custom RAG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT NAV -->
+  <section class="demo-nav-projects section">
+    <div class="container">
+      <div class="proj-nav-inner">
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">previous project</span>
+          <a href="/demos/marketpulse/" class="proj-nav-prev hover-lift">
+            <span class="proj-nav-arrow">←</span>
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">05 / 07</span>
+              <h3>MarketPulse</h3>
+              <p>AI Stock Intelligence Platform</p>
+            </div>
+          </a>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">next project</span>
+          <a href="/demos/dataaisle/" class="proj-nav-next hover-lift">
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">07 / 07</span>
+              <h3>DataAisle</h3>
+              <p>ETL Pipeline + Data Warehouse</p>
+            </div>
+            <span class="proj-nav-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../../main.js"></script>
+  <script>
+  // DOCUMENT DATA
+  const documents = [
+    {
+      id: 'medical-report',
+      name: 'Patient Medical Report',
+      type: 'PDF',
+      pages: 8,
+      size: '1.2 MB',
+      icon: '📋',
+      questions: [
+        'What are the patient\'s main diagnoses?',
+        'What medications are currently prescribed?',
+        'What do the lab results indicate?',
+        'What follow-up is recommended?',
+      ],
+      answers: {
+        'What are the patient\'s main diagnoses?': {
+          text: 'The patient presents with three primary diagnoses: Type 2 Diabetes Mellitus (HbA1c 8.4%, above target of 7.0%), Stage 2 Hypertension with blood pressure averaging 158/94 mmHg across three readings, and Mild Chronic Kidney Disease (eGFR 62 mL/min/1.73m²). These conditions are clinically interrelated — the poorly controlled diabetes is a significant contributing factor to both the hypertension and the early renal impairment.',
+          citations: ['Page 2 — Primary Diagnosis Summary', 'Page 3 — Lab Results Overview', 'Page 5 — Nephrology Consult Notes']
+        },
+        'What medications are currently prescribed?': {
+          text: 'The patient is currently prescribed: Metformin 1000mg twice daily for glycemic control, Lisinopril 10mg once daily as an ACE inhibitor for both blood pressure management and renal protection, Amlodipine 5mg once daily as a calcium channel blocker for additional blood pressure control, and Atorvastatin 40mg once daily for cardiovascular risk reduction. The physician has noted that Metformin dosage may need adjustment given the declining eGFR.',
+          citations: ['Page 4 — Current Medication List', 'Page 6 — Physician Notes']
+        },
+        'What do the lab results indicate?': {
+          text: 'Laboratory results from the most recent panel (April 28, 2026) indicate elevated HbA1c at 8.4% (target below 7.0%), fasting glucose of 172 mg/dL, eGFR of 62 mL/min/1.73m² indicating Stage 2 CKD, urine albumin-creatinine ratio of 48 mg/g (mildly elevated), total cholesterol 198 mg/dL with LDL 112 mg/dL. The trend over 6 months shows slight worsening of renal function and persistently poor glycemic control.',
+          citations: ['Page 3 — Laboratory Results', 'Page 3 — 6-Month Trend Analysis']
+        },
+        'What follow-up is recommended?': {
+          text: 'The attending physician recommends: follow-up appointment in 6 weeks to reassess HbA1c and medication efficacy, nephrology consultation within 30 days given the declining eGFR trend, dietary consult for a low-sodium renal diet, self-monitoring of blood glucose at least twice daily, and repeat renal function panel in 3 months. If HbA1c remains above 8% at follow-up, initiation of a GLP-1 receptor agonist will be considered.',
+          citations: ['Page 7 — Treatment Plan', 'Page 8 — Follow-up Schedule']
+        }
+      }
+    },
+    {
+      id: 'financial-brief',
+      name: 'Q1 2026 Financial Brief',
+      type: 'PDF',
+      pages: 12,
+      size: '2.4 MB',
+      icon: '📊',
+      questions: [
+        'What was the total revenue in Q1 2026?',
+        'Which business segment performed best?',
+        'What are the key risks identified?',
+        'What is the outlook for Q2 2026?',
+      ],
+      answers: {
+        'What was the total revenue in Q1 2026?': {
+          text: 'Total consolidated revenue for Q1 2026 reached $847.3 million, representing a 22.4% year-over-year increase from Q1 2025\'s $692.1 million. This exceeded analyst consensus estimates of $831 million by approximately 1.96%. Organic revenue growth, excluding the impact of the Nexus Technologies acquisition completed in November 2025, was 14.8%. Gross margin improved to 61.2% from 58.7% in the prior year period, driven primarily by product mix shift toward higher-margin SaaS offerings.',
+          citations: ['Page 2 — Financial Highlights', 'Page 4 — Revenue Bridge Analysis']
+        },
+        'Which business segment performed best?': {
+          text: 'The Cloud & AI Solutions segment delivered the strongest performance, with revenue of $412 million representing 48.6% of total revenue and 34.2% year-over-year growth. Recurring revenue within this segment reached $318 million with a net revenue retention rate of 118%. The Enterprise Software segment contributed $285 million (+15.1% YoY), while the Legacy Systems segment declined 8.3% to $150 million as the company continues its strategic migration away from on-premise solutions.',
+          citations: ['Page 5 — Segment Performance', 'Page 6 — Cloud & AI Deep Dive']
+        },
+        'What are the key risks identified?': {
+          text: 'Management identified four primary risk categories: Macroeconomic risks including potential enterprise spending slowdowns if interest rates remain elevated; Competitive risks from hyperscaler cloud providers entering adjacent markets; Execution risks related to the integration of Nexus Technologies, which is 60% complete with $28M in synergies realized of the $75M target; and Regulatory risks from evolving AI governance frameworks in the EU and Canada that may require product modifications. The company has increased its legal and compliance reserve by $12M to address the regulatory risk.',
+          citations: ['Page 9 — Risk Factors', 'Page 10 — M&A Integration Update']
+        },
+        'What is the outlook for Q2 2026?': {
+          text: 'For Q2 2026, management issued guidance of $880-910 million in revenue, representing 18-22% year-over-year growth. Non-GAAP operating margin is guided at 24-26%. The company expects continued strength in Cloud & AI Solutions, with a major product launch — the Apex AI Platform — scheduled for mid-May which is expected to contribute $15-20M in incremental revenue in Q2. Full-year 2026 guidance was raised to $3.45-3.55 billion from the prior $3.30-3.45 billion range.',
+          citations: ['Page 11 — Forward Guidance', 'Page 12 — Product Roadmap']
+        }
+      }
+    },
+    {
+      id: 'research-paper',
+      name: 'ML in Healthcare Research',
+      type: 'PDF',
+      pages: 24,
+      size: '3.8 MB',
+      icon: '🔬',
+      questions: [
+        'What ML models were evaluated in the study?',
+        'What dataset was used for training?',
+        'What were the key performance metrics?',
+        'What limitations does the study acknowledge?',
+      ],
+      answers: {
+        'What ML models were evaluated in the study?': {
+          text: 'The study evaluated six machine learning architectures for clinical outcome prediction: Random Forest (RF), Gradient Boosting Machine (GBM), XGBoost, a custom Transformer-based model fine-tuned on clinical notes, a Multi-Layer Perceptron (MLP) baseline, and an ensemble approach combining RF, XGBoost and the Transformer with soft voting. The Transformer model was pre-trained on PubMed abstracts and MIMIC-III clinical notes before fine-tuning on the study dataset. All models were evaluated using 5-fold stratified cross-validation to account for class imbalance in adverse outcome prediction.',
+          citations: ['Page 5 — Methodology', 'Page 6 — Model Architectures', 'Page 8 — Training Procedure']
+        },
+        'What dataset was used for training?': {
+          text: 'The study utilized a retrospective cohort of 47,832 adult ICU admissions from three academic medical centers between 2020-2024, drawn from the MIMIC-IV database supplemented with local EHR extracts. The dataset included 284 clinical features per patient spanning vital signs, laboratory values, medications, procedures, and clinical notes. After preprocessing and exclusion criteria application, the final analytical dataset comprised 38,241 admissions with a 30-day mortality rate of 12.4%. The dataset was split 70/15/15 for train/validation/test.',
+          citations: ['Page 4 — Dataset Description', 'Page 7 — Preprocessing Pipeline']
+        },
+        'What were the key performance metrics?': {
+          text: 'The ensemble model achieved the best overall performance with AUROC of 0.891 (95% CI: 0.884-0.898) for 30-day mortality prediction, significantly outperforming the MLP baseline (AUROC 0.812). Sensitivity was 84.2% at a specificity of 81.6%. The Transformer alone achieved AUROC of 0.878, while XGBoost reached 0.869. For the secondary endpoint of ICU readmission within 72 hours, the ensemble achieved AUROC of 0.847. Calibration was assessed using the Hosmer-Lemeshow test, with the ensemble showing the best calibration (p=0.43).',
+          citations: ['Page 14 — Results', 'Page 15 — Performance Comparison Table', 'Page 16 — Calibration Analysis']
+        },
+        'What limitations does the study acknowledge?': {
+          text: 'The authors acknowledge four significant limitations: First, the retrospective nature of the study introduces selection bias and limits causal inference. Second, all three institutions are academic medical centers in North America, limiting generalizability to community hospitals or other healthcare systems. Third, the Transformer model required substantial computational resources (8x A100 GPUs, 72 hours training) which may limit clinical deployment feasibility. Fourth, the study period coincided with COVID-19 which may have altered clinical patterns and outcome rates in ways that affect model generalizability to post-pandemic populations.',
+          citations: ['Page 21 — Limitations', 'Page 22 — Discussion']
+        }
+      }
+    },
+    {
+      id: 'contract',
+      name: 'Software License Agreement',
+      type: 'DOCX',
+      pages: 18,
+      size: '0.8 MB',
+      icon: '📜',
+      questions: [
+        'What are the key license restrictions?',
+        'What is the payment and billing structure?',
+        'What does the SLA guarantee?',
+        'What are the termination conditions?',
+      ],
+      answers: {
+        'What are the key license restrictions?': {
+          text: 'The license grants a non-exclusive, non-transferable right to use the software solely for the licensee\'s internal business purposes. Key restrictions include: prohibition on sublicensing, reselling, or distributing the software to third parties; prohibition on reverse engineering, decompiling, or disassembling the software; limitation of concurrent users to the number specified in the Order Form; restriction of use to the geographic regions specified in Schedule A; and prohibition on using the software to build a competing product. The license expressly does not include source code access unless the parties execute a separate Source Code Escrow Agreement.',
+          citations: ['Page 3 — License Grant', 'Page 4 — Restrictions', 'Schedule A']
+        },
+        'What is the payment and billing structure?': {
+          text: 'Annual subscription fees are payable in advance within 30 days of invoice. The base license fee for the first year is $240,000 covering up to 500 named users, with additional user blocks of 100 available at $42,000 per block annually. Fees are subject to an annual increase not to exceed the lesser of 5% or CPI. Usage-based API consumption is billed monthly in arrears at $0.02 per API call above the included 500,000 calls per month. Professional services are billed at $225/hour for standard engagements. A 1.5% monthly late payment fee applies to overdue balances.',
+          citations: ['Page 8 — Fees and Payment', 'Page 9 — Pricing Schedule', 'Schedule B — Fee Structure']
+        },
+        'What does the SLA guarantee?': {
+          text: 'The Service Level Agreement guarantees 99.9% monthly uptime for the production environment, calculated excluding scheduled maintenance windows (maximum 4 hours per month, communicated 72 hours in advance). In the event of an outage exceeding the SLA threshold, the licensee is entitled to service credits equal to 10% of the monthly fee per hour of downtime beyond the threshold, capped at 30% of the monthly fee. Critical support tickets (P1) must receive an initial response within 1 hour and resolution within 4 hours. The SLA explicitly excludes downtime caused by licensee actions, third-party services, or force majeure events.',
+          citations: ['Page 12 — Service Level Agreement', 'Page 13 — Service Credits', 'Schedule C — Support Tiers']
+        },
+        'What are the termination conditions?': {
+          text: 'Either party may terminate the agreement for material breach if the breach remains uncured 30 days after written notice. The licensor may terminate immediately if the licensee becomes insolvent, makes an assignment for benefit of creditors, or violates the license restrictions in Section 3. The licensee may terminate for convenience with 90 days written notice, but remains liable for fees through the end of the current annual term. Upon termination, the licensee must cease all use, destroy all copies, and provide written certification of compliance within 10 business days. The licensor will provide 30 days of data export access following termination.',
+          citations: ['Page 15 — Term and Termination', 'Page 16 — Effects of Termination']
+        }
+      }
+    },
+    {
+      id: 'technical-spec',
+      name: 'System Architecture Spec',
+      type: 'TXT',
+      pages: 6,
+      size: '0.3 MB',
+      icon: '⚙️',
+      questions: [
+        'What is the overall system architecture?',
+        'What are the API design decisions?',
+        'How is data security handled?',
+        'What are the scalability considerations?',
+      ],
+      answers: {
+        'What is the overall system architecture?': {
+          text: 'The system follows a microservices architecture deployed on AWS ECS with Fargate. The core services include: an API Gateway service (Node.js/Express) handling authentication and request routing, a Data Ingestion Service (Python/FastAPI) managing ETL pipelines, an AI Processing Service (Python) handling model inference, a Notification Service (Go) for real-time alerts, and a Reporting Service (C#/.NET) for PDF/CSV generation. Services communicate via AWS SQS for asynchronous tasks and REST for synchronous calls. The frontend is a React 18 SPA served via CloudFront CDN. All services write to a shared PostgreSQL RDS instance with read replicas for reporting queries.',
+          citations: ['Section 2 — Architecture Overview', 'Section 3 — Service Descriptions']
+        },
+        'What are the API design decisions?': {
+          text: 'The API follows REST principles with JSON payloads throughout. Authentication uses JWT tokens with 15-minute access token expiry and 7-day refresh tokens stored in HttpOnly cookies. All endpoints are versioned under /api/v1/ with a deprecation policy of 12 months for breaking changes. Rate limiting is applied at 1,000 requests per minute per API key with burst allowance of 200. Pagination uses cursor-based pagination rather than offset pagination for consistency across large datasets. WebSocket connections are provided for real-time dashboard updates via AWS API Gateway WebSocket APIs. OpenAPI 3.0 documentation is auto-generated from code annotations.',
+          citations: ['Section 4 — API Design Standards', 'Section 5 — Authentication Architecture']
+        },
+        'How is data security handled?': {
+          text: 'Security is implemented in multiple layers: all data at rest is encrypted using AES-256 via AWS KMS with customer-managed keys; all data in transit uses TLS 1.3; the database uses row-level security policies aligned with the 5-role RBAC model; PII fields are encrypted at the application layer before database insertion using envelope encryption; audit logs are written to an immutable S3 bucket with Object Lock enabled for compliance; and secrets are managed via AWS Secrets Manager with automatic rotation every 30 days. The application passed SOC 2 Type II audit in February 2026 and undergoes quarterly penetration testing.',
+          citations: ['Section 6 — Security Architecture', 'Section 7 — Compliance']
+        },
+        'What are the scalability considerations?': {
+          text: 'The system is designed for horizontal scaling with stateless services. Auto-scaling policies are configured to scale ECS tasks when CPU exceeds 70% or memory exceeds 80% for 3 consecutive minutes, with a minimum of 2 tasks and maximum of 20 tasks per service. The database uses connection pooling via PgBouncer with a pool size of 100 connections. Redis ElastiCache provides caching for frequently accessed reference data with TTLs of 5-60 minutes depending on data volatility. The AI Processing Service uses an SQS queue with a dead-letter queue for failed inference jobs, enabling decoupled scaling of AI workloads independently of the API layer. Load testing demonstrated stable performance at 10,000 concurrent users.',
+          citations: ['Section 8 — Scalability Design', 'Section 9 — Performance Testing Results']
+        }
+      }
+    }
+  ];
+
+  let currentDoc = null;
+  let messages = [];
+
+  // RENDER DOC LIST
+  function renderDocList() {
+    document.getElementById('docList').innerHTML = documents.map(d => `
+      <div class="vm-doc-item ${currentDoc?.id === d.id ? 'active' : ''}"
+           onclick="selectDoc('${d.id}')">
+        <span class="vm-doc-icon">${d.icon}</span>
+        <div class="vm-doc-info">
+          <span class="vm-doc-name">${d.name}</span>
+          <span class="vm-doc-meta mono">${d.type} · ${d.pages}p · ${d.size}</span>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('vaultStats').textContent =
+      `${documents.length} docs · ${documents.reduce((s,d)=>s+d.pages,0)} pages`;
+  }
+
+  function selectDoc(id) {
+    currentDoc = documents.find(d => d.id === id);
+    messages = [];
+    renderDocList();
+    document.getElementById('activeDocName').textContent = currentDoc.name;
+    renderMessages();
+    renderSuggestions();
+  }
+
+  // RENDER SUGGESTIONS
+  function renderSuggestions() {
+    if (!currentDoc) return;
+    document.getElementById('suggestedQs').innerHTML = currentDoc.questions.map(q => `
+      <button class="vm-q-btn" onclick="askQuestion('${q.replace(/'/g,"\\'")}')">
+        ${q}
+      </button>
+    `).join('');
+  }
+
+  // MESSAGES
+  function renderMessages() {
+    const el = document.getElementById('messages');
+    if (!messages.length) {
+      el.innerHTML = `
+        <div class="vm-welcome">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(20,184,166,0.4)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <p>Click a suggested question below to ask about <strong>${currentDoc?.name || 'the document'}</strong>.</p>
+        </div>`;
+      return;
+    }
+    el.innerHTML = messages.map(m => `
+      <div class="vm-message vm-message-${m.role}">
+        <div class="vm-message-bubble">
+          ${m.role === 'assistant' ? `
+            <div class="vm-message-header mono">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              AI Answer
+            </div>` : ''}
+          <p>${m.text}</p>
+          ${m.citations ? `
+            <div class="vm-citations">
+              <span class="vm-citations-label mono">sources</span>
+              ${m.citations.map(c => `<span class="vm-citation">${c}</span>`).join('')}
+            </div>` : ''}
+        </div>
+      </div>
+    `).join('');
+    el.scrollTop = el.scrollHeight;
+  }
+
+  function askQuestion(q) {
+    if (!currentDoc) return;
+
+    messages.push({ role:'user', text: q });
+    renderMessages();
+
+    // Stream the answer
+    const answer = currentDoc.answers[q];
+    if (!answer) return;
+
+    const msgIndex = messages.length;
+    messages.push({ role:'assistant', text:'', citations: null });
+    renderMessages();
+
+    let i = 0;
+    const text = answer.text;
+
+    function typeChar() {
+      if (i < text.length) {
+        messages[msgIndex].text += text[i++];
+        renderMessages();
+        setTimeout(typeChar, 12);
+      } else {
+        messages[msgIndex].citations = answer.citations;
+        renderMessages();
+      }
+    }
+    setTimeout(typeChar, 300);
+  }
+
+  function sendMessage() {
+    const input = document.getElementById('chatInput');
+    const q = input.value.trim();
+    if (!q || !currentDoc) return;
+    input.value = '';
+
+    // Find closest matching question
+    const match = currentDoc.questions.find(cq =>
+      cq.toLowerCase().includes(q.toLowerCase().split(' ')[0]) ||
+      q.toLowerCase().includes(cq.toLowerCase().split(' ')[0])
+    ) || currentDoc.questions[0];
+
+    askQuestion(match);
+  }
+
+  document.getElementById('chatInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') sendMessage();
+  });
+
+  // INIT 
+  renderDocList();
+  </script>
+
+</body>
+</html>
