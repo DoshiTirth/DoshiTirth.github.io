@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body { background: #080a0f; }
+    html { opacity: 0; transition: none; }
+    html.ready { opacity: 1; transition: opacity 0.4s ease 0.05s; }
+  </style>
+  <title>MarketPulse — Tirth Doshi</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>document.documentElement.classList.add('ready');</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/skills/">skills</a></li>
+        <li><a href="/experience/">experience</a></li>
+        <li><a href="/contact/" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="demo-hero" style="--accent: #f97316;">
+    <div class="demo-hero-bg">
+      <div class="demo-orb" style="background: #f97316;"></div>
+    </div>
+    <div class="container">
+      <div class="demo-back reveal">
+        <a href="/projects/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          back to projects
+        </a>
+      </div>
+      <div class="demo-hero-inner">
+        <div class="demo-hero-left">
+          <div class="demo-number mono reveal">05 / 07</div>
+          <h1 class="reveal" data-delay="100">MarketPulse</h1>
+          <p class="demo-subtitle reveal" data-delay="150">AI Stock Intelligence Platform</p>
+          <p class="reveal" data-delay="200">
+            Custom 4-skill AI agent engine generating confidence-scored buy, sell,
+            and hold signals from live market data. RSI, MACD, and Bollinger Bands
+            dashboards. Claude AI conversational assistant using real-time market
+            context. Web app and native desktop via Electron.
+          </p>
+          <div class="demo-hero-tags reveal" data-delay="250">
+            <span class="tag tag-coral">AI Agent</span>
+            <span class="tag tag-coral">Full Stack</span>
+            <span class="tag tag-coral">Finance</span>
+            <span class="tag tag-coral">Electron</span>
+          </div>
+          <div class="demo-hero-actions reveal" data-delay="300">
+            <a href="https://github.com/DoshiTirth/market-pulse" target="_blank" class="btn btn-primary" style="background:#f97316;color:#fff;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              view on GitHub
+            </a>
+            <a href="/projects/" class="btn btn-outline">all projects</a>
+          </div>
+        </div>
+        <div class="demo-hero-stats reveal" data-delay="200">
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="4">0</span>
+            <span class="demo-stat-label">AI agent skills</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="3">0</span>
+            <span class="demo-stat-label">signal types</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="2">0</span>
+            <span class="demo-stat-label">platforms (web + desktop)</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono" data-count="100">0</span>
+            <span class="demo-stat-label">% real-time data</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="demo-arch section">
+    <div class="container">
+      <div class="section-label reveal">architecture</div>
+      <h2 class="reveal" data-delay="100">How it <span class="text-gradient">works</span></h2>
+      <div class="arch-flow reveal" data-delay="200">
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(249,115,22,0.12);border-color:rgba(249,115,22,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="arch-label">Finnhub API</span>
+          <span class="arch-sub">live market data</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(249,115,22,0.12);border-color:rgba(249,115,22,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
+          </div>
+          <span class="arch-label">AI Agent Engine</span>
+          <span class="arch-sub">4 analysis skills</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(249,115,22,0.12);border-color:rgba(249,115,22,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <span class="arch-label">Claude AI</span>
+          <span class="arch-sub">conversational assistant</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(249,115,22,0.12);border-color:rgba(249,115,22,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <span class="arch-label">Express.js</span>
+          <span class="arch-sub">REST API server</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <div class="arch-icon" style="background:rgba(249,115,22,0.12);border-color:rgba(249,115,22,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="arch-label">React + Electron</span>
+          <span class="arch-sub">web + desktop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO -->
+  <section class="demo-interactive section">
+    <div class="container">
+      <div class="section-label reveal">interactive demo</div>
+      <h2 class="reveal" data-delay="100">
+        AI stock
+        <span class="text-gradient">signal engine</span>
+      </h2>
+      <p class="reveal" data-delay="150">
+        Select a stock to see the price chart with AI buy/sell/hold signals.
+        The agent scores each signal with a confidence percentage.
+      </p>
+
+      <div class="mp-shell reveal" data-delay="200">
+
+        <!-- Stock selector -->
+        <div class="mp-header">
+          <div class="mp-tickers" id="tickerTabs"></div>
+          <div class="mp-header-right">
+            <div class="mp-price" id="currentPrice">
+              <span class="mp-price-value mono" id="priceValue">$0.00</span>
+              <span class="mp-price-change mono" id="priceChange">+0.00%</span>
+            </div>
+            <div class="mp-signal-badge" id="signalBadge">—</div>
+          </div>
+        </div>
+
+        <!-- Chart area -->
+        <div class="mp-chart-area">
+          <canvas id="stockChart" height="220"></canvas>
+        </div>
+
+        <!-- Indicators row -->
+        <div class="mp-indicators">
+          <div class="mp-indicator">
+            <span class="mp-ind-label mono">RSI (14)</span>
+            <span class="mp-ind-value mono" id="rsiValue">—</span>
+            <span class="mp-ind-status" id="rsiStatus">—</span>
+          </div>
+          <div class="mp-indicator">
+            <span class="mp-ind-label mono">MACD</span>
+            <span class="mp-ind-value mono" id="macdValue">—</span>
+            <span class="mp-ind-status" id="macdStatus">—</span>
+          </div>
+          <div class="mp-indicator">
+            <span class="mp-ind-label mono">Bollinger Band</span>
+            <span class="mp-ind-value mono" id="bbValue">—</span>
+            <span class="mp-ind-status" id="bbStatus">—</span>
+          </div>
+          <div class="mp-indicator">
+            <span class="mp-ind-label mono">Volume</span>
+            <span class="mp-ind-value mono" id="volValue">—</span>
+            <span class="mp-ind-status" id="volStatus">—</span>
+          </div>
+        </div>
+
+        <!-- AI signal panel -->
+        <div class="mp-ai-panel">
+          <div class="mp-ai-header">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
+            <span class="mono">AI Agent — 4-Skill Analysis Engine</span>
+          </div>
+          <div class="mp-signals" id="aiSignals"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="demo-tech section">
+    <div class="container">
+      <div class="section-label reveal">tech stack</div>
+      <div class="tech-grid reveal" data-delay="100">
+        <div class="tech-group">
+          <div class="tech-group-label mono">frontend</div>
+          <div class="tech-tags">
+            <span class="tag tag-coral">React 18</span>
+            <span class="tag tag-coral">Chart.js</span>
+            <span class="tag tag-coral">Vite</span>
+            <span class="tag tag-coral">Electron</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">backend</div>
+          <div class="tech-tags">
+            <span class="tag tag-coral">Express.js</span>
+            <span class="tag tag-coral">Node.js</span>
+            <span class="tag tag-coral">Finnhub API</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">AI engine</div>
+          <div class="tech-tags">
+            <span class="tag tag-coral">Claude AI</span>
+            <span class="tag tag-coral">Custom Agent</span>
+            <span class="tag tag-coral">4 Skills</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">indicators</div>
+          <div class="tech-tags">
+            <span class="tag tag-coral">RSI</span>
+            <span class="tag tag-coral">MACD</span>
+            <span class="tag tag-coral">Bollinger Bands</span>
+            <span class="tag tag-coral">Volume Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT NAV -->
+  <section class="demo-nav-projects section">
+    <div class="container">
+      <div class="proj-nav-inner">
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">previous project</span>
+          <a href="/demos/retailpulse/" class="proj-nav-prev hover-lift">
+            <span class="proj-nav-arrow">←</span>
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">04 / 07</span>
+              <h3>RetailPulse</h3>
+              <p>Full-Stack ERP-Lite System</p>
+            </div>
+          </a>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;">
+          <span class="text-muted mono" style="font-size:0.8rem;">next project</span>
+          <a href="/demos/vaultmind/" class="proj-nav-next hover-lift">
+            <div>
+              <span class="mono" style="color:var(--text3);font-size:0.75rem;">06 / 07</span>
+              <h3>VaultMind</h3>
+              <p>RAG Document Intelligence</p>
+            </div>
+            <span class="proj-nav-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script src="../../main.js"></script>
+  <script>
+  // STOCK DATA 
+  const stocks = {
+    NVDA: {
+      name: 'NVIDIA Corp',
+      prices: [842,856,871,848,863,879,892,885,901,918,934,921,945,962,978,955,971,988,1002,1024,1018,1035,1052,1041,1068],
+      change: '+2.84%',
+      positive: true,
+      rsi: 68.4, macd: 12.4, bb: 'Upper', vol: 'High',
+      signal: 'BUY',
+      confidence: 87,
+      skills: [
+        { name:'Trend Analysis',    signal:'BUY',  confidence:91, reason:'Strong uptrend — 25-day high, momentum positive' },
+        { name:'RSI Indicator',     signal:'HOLD', confidence:72, reason:'RSI at 68.4 — approaching overbought but not there yet' },
+        { name:'Volume Analysis',   signal:'BUY',  confidence:88, reason:'Volume 2.3x average — institutional buying confirmed' },
+        { name:'Bollinger Bands',   signal:'HOLD', confidence:65, reason:'Price at upper band — potential resistance at $1,080' },
+      ]
+    },
+    AAPL: {
+      name: 'Apple Inc',
+      prices: [172,175,178,176,180,183,181,185,188,184,187,190,193,191,195,198,196,200,203,201,205,208,206,210,213],
+      change: '+1.42%',
+      positive: true,
+      rsi: 54.2, macd: 3.8, bb: 'Middle', vol: 'Normal',
+      signal: 'HOLD',
+      confidence: 74,
+      skills: [
+        { name:'Trend Analysis',    signal:'HOLD', confidence:76, reason:'Steady uptrend but momentum slowing near resistance' },
+        { name:'RSI Indicator',     signal:'HOLD', confidence:82, reason:'RSI at 54.2 — neutral zone, no extreme readings' },
+        { name:'Volume Analysis',   signal:'HOLD', confidence:68, reason:'Volume in line with 30-day average — no unusual activity' },
+        { name:'Bollinger Bands',   signal:'BUY',  confidence:71, reason:'Price at midband with room to upper band at $218' },
+      ]
+    },
+    TSLA: {
+      name: 'Tesla Inc',
+      prices: [248,242,255,261,258,245,252,248,241,238,244,251,248,242,237,243,250,246,239,233,240,247,243,236,230],
+      change: '-3.21%',
+      positive: false,
+      rsi: 38.6, macd: -4.2, bb: 'Lower', vol: 'High',
+      signal: 'SELL',
+      confidence: 79,
+      skills: [
+        { name:'Trend Analysis',    signal:'SELL', confidence:84, reason:'Downtrend confirmed — lower highs and lower lows pattern' },
+        { name:'RSI Indicator',     signal:'HOLD', confidence:71, reason:'RSI at 38.6 — approaching oversold, watch for reversal' },
+        { name:'Volume Analysis',   signal:'SELL', confidence:80, reason:'High sell volume on down days — distribution pattern' },
+        { name:'Bollinger Bands',   signal:'SELL', confidence:78, reason:'Price at lower band — breakdown risk if $228 support breaks' },
+      ]
+    },
+    MSFT: {
+      name: 'Microsoft Corp',
+      prices: [378,382,385,380,388,392,390,395,399,397,402,406,403,408,412,410,415,419,417,422,426,424,429,433,431],
+      change: '+0.93%',
+      positive: true,
+      rsi: 61.8, macd: 7.2, bb: 'Upper', vol: 'Normal',
+      signal: 'BUY',
+      confidence: 81,
+      skills: [
+        { name:'Trend Analysis',    signal:'BUY',  confidence:85, reason:'Consistent uptrend — AI cloud growth driving momentum' },
+        { name:'RSI Indicator',     signal:'BUY',  confidence:78, reason:'RSI at 61.8 — bullish without being overbought' },
+        { name:'Volume Analysis',   signal:'HOLD', confidence:72, reason:'Steady volume — no unusual institutional movement today' },
+        { name:'Bollinger Bands',   signal:'BUY',  confidence:80, reason:'Controlled approach to upper band — healthy trend' },
+      ]
+    }
+  };
+
+  let currentTicker = 'NVDA';
+  let chartInst = null;
+
+  // RENDER TICKERS
+  function renderTickers() {
+    document.getElementById('tickerTabs').innerHTML = Object.keys(stocks).map(t => `
+      <button class="mp-ticker ${t === currentTicker ? 'active' : ''}"
+              onclick="selectTicker('${t}')">${t}</button>
+    `).join('');
+  }
+
+  function selectTicker(ticker) {
+    currentTicker = ticker;
+    renderTickers();
+    renderChart();
+    renderIndicators();
+    renderSignals();
+  }
+
+  // RENDER CHART
+  function renderChart() {
+    const stock = stocks[currentTicker];
+    const labels = Array.from({length:25}, (_,i) => {
+      const d = new Date('2026-04-09');
+      d.setDate(d.getDate() + i);
+      return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    });
+
+    // Find buy/sell signals for annotation
+    const signalPoints = stock.prices.map((p, i) => {
+      if (i < 3) return null;
+      const skill = stock.skills[0];
+      if (skill.signal === 'BUY' && i === 18) return { x: i, y: p, type:'buy' };
+      if (skill.signal === 'SELL' && i === 18) return { x: i, y: p, type:'sell' };
+      return null;
+    }).filter(Boolean);
+
+    const color = stock.positive ? '#10b981' : '#ef4444';
+    const colorDim = stock.positive ? 'rgba(16,185,129,0.1)' : 'rgba(239,68,68,0.1)';
+
+    // Price display
+    const last = stock.prices[stock.prices.length - 1];
+    document.getElementById('priceValue').textContent = `$${last.toFixed(2)}`;
+    const changeEl = document.getElementById('priceChange');
+    changeEl.textContent = stock.change;
+    changeEl.style.color = stock.positive ? '#10b981' : '#ef4444';
+
+    // Signal badge
+    const badge = document.getElementById('signalBadge');
+    badge.textContent = stock.signal;
+    badge.className = 'mp-signal-badge mp-signal-' + stock.signal.toLowerCase();
+
+    if (chartInst) chartInst.destroy();
+
+    const ctx = document.getElementById('stockChart').getContext('2d');
+    chartInst = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          data: stock.prices,
+          borderColor: color,
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: color,
+          tension: 0.3,
+          fill: true,
+          backgroundColor: (ctx) => {
+            const gradient = ctx.chart.ctx.createLinearGradient(0, 0, 0, 220);
+            gradient.addColorStop(0, stock.positive ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)');
+            gradient.addColorStop(1, 'rgba(0,0,0,0)');
+            return gradient;
+          }
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { intersect: false, mode: 'index' },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#111520',
+            borderColor: '#1c2235',
+            borderWidth: 1,
+            titleColor: '#9ca3af',
+            bodyColor: '#e8eaf0',
+            callbacks: {
+              label: ctx => ` $${ctx.parsed.y.toFixed(2)}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255,255,255,0.03)' },
+            ticks: {
+              color: '#6b7280',
+              font: { family:'JetBrains Mono', size:10 },
+              maxTicksLimit: 8
+            }
+          },
+          y: {
+            position: 'right',
+            grid: { color: 'rgba(255,255,255,0.03)' },
+            ticks: {
+              color: '#6b7280',
+              font: { family:'JetBrains Mono', size:10 },
+              callback: v => `$${v}`
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // RENDER INDICATORS
+  function renderIndicators() {
+    const s = stocks[currentTicker];
+
+    document.getElementById('rsiValue').textContent = s.rsi.toFixed(1);
+    document.getElementById('rsiStatus').textContent =
+      s.rsi > 70 ? 'Overbought' : s.rsi < 30 ? 'Oversold' : 'Neutral';
+    document.getElementById('rsiStatus').style.color =
+      s.rsi > 70 ? '#ef4444' : s.rsi < 30 ? '#10b981' : '#9ca3af';
+
+    document.getElementById('macdValue').textContent = s.macd > 0 ? `+${s.macd}` : s.macd;
+    document.getElementById('macdStatus').textContent = s.macd > 0 ? 'Bullish' : 'Bearish';
+    document.getElementById('macdStatus').style.color = s.macd > 0 ? '#10b981' : '#ef4444';
+
+    document.getElementById('bbValue').textContent = s.bb + ' Band';
+    document.getElementById('bbStatus').textContent =
+      s.bb === 'Upper' ? 'Resistance near' : s.bb === 'Lower' ? 'Support near' : 'Neutral range';
+    document.getElementById('bbStatus').style.color =
+      s.bb === 'Upper' ? '#f59e0b' : s.bb === 'Lower' ? '#f59e0b' : '#9ca3af';
+
+    document.getElementById('volValue').textContent = s.vol;
+    document.getElementById('volStatus').textContent =
+      s.vol === 'High' ? 'Strong activity' : 'Average activity';
+    document.getElementById('volStatus').style.color =
+      s.vol === 'High' ? '#4f9cf9' : '#9ca3af';
+  }
+
+  // RENDER AI SIGNALS
+  function renderSignals() {
+    const s = stocks[currentTicker];
+    document.getElementById('aiSignals').innerHTML = s.skills.map((sk, i) => `
+      <div class="mp-skill-card" style="animation-delay:${i*80}ms">
+        <div class="mp-skill-header">
+          <span class="mp-skill-name mono">${sk.name}</span>
+          <div class="mp-skill-right">
+            <div class="mp-confidence-bar">
+              <div class="mp-confidence-fill" style="width:${sk.confidence}%;background:${
+                sk.signal === 'BUY' ? '#10b981' :
+                sk.signal === 'SELL' ? '#ef4444' : '#f59e0b'
+              };"></div>
+            </div>
+            <span class="mono" style="font-size:0.7rem;color:var(--text3);min-width:30px;text-align:right;">${sk.confidence}%</span>
+            <span class="mp-skill-signal mp-sig-${sk.signal.toLowerCase()}">${sk.signal}</span>
+          </div>
+        </div>
+        <p class="mp-skill-reason">${sk.reason}</p>
+      </div>
+    `).join('');
+  }
+
+  // INIT
+  renderTickers();
+  renderChart();
+  renderIndicators();
+  renderSignals();
+  </script>
+
+</body>
+</html>
