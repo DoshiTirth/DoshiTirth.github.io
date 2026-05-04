@@ -1,3 +1,35 @@
+/* THEME SYSTEM */
+(function() {
+  const saved = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+
+  // Update inline background for flash prevention
+  if (saved === 'light') {
+    document.documentElement.style.background = '#f8f9fc';
+    document.body && (document.body.style.background = '#f8f9fc');
+  }
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+
+  toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+
+    // Update background color for flash prevention on next navigation
+    if (next === 'light') {
+      document.documentElement.style.background = '#f8f9fc';
+    } else {
+      document.documentElement.style.background = '#080a0f';
+    }
+  });
+});
+
 /* NAV SCROLL BEHAVIOR */
 const nav = document.querySelector('nav');
 

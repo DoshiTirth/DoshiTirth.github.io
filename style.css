@@ -49,6 +49,79 @@ html {
   --section-gap: 120px;
 }
 
+/* LIGHT MODE */
+[data-theme="light"] {
+  --bg:         #f8f9fc;
+  --bg2:        #f0f2f7;
+  --surface:    #ffffff;
+  --surface2:   #f0f2f7;
+  --surface3:   #e4e7ef;
+
+  --border:     rgba(0, 0, 0, 0.08);
+  --border2:    rgba(0, 0, 0, 0.14);
+  --border3:    rgba(0, 0, 0, 0.22);
+
+  --text:       #0f1117;
+  --text2:      #4b5563;
+  --text3:      #9ca3af;
+
+  --blue-dim:   rgba(79, 156, 249, 0.1);
+  --blue-glow:  rgba(79, 156, 249, 0.2);
+  --green-dim:  rgba(16, 185, 129, 0.1);
+  --amber-dim:  rgba(245, 158, 11, 0.1);
+  --purple-dim: rgba(139, 92, 246, 0.1);
+  --coral-dim:  rgba(249, 115, 22, 0.1);
+}
+
+/* grid lines in light mode */
+[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(79, 156, 249, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 156, 249, 0.06) 1px, transparent 1px);
+}
+
+/* nav in light mode */
+[data-theme="light"] nav.scrolled {
+  background: rgba(248, 249, 252, 0.85);
+}
+
+/* terminal card in light mode */
+[data-theme="light"] .terminal-card {
+  background: #1e2030;
+}
+
+[data-theme="light"] .terminal-header {
+  background: #161825;
+}
+
+/* THEME TOGGLE */
+.theme-toggle {
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--border3);
+  color: var(--text);
+  background: var(--surface);
+}
+
+/* show/hide sun and moon based on theme */
+.icon-moon { display: none; }
+.icon-sun  { display: block; }
+
+[data-theme="light"] .icon-moon { display: block; }
+[data-theme="light"] .icon-sun  { display: none; }
+
 /* RESET */
 *, *::before, *::after {
   box-sizing: border-box;
