@@ -4153,3 +4153,126 @@ html.page-leaving {
   .da-run-stats { grid-template-columns: repeat(2,1fr); }
   .da-stages { flex-direction: column; }
 }
+
+/* SKILLS PAGE STYLES */
+
+.sk-category {
+  margin-bottom: 4rem;
+}
+
+.sk-category-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sk-category-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sk-category-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.sk-category-sub {
+  font-size: 0.75rem;
+  color: var(--text3);
+}
+
+.sk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.875rem;
+}
+
+.sk-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  transition: border-color 0.2s ease;
+}
+
+.sk-card:hover { border-color: var(--border2); }
+
+.sk-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.sk-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.sk-level {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.sk-level-expert {
+  background: rgba(16,185,129,0.12);
+  color: #10b981;
+  border: 1px solid rgba(16,185,129,0.2);
+}
+
+.sk-level-advanced {
+  background: rgba(79,156,249,0.12);
+  color: #4f9cf9;
+  border: 1px solid rgba(79,156,249,0.2);
+}
+
+.sk-level-intermediate {
+  background: rgba(245,158,11,0.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245,158,11,0.2);
+}
+
+.sk-bar-wrap {
+  height: 4px;
+  background: var(--surface2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sk-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sk-used {
+  font-size: 0.7rem;
+  color: var(--text3);
+  line-height: 1.5;
+  max-width: none;
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+/* RESPONSIVE SKILLS */
+@media (max-width: 1024px) {
+  .sk-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .sk-grid { grid-template-columns: 1fr; }
+}

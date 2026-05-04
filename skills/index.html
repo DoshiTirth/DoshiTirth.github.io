@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body { background: #080a0f; }
+    html { opacity: 0; transition: none; }
+    html.ready { opacity: 1; transition: opacity 0.4s ease 0.05s; }
+  </style>
+  <title>Skills — Tirth Doshi</title>
+  <meta name="description" content="Full tech stack of Tirth Doshi — AI Engineer, Full Stack Developer, Data Engineer.">
+  <link rel="stylesheet" href="../style.css">
+  <script>document.documentElement.classList.add('ready');</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/skills/">skills</a></li>
+        <li><a href="/experience/">experience</a></li>
+        <li><a href="/contact/" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO */ -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <div class="page-orb page-orb-1" style="background:var(--amber);"></div>
+      <div class="page-orb page-orb-2" style="background:var(--purple);"></div>
+    </div>
+    <div class="container">
+      <div class="section-label reveal">tech stack</div>
+      <h1 class="reveal" data-delay="100">
+        Built with<br>
+        <span class="text-gradient">real tools.</span>
+      </h1>
+      <p class="reveal" data-delay="200">
+        Every skill here has been used in a shipped project — not just tutorials.
+        Grouped by domain across AI, backend, frontend, data, and cloud.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS GRID  -->
+  <section class="section">
+    <div class="container">
+
+      <!-- AI & Machine Learning -->
+      <div class="sk-category reveal">
+        <div class="sk-category-header">
+          <div class="sk-category-icon" style="background:rgba(139,92,246,0.12);border-color:rgba(139,92,246,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div>
+            <h2 class="sk-category-title">AI & Machine Learning</h2>
+            <p class="sk-category-sub mono">LLM integration · ML pipelines · anomaly detection · NLP</p>
+          </div>
+        </div>
+        <div class="sk-grid">
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Python</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:95%;background:#8b5cf6;"></div></div>
+            <p class="sk-used">MediFlow · TalentLens · SmartPOS AI · VaultMind · DataAisle</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">LLM Integration</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:90%;background:#8b5cf6;"></div></div>
+            <p class="sk-used">Anthropic API · OpenAI API · custom agent engines · RAG pipelines</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Scikit-learn</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:85%;background:#8b5cf6;"></div></div>
+            <p class="sk-used">Isolation Forest · LOF · One-Class SVM · K-Means · ensemble models</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">RAG Pipelines</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:85%;background:#8b5cf6;"></div></div>
+            <p class="sk-used">VaultMind — direct OpenAI API + ChromaDB, no LangChain</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">NLP & Text Analysis</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:82%;background:#8b5cf6;"></div></div>
+            <p class="sk-used">TalentLens — skill extraction from job descriptions at scale</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Prophet / Time Series</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:70%;background:#8b5cf6;"></div></div>
+            <p class="sk-used">SmartPOS AI — sales forecasting microservice</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">ChromaDB</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:80%;background:#8b5cf6;"></div></div>
+            <p class="sk-used">VaultMind — vector store for document embeddings</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">TensorFlow / Keras</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:65%;background:#8b5cf6;"></div></div>
+            <p class="sk-used">academic projects · deep learning coursework</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend & APIs -->
+      <div class="sk-category reveal">
+        <div class="sk-category-header">
+          <div class="sk-category-icon" style="background:rgba(79,156,249,0.12);border-color:rgba(79,156,249,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f9cf9" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <div>
+            <h2 class="sk-category-title">Backend & APIs</h2>
+            <p class="sk-category-sub mono">C# .NET · Python · REST APIs · authentication</p>
+          </div>
+        </div>
+        <div class="sk-grid">
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">C# / .NET</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:93%;background:#4f9cf9;"></div></div>
+            <p class="sk-used">RetailPulse · SmartPOS AI · TalentLens · DataAisle</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">ASP.NET Core</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:92%;background:#4f9cf9;"></div></div>
+            <p class="sk-used">REST APIs · JWT auth · RBAC · middleware · 5 projects</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">FastAPI</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:85%;background:#4f9cf9;"></div></div>
+            <p class="sk-used">VaultMind — async document processing API</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Flask</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:85%;background:#4f9cf9;"></div></div>
+            <p class="sk-used">MediFlow · SmartPOS AI AI microservice</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">JWT Authentication</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:92%;background:#4f9cf9;"></div></div>
+            <p class="sk-used">RBAC · refresh tokens · role-based permissions · 4 projects</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Entity Framework Core</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:90%;background:#4f9cf9;"></div></div>
+            <p class="sk-used">RetailPulse · SmartPOS AI · code-first migrations</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Express.js</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:72%;background:#4f9cf9;"></div></div>
+            <p class="sk-used">MarketPulse — REST API + WebSocket server</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Kotlin</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:60%;background:#4f9cf9;"></div></div>
+            <p class="sk-used">Android development · academic projects</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="sk-category reveal">
+        <div class="sk-category-header">
+          <div class="sk-category-icon" style="background:rgba(16,185,129,0.12);border-color:rgba(16,185,129,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div>
+            <h2 class="sk-category-title">Frontend</h2>
+            <p class="sk-category-sub mono">React · WPF · JavaScript · data visualization</p>
+          </div>
+        </div>
+        <div class="sk-grid">
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">React 18</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:85%;background:#10b981;"></div></div>
+            <p class="sk-used">MediFlow · TalentLens · SmartPOS AI · VaultMind · MarketPulse</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">JavaScript / TypeScript</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:83%;background:#10b981;"></div></div>
+            <p class="sk-used">used across all frontend projects</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">C# WPF</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:82%;background:#10b981;"></div></div>
+            <p class="sk-used">SmartPOS AI — .NET 9 cashier terminal desktop app</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Chart.js / Recharts</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:88%;background:#10b981;"></div></div>
+            <p class="sk-used">dashboards across RetailPulse · DataAisle · MarketPulse</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Electron</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:70%;background:#10b981;"></div></div>
+            <p class="sk-used">MarketPulse — cross-platform desktop app</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Vite</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:84%;background:#10b981;"></div></div>
+            <p class="sk-used">build tool across all React projects</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Engineering -->
+      <div class="sk-category reveal">
+        <div class="sk-category-header">
+          <div class="sk-category-icon" style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <div>
+            <h2 class="sk-category-title">Data Engineering</h2>
+            <p class="sk-category-sub mono">ETL pipelines · data warehousing · SQL · analytics</p>
+          </div>
+        </div>
+        <div class="sk-grid">
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">SQL Server</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:94%;background:#f59e0b;"></div></div>
+            <p class="sk-used">star schemas · RBAC · stored procs · all 7 projects</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">ETL Pipeline Design</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:90%;background:#f59e0b;"></div></div>
+            <p class="sk-used">DataAisle · MediFlow · TalentLens — 361,510+ records processed</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Star Schema / DW Design</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:87%;background:#f59e0b;"></div></div>
+            <p class="sk-used">DataAisle · TalentLens — fact + dimension table architecture</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">pandas</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:92%;background:#f59e0b;"></div></div>
+            <p class="sk-used">data cleaning · transformation · all Python ETL pipelines</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">PostgreSQL</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:70%;background:#f59e0b;"></div></div>
+            <p class="sk-used">academic projects · system architecture design</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Power BI</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:68%;background:#f59e0b;"></div></div>
+            <p class="sk-used">CryptoGuardAI · academic analytics projects</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Tableau</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:65%;background:#f59e0b;"></div></div>
+            <p class="sk-used">academic data visualization projects</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">MongoDB</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:65%;background:#f59e0b;"></div></div>
+            <p class="sk-used">NoSQL design · document store projects</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloud & DevOps -->
+      <div class="sk-category reveal">
+        <div class="sk-category-header">
+          <div class="sk-category-icon" style="background:rgba(249,115,22,0.12);border-color:rgba(249,115,22,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <div>
+            <h2 class="sk-category-title">Cloud & DevOps</h2>
+            <p class="sk-category-sub mono">AWS · Git · Docker · CI/CD · project tools</p>
+          </div>
+        </div>
+        <div class="sk-grid">
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Git / GitHub</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:95%;background:#f97316;"></div></div>
+            <p class="sk-used">branching · PRs · GitHub Actions · all projects</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">AWS</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:68%;background:#f97316;"></div></div>
+            <p class="sk-used">EC2 · S3 · RDS · IAM · Lambda basics</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Docker</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:65%;background:#f97316;"></div></div>
+            <p class="sk-used">containerization · docker-compose · development environments</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">GitHub Actions</span>
+              <span class="sk-level sk-level-intermediate">Intermediate</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:70%;background:#f97316;"></div></div>
+            <p class="sk-used">CI/CD pipelines · automated testing · deployment workflows</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Postman</span>
+              <span class="sk-level sk-level-expert">Expert</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:92%;background:#f97316;"></div></div>
+            <p class="sk-used">API testing · collection management · all projects</p>
+          </div>
+          <div class="sk-card">
+            <div class="sk-card-top">
+              <span class="sk-name">Jira / Agile</span>
+              <span class="sk-level sk-level-advanced">Advanced</span>
+            </div>
+            <div class="sk-bar-wrap"><div class="sk-bar" style="width:80%;background:#f97316;"></div></div>
+            <p class="sk-used">sprint planning · backlog management · Potenza Global Solutions</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    // Animate skill bars on scroll
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.sk-bar').forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(() => { bar.style.width = width; }, 100);
+          });
+          barObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.sk-category').forEach(cat => {
+      barObserver.observe(cat);
+    });
+  </script>
+
+</body>
+</html>
