@@ -1441,13 +1441,6 @@ html.page-leaving {
   }
 }
 
-/* Last card full width if alone */
-.proj-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  max-width: 600px;
-}
-
-
 /* DEMO PAGES — SHARED STYLES */
 
 /* DEMO HERO */
