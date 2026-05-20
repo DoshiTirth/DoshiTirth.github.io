@@ -1,426 +1,272 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lakelands Community Care — Analytics Hub | Tirth Doshi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080a0f">
   <style>
     html, body {
       background: #080a0f !important;
       background-color: #080a0f !important;
     }
-    html[data-theme="light"], html[data-theme="light"] body {
+    html[data-theme="light"],
+    html[data-theme="light"] body {
       background: #f8f9fc !important;
       background-color: #f8f9fc !important;
     }
     html { opacity: 0; transition: none; }
     html.ready { opacity: 1; transition: opacity 0.4s ease 0.05s; }
-
-    /* ── PAGE HERO ── */
-    .demo-hero {
-      padding: 7rem 0 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .demo-hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 50%;
-      transform: translateX(-50%);
-      width: 800px; height: 400px;
-      background: radial-gradient(ellipse at center, rgba(46,196,182,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .demo-hero .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    .demo-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--clr-muted, #6b7280);
-      text-decoration: none;
-      margin-bottom: 2.5rem;
-      transition: color 0.2s;
-    }
-    .demo-back:hover { color: var(--clr-accent, #2EC4B6); }
-    .demo-back svg { width: 14px; height: 14px; }
-
-    .demo-tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .demo-tag {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid rgba(46,196,182,0.3);
-      color: #2EC4B6;
-      background: rgba(46,196,182,0.06);
-    }
-    .demo-tag.tag-orange {
-      border-color: rgba(255,159,28,0.3);
-      color: #FF9F1C;
-      background: rgba(255,159,28,0.06);
-    }
-
-    .demo-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      color: var(--clr-text, #f1f5f9);
-      margin-bottom: 1rem;
-    }
-    .demo-title span { color: #2EC4B6; }
-
-    .demo-subtitle {
-      font-size: 1.05rem;
-      font-weight: 300;
-      color: var(--clr-muted, #6b7280);
-      max-width: 620px;
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-    }
-
-    /* ── META ROW ── */
-    .demo-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 1.5rem 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      margin-bottom: 3rem;
-    }
-    .meta-item { display: flex; flex-direction: column; gap: 0.25rem; }
-    .meta-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--clr-muted, #6b7280);
-    }
-    .meta-value {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--clr-text, #f1f5f9);
-    }
-
-    /* ── IFRAME EMBED ── */
-    .embed-section {
-      max-width: 1100px;
-      margin: 0 auto 4rem;
-      padding: 0 2rem;
-    }
-    .embed-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--clr-muted, #6b7280);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .embed-label::before {
-      content: '';
-      display: inline-block;
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: #2EC4B6;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-    .embed-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%; /* 16:9 */
-      height: 0;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(46,196,182,0.15);
-      box-shadow: 0 0 60px rgba(46,196,182,0.06), 0 24px 64px rgba(0,0,0,0.4);
-    }
-    .embed-wrapper iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .embed-note {
-      margin-top: 0.75rem;
-      font-size: 0.78rem;
-      color: var(--clr-muted, #6b7280);
-      text-align: center;
-    }
-    .embed-note a {
-      color: #2EC4B6;
-      text-decoration: none;
-    }
-    .embed-note a:hover { text-decoration: underline; }
-
-    /* ── FEATURES GRID ── */
-    .features-section {
-      max-width: 1100px;
-      margin: 0 auto 5rem;
-      padding: 0 2rem;
-    }
-    .section-heading {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--clr-text, #f1f5f9);
-      margin-bottom: 2rem;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .feature-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .feature-card:hover {
-      border-color: rgba(46,196,182,0.25);
-      transform: translateY(-2px);
-    }
-    .feature-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-    .feature-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--clr-text, #f1f5f9);
-      margin-bottom: 0.5rem;
-    }
-    .feature-desc {
-      font-size: 0.85rem;
-      color: var(--clr-muted, #6b7280);
-      line-height: 1.6;
-    }
-
-    /* ── TECH STACK ── */
-    .stack-section {
-      max-width: 1100px;
-      margin: 0 auto 5rem;
-      padding: 0 2rem;
-    }
-    .stack-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .stack-pill {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--clr-text, #f1f5f9);
-      transition: border-color 0.2s;
-    }
-    .stack-pill:hover { border-color: rgba(46,196,182,0.3); }
-    .stack-pill .dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    /* ── LIGHT THEME OVERRIDES ── */
-    html[data-theme="light"] .demo-title { color: #0f172a; }
-    html[data-theme="light"] .demo-subtitle { color: #475569; }
-    html[data-theme="light"] .meta-label { color: #94a3b8; }
-    html[data-theme="light"] .meta-value { color: #1e293b; }
-    html[data-theme="light"] .demo-back { color: #94a3b8; }
-    html[data-theme="light"] .demo-meta { border-color: rgba(0,0,0,0.08); }
-    html[data-theme="light"] .feature-card {
-      background: rgba(0,0,0,0.02);
-      border-color: rgba(0,0,0,0.08);
-    }
-    html[data-theme="light"] .feature-title { color: #0f172a; }
-    html[data-theme="light"] .feature-desc { color: #64748b; }
-    html[data-theme="light"] .stack-pill {
-      background: rgba(0,0,0,0.03);
-      border-color: rgba(0,0,0,0.09);
-      color: #1e293b;
-    }
-    html[data-theme="light"] .embed-label { color: #94a3b8; }
-    html[data-theme="light"] .embed-note { color: #94a3b8; }
-    html[data-theme="light"] .section-heading { color: #0f172a; }
   </style>
+  <title>Lakelands Community Care — Tirth Doshi</title>
+  <meta name="description" content="Power BI Analytics Dashboard for Lakelands Community Care — built by Tirth Doshi.">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../style.css">
+  <script>document.documentElement.classList.add('ready');</script>
 </head>
 <body>
 
-  <!-- NAV (matches your existing site) -->
+  <!-- ─── NAV ─── -->
   <nav>
-    <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
-    <ul class="nav-links">
-      <li><a href="/">home</a></li>
-      <li><a href="/projects/">projects</a></li>
-      <li><a href="/skills/">skills</a></li>
-      <li><a href="/experience/">experience</a></li>
-      <li><a href="/contact/" class="nav-cta">contact</a></li>
-    </ul>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
-    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span>~/</span>tirth-doshi</a>
+      <ul class="nav-links">
+        <li><a href="/">home</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/skills/">skills</a></li>
+        <li><a href="/experience/">experience</a></li>
+        <li><a href="/contact/" class="nav-cta">contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="demo-hero">
+  <!-- ─── HERO ─── -->
+  <section class="demo-hero" style="--accent: #10b981;">
+    <div class="demo-hero-bg">
+      <div class="demo-orb" style="background: #10b981;"></div>
+    </div>
     <div class="container">
-      <a href="/projects/" class="demo-back">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        Back to Projects
-      </a>
-
-      <div class="demo-tag-row">
-        <span class="demo-tag">Power BI</span>
-        <span class="demo-tag">DAX</span>
-        <span class="demo-tag">Data Modelling</span>
-        <span class="demo-tag tag-orange">Non-Profit Analytics</span>
-        <span class="demo-tag tag-orange">Community Care</span>
+      <div class="demo-back reveal">
+        <a href="/projects/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          back to projects
+        </a>
       </div>
 
-      <h1 class="demo-title">
-        Lakelands Community Care<br/><span>Analytics Hub</span>
-      </h1>
-      <p class="demo-subtitle">
-        A 3-page interactive Power BI dashboard built to visualize service delivery, program outcomes, staff operations, and budget performance for a Simcoe County community care organization.
+      <div class="demo-hero-inner">
+        <div class="demo-hero-left">
+          <div class="demo-number mono reveal">Power BI · Analytics</div>
+          <h1 class="reveal" data-delay="100">Lakelands<br><span class="text-gradient">Community Care</span></h1>
+          <p class="demo-subtitle reveal" data-delay="150">Analytics Hub — Power BI Dashboard</p>
+          <p class="reveal" data-delay="200">
+            A 3-page interactive Power BI dashboard built to visualize service delivery,
+            program outcomes, staff operations, and budget performance for a Simcoe County
+            community care organization. Built as part of a technical interview for
+            Empower Simcoe — Power Applications & AI Lead role.
+          </p>
+          <div class="demo-hero-tags reveal" data-delay="250">
+            <span class="tag tag-green">Power BI</span>
+            <span class="tag tag-green">DAX</span>
+            <span class="tag tag-green">Data Modelling</span>
+            <span class="tag tag-amber">Non-Profit Analytics</span>
+            <span class="tag tag-amber">Community Care</span>
+          </div>
+          <div class="demo-hero-actions reveal" data-delay="300">
+            <a href="/projects/" class="btn btn-outline">all projects</a>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="demo-hero-stats reveal" data-delay="200">
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono">3</span>
+            <span class="demo-stat-label">dashboard pages</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono">10</span>
+            <span class="demo-stat-label">star schema tables</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono">13</span>
+            <span class="demo-stat-label">DAX measures</span>
+          </div>
+          <div class="demo-stat-card">
+            <span class="demo-stat-num mono">5</span>
+            <span class="demo-stat-label">fact tables</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meta row -->
+      <div class="lk-meta reveal" data-delay="300">
+        <div class="lk-meta-item">
+          <span class="lk-meta-label mono">context</span>
+          <span class="lk-meta-value">Technical Interview — Empower Simcoe</span>
+        </div>
+        <div class="lk-meta-item">
+          <span class="lk-meta-label mono">role applied</span>
+          <span class="lk-meta-value">Power Applications & AI Lead</span>
+        </div>
+        <div class="lk-meta-item">
+          <span class="lk-meta-label mono">pages</span>
+          <span class="lk-meta-value">Program Overview · Service Delivery · Operations</span>
+        </div>
+        <div class="lk-meta-item">
+          <span class="lk-meta-label mono">data model</span>
+          <span class="lk-meta-value">Star Schema · 10 Tables · 13 DAX Measures</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LIVE EMBED ─── -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section-label reveal">live interactive dashboard</div>
+      <h2 class="reveal" data-delay="100">
+        Power BI
+        <span class="text-gradient">embedded report</span>
+      </h2>
+      <p class="reveal" data-delay="150">
+        Use the slicers to filter by Region and Year. Navigate between pages using
+        the tabs at the bottom. Requires a Power BI account to interact fully.
       </p>
 
-      <div class="demo-meta">
-        <div class="meta-item">
-          <span class="meta-label">Context</span>
-          <span class="meta-value">Technical Interview — Empower Simcoe</span>
+      <div class="lk-embed-wrap reveal" data-delay="200">
+        <div class="lk-embed-label mono">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          live — lakelands community care analytics hub
+          <span class="lk-live-dot"></span>
         </div>
-        <div class="meta-item">
-          <span class="meta-label">Role</span>
-          <span class="meta-value">Power Applications & AI Lead</span>
+        <div class="lk-embed">
+          <iframe
+            title="Empower Simcoe"
+            src="https://app.powerbi.com/reportEmbed?reportId=4f777ded-ec55-4ae0-8230-a68b7e16c067&autoAuth=true&ctid=da9a94b6-4681-49bc-bd7c-bab9eac0ad3c"
+            frameborder="0"
+            allowfullscreen="true">
+          </iframe>
         </div>
-        <div class="meta-item">
-          <span class="meta-label">Pages</span>
-          <span class="meta-value">3 — Program Overview · Service Delivery · Operations</span>
+        <p class="lk-embed-note mono">
+          Full interactivity requires a Power BI account. &nbsp;·&nbsp;
+          <a href="https://app.powerbi.com/reportEmbed?reportId=4f777ded-ec55-4ae0-8230-a68b7e16c067&autoAuth=true&ctid=da9a94b6-4681-49bc-bd7c-bab9eac0ad3c" target="_blank">
+            open in Power BI ↗
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHAT IT COVERS ─── -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section-label reveal">dashboard pages</div>
+      <h2 class="reveal" data-delay="100">
+        What the dashboard
+        <span class="text-gradient">covers</span>
+      </h2>
+
+      <div class="lk-features reveal" data-delay="200">
+        <div class="lk-feature card hover-lift">
+          <div class="lk-feature-num mono">01</div>
+          <h3>Program Overview</h3>
+          <p>ArcGIS 3D map showing client distribution across Simcoe County. KPI cards for active clients, service hours, services delivered, and average outcome score. Bar chart by region and monthly trend line.</p>
         </div>
-        <div class="meta-item">
-          <span class="meta-label">Data Model</span>
-          <span class="meta-value">Star Schema · 10 Tables · 13 DAX Measures</span>
+        <div class="lk-feature card hover-lift">
+          <div class="lk-feature-num mono">02</div>
+          <h3>Service Delivery Deep Dive</h3>
+          <p>Donut chart for services by program, stacked bar for service types, outcome score trend by program, and a program vs service type matrix with conditional formatting.</p>
+        </div>
+        <div class="lk-feature card hover-lift">
+          <div class="lk-feature-num mono">03</div>
+          <h3>Operations & Resources</h3>
+          <p>Budget allocated vs spent by program, scatter chart for staff hours vs training by shift type, incident analysis by severity, and a gauge for budget utilization.</p>
+        </div>
+        <div class="lk-feature card hover-lift">
+          <div class="lk-feature-num mono">04</div>
+          <h3>Star Schema Data Model</h3>
+          <p>10-table star schema with 5 fact tables — Service Delivery, Budget, Incidents, Staff Activity, Client Assessments — and 5 dimension tables. 13 custom DAX measures.</p>
+        </div>
+        <div class="lk-feature card hover-lift">
+          <div class="lk-feature-num mono">05</div>
+          <h3>Interactive Slicers</h3>
+          <p>Year tile slicer (2022–2026) and Region dropdown filter that cross-filter all visuals simultaneously across every page of the report.</p>
+        </div>
+        <div class="lk-feature card hover-lift">
+          <div class="lk-feature-num mono">06</div>
+          <h3>Custom Dark Theme</h3>
+          <p>Consistent dark navy design system with teal accents throughout all 3 pages. Custom color palette, card backgrounds, and typography matching professional BI standards.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LIVE EMBED -->
-  <section class="embed-section">
-    <div class="embed-label">Live Interactive Dashboard</div>
-    <div class="embed-wrapper">
-      <iframe
-        title="Empower Simcoe"
-        src="https://app.powerbi.com/reportEmbed?reportId=4f777ded-ec55-4ae0-8230-a68b7e16c067&autoAuth=true&ctid=da9a94b6-4681-49bc-bd7c-bab9eac0ad3c"
-        frameborder="0"
-        allowfullscreen="true">
-      </iframe>
-    </div>
-    <p class="embed-note">Use the slicers to filter by Region and Year. Navigate between pages using the tabs at the bottom. Requires a Power BI account to interact. &nbsp;·&nbsp; <a href="https://app.powerbi.com/reportEmbed?reportId=4f777ded-ec55-4ae0-8230-a68b7e16c067&autoAuth=true&ctid=da9a94b6-4681-49bc-bd7c-bab9eac0ad3c" target="_blank">Open in Power BI ↗</a></p>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features-section">
-    <h2 class="section-heading">What the Dashboard Covers</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🗺️</div>
-        <div class="feature-title">Page 1 — Program Overview</div>
-        <div class="feature-desc">3D map visual (ArcGIS) showing client distribution across Simcoe County. KPI cards for active clients, service hours, services delivered, and avg outcome score. Bar chart by region + monthly trend line.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <div class="feature-title">Page 2 — Service Delivery Deep Dive</div>
-        <div class="feature-desc">Donut chart for services by program, stacked bar for service types, outcome score trend by program, and a program vs service type matrix with conditional formatting.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚙️</div>
-        <div class="feature-title">Page 3 — Operations & Resources</div>
-        <div class="feature-desc">Budget allocated vs spent by program, scatter chart for staff hours vs training by shift type, incident analysis by severity, and a gauge for budget utilization.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔗</div>
-        <div class="feature-title">Star Schema Data Model</div>
-        <div class="feature-desc">10-table star schema with 5 fact tables (Service Delivery, Budget, Incidents, Staff Activity, Client Assessments) and 5 dimension tables. 13 custom DAX measures.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎛️</div>
-        <div class="feature-title">Interactive Slicers</div>
-        <div class="feature-desc">Year tile slicer (2022–2026) and Region dropdown filter that cross-filter all visuals simultaneously across every page of the report.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎨</div>
-        <div class="feature-title">Custom Dark Theme</div>
-        <div class="feature-desc">Consistent dark navy design system with teal accents throughout all 3 pages. Custom color palette, card backgrounds, and typography matching a professional BI standard.</div>
+  <!-- ─── TECH STACK ─── -->
+  <section class="demo-tech section" style="padding-top:0;">
+    <div class="container">
+      <div class="section-label reveal">tech stack</div>
+      <div class="tech-grid reveal" data-delay="100">
+        <div class="tech-group">
+          <div class="tech-group-label mono">visualisation</div>
+          <div class="tech-tags">
+            <span class="tag tag-green">Power BI Desktop</span>
+            <span class="tag tag-green">Power BI Service</span>
+            <span class="tag tag-green">ArcGIS Maps</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">data & modelling</div>
+          <div class="tech-tags">
+            <span class="tag tag-green">DAX (13 Measures)</span>
+            <span class="tag tag-green">Power Query (M)</span>
+            <span class="tag tag-green">Star Schema</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">data generation</div>
+          <div class="tech-tags">
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-green">pandas</span>
+            <span class="tag tag-green">Faker</span>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label mono">deployment</div>
+          <div class="tech-tags">
+            <span class="tag tag-green">Power BI Service</span>
+            <span class="tag tag-green">Secure Embed</span>
+            <span class="tag tag-green">iframe API</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TECH STACK -->
-  <section class="stack-section">
-    <h2 class="section-heading">Tech Stack</h2>
-    <div class="stack-grid">
-      <div class="stack-pill"><span class="dot" style="background:#2EC4B6"></span>Power BI Desktop</div>
-      <div class="stack-pill"><span class="dot" style="background:#2EC4B6"></span>DAX (13 Measures)</div>
-      <div class="stack-pill"><span class="dot" style="background:#2EC4B6"></span>Power Query (M)</div>
-      <div class="stack-pill"><span class="dot" style="background:#FF9F1C"></span>Star Schema — 10 Tables</div>
-      <div class="stack-pill"><span class="dot" style="background:#FF9F1C"></span>ArcGIS Maps Visual</div>
-      <div class="stack-pill"><span class="dot" style="background:#FF9F1C"></span>Python (Data Generation)</div>
-      <div class="stack-pill"><span class="dot" style="background:#a78bfa"></span>Power BI Service</div>
-      <div class="stack-pill"><span class="dot" style="background:#a78bfa"></span>Secure Embed</div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <!-- ─── FOOTER ─── -->
   <footer>
     <div class="footer-inner">
-      <span class="footer-copy">© 2026 Tirth Doshi</span>
-      <div class="footer-links">
-        <a href="https://github.com/DoshiTirth" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a>
-        <a href="/contact/">contact</a>
-      </div>
+      <span class="footer-copy">© 2026 Tirth Doshi — Always building. Always shipping.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/DoshiTirth" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tirth-doshi-0a59aa296" target="_blank">LinkedIn</a></li>
+        <li><a href="/contact/">contact</a></li>
+      </ul>
     </div>
   </footer>
 
   <script src="../../main.js"></script>
-  <script>document.documentElement.classList.add('ready');</script>
 </body>
 </html>
